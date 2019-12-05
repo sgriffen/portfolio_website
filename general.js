@@ -1,21 +1,22 @@
 function collapse_all(parent) {
  
-  var id = "container_";
+  var idPrefix = "container_";
   var i = 0;
   
-  while(childExists(parent, id + i)) {
+  var id = idPrefix + i;
+  while(childExists(parent, id)) {
     
-    findChildById(parent, id + i).style.display = "none";
+    findChildById(parent, id).style.display = "none";
+    
     i++;
+    id = idPrefix + i;
   }
 }
 
-function toggle_display(id) {
-
-  var tog = document.getElementById(id);
+function toggle_display(toToggle) {
   
-  if (tog.style.display === "none") { tog.style.display = "inline-block"; }
-  else { tog.style.display = "none"; }
+  if (toToggle.style.display === "none") { toToggle.style.display = "inline-block"; }
+  else { toToggle.style.display = "none"; }
 }
 
 function childExists(element, id) {
