@@ -9,6 +9,10 @@
 		<h1><b>Sean Griffen's Portfolio</b></h1>
 		<h2><i>Junior in Computer Engineering at Iowa State University</i></h2>
 		
+		<br>
+		<img id="profile_pic" src="me.jpg" alt="Image of me">
+		<br>
+		
 		<p>
 			Contact me at:
 			<ul id="contact list">
@@ -20,7 +24,7 @@
 	
 		<p>Click on the buttons below to show different parts of this web page</p>
     		
-		<button id="display_projects" onclick="collapse_all(); toggle_display('conainter_0');">Projects</button>
+		<button id="display_projects" onclick="collapse_all(document.getElementById('bod')); toggle_display('conainter_0');">Projects</button>
 		<br>
 		<div id="conainter_0" style="display:none">
 			<fieldset id="project_0">
@@ -30,7 +34,7 @@
 		</div>
 		<br>
 	
-		<button id="display_ethics" onclick="collapse_all(); toggle_display('conainter_1');">Ethics Essay</button>
+		<button id="display_ethics" onclick="collapse_all(document.getElementById('bod')); toggle_display('conainter_1');">Ethics Essay</button>
 		<br>
 		<div id="conainter_1" style="display:none">
 			<iframe src="http://docs.google.com/gview?url=http://sgriffen.github.io/Sean_Griffen_A1_Ethics_Essay.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
