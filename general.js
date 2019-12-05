@@ -1,4 +1,4 @@
-function collapse_all(parent) {
+function collapse_all(parent, idFrom) {
  
   var idPrefix = "container_";
   var i = 0;
@@ -6,7 +6,8 @@ function collapse_all(parent) {
   var id = idPrefix + i;
   while(childExists(parent, id)) {
     
-    findChildById(parent, id).style.display = "none";
+    var toCollapse = findChildById(parent, id);
+    if (toCollapse.id !== idFrom) { toCollapse.style.display = "none"; }
     
     i++;
     id = idPrefix + i;
