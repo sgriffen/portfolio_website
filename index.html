@@ -4,7 +4,7 @@
 	<head>
 		<title>Sean Griffen Portfolio</title>
 	</head>
-	<body>
+	<body id="bod">
 		
 		<h1><b>Sean Griffen's Portfolio</b></h1>
 		<h2><i>Junior in Computer Engineering at Iowa State University</i></h2>
@@ -24,20 +24,22 @@
 	
 		<p>Click on the buttons below to show different parts of this web page</p>
     		
-		<button id="display_projects" onclick="collapse_all(document.getElementById('bod')); toggle_display('conainter_0');">Projects</button>
-		<br>
-		<div id="conainter_0" style="display:none">
-			<fieldset id="project_0">
-				<legend>Freshman year: CprE 186 Semester project - DND Java</legend>
-				
-			</fieldset>
-		</div>
-		<br>
-	
-		<button id="display_ethics" onclick="collapse_all(document.getElementById('bod')); toggle_display('conainter_1');">Ethics Essay</button>
-		<br>
-		<div id="conainter_1" style="display:none">
-			<iframe src="http://docs.google.com/gview?url=http://sgriffen.github.io/Sean_Griffen_A1_Ethics_Essay.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
+		<div id="sections">
+			<button id="display_projects" onclick="collapse_all(document.getElementById('sections')); toggle_display('conainter_0');">Projects</button>
+			<br>
+			<div id="conainter_0" style="display:none">
+				<fieldset id="project_0">
+					<legend>Freshman year: CprE 186 Semester project - DND Java</legend>
+
+				</fieldset>
+			</div>
+			<br>
+
+			<button id="display_ethics" onclick="collapse_all(document.getElementById('sections')); toggle_display('conainter_1');">Ethics Essay</button>
+			<br>
+			<div id="conainter_1" style="display:none">
+				<iframe src="http://docs.google.com/gview?url=http://sgriffen.github.io/Sean_Griffen_A1_Ethics_Essay.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
+			</div>
 		</div>
 			
 		<script type="text/javascript" src="general.js"></script>
