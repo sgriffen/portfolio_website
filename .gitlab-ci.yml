@@ -5,4 +5,4 @@ autoDeploy:
     tags:
         - html
     script:
-        - sudo mv * /var/www/html/seangriffen.com/public_html
+        - mv * /var/www/html/seangriffen.com/public_html
