@@ -3,6 +3,6 @@ stages:
 autoDeploy:     
     stage: autodeploy
     tags:
-        - html
+        - website
     script:
         - sudo mv * /var/www/html/seangriffen.com/public_html
