@@ -3,6 +3,6 @@ stages:
 autoDeploy:     
     stage: autodeploy
     tags:
-        - website
+        -  gitlab-org
     script:
         - sudo mv * /var/www/html/seangriffen.com/public_html
