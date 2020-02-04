@@ -1,29 +1,72 @@
+function update_navBar(parent, clicked, hasDrop) {
+	
+	let idPrefix = "display_";
+	let i = 0;
+	
+	let id = idPrefix + i;
+	while(childExists(parent, id)) {
+		
+		let toUpdate = findChildById(parent, id);
+		toUpdate.classList.remove("nav-active");
+		
+		let dropContainerId = id + "-drop";
+		if (childExists(toUpdate, dropContainerId)) { findChildById(toUpdate, dropContainerId).style.display = "none"; }
+		
+		i++;
+		id = idPrefix + i;
+	}
+	
+	clicked.classList.add("nav-active");
+	if (hasDrop) {
+		
+		let dropContainer = findChildById(clicked, clicked.id + "-drop");
+		dropContainer.style.display = "block";
+	}
+}
+
+function update_dropBar(parent, clicked) {
+	
+	let idPrefix = parent.id + "_content_";
+	let i = 0;
+	
+	let id = idPrefix + i;
+	while(childExists(parent, id)) {
+		
+		let toUpdate = findChildById(parent, id);
+		toUpdate.classList.remove("nav-drop-active");
+		
+		i++;
+		id = idPrefix + i;
+	}
+	
+	clicked.classList.add("nav-drop-active");
+}
+
 function collapse_all(parent, idFrom) {
  
-  var idPrefix = "container_";
-  var i = 0;
-  
-  var id = idPrefix + i;
-  while(childExists(parent, id)) {
-    
-    var toCollapse = findChildById(parent, id);
-    if (toCollapse.id !== idFrom) { toCollapse.style.display = "none"; }
-    
-    i++;
-    id = idPrefix + i;
-  }
+	let idPrefix = "sub_";
+	let i = 0;
+	
+	let id = idPrefix + i;
+	while(childExists(parent, id)) {
+		
+		let toCollapse = findChildById(parent, id);
+		if (toCollapse.id !== idFrom) { toCollapse.style.display = "none";}
+		
+		i++;
+		id = idPrefix + i;
+	}
 }
 
 function toggle_display(toToggle) {
   
-  if (toToggle.style.display === "none") { toToggle.style.display = "inline-block"; }
-  else { toToggle.style.display = "none"; }
+	if (toToggle.style.display === "none") { toToggle.style.display = "inline-block"; }
 }
 
 function childExists(element, id) {
 	
-	var i;
-	var childNodes = element.childNodes;
+	let i;
+	let childNodes = element.childNodes;
 	for (i = 0; i < childNodes.length; i++) {
 		if (childNodes[i].id === id) { return true; }
 	}
@@ -33,8 +76,8 @@ function childExists(element, id) {
 
 function findChildById(element, id) {
 	
-	var i;
-	var childNodes = element.childNodes;
+	let i;
+	let childNodes = element.childNodes;
 	for (i = 0; i < childNodes.length; i++) {
 		if (childNodes[i].id === id) { return childNodes[i]; }
 	}

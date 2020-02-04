@@ -4,26 +4,17 @@
 	<head>
 		<title>Sean Griffen's Portfolio</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-		<link rel="stylesheet" type="text/css" href="refs/default.css">
-		<link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="refs/general_xs.css">
-		<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)" href="refs/general_s.css">
-		<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="refs/general_m.css">
-		<link rel="stylesheet" type="text/css" media="screen and (min-width: 992px)" href="refs/general_l.css">
-		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="refs/general_xl.css">
+		<link rel="stylesheet" type="text/css" href="refs/general_new.css">
 	</head>
 	<body>
 		
-		<div class="row">
-			<div class="col-12">
-				<h1><b>The Various Projects Sean Griffen</b></h1>
-				<br>
-				<h2><i>Junior in Computer Engineering at Iowa State University</i></h2>
-			</div>
-		</div>
+		<h1><b>The Various Projects Sean Griffen</b></h1>
+		<br>
+		<h2><i>Junior in Computer Engineering at Iowa State University</i></h2>
+		
 		<br>
 		<div class="row">
-			<div class="col-3 sidebar">
+			<div class="col-3 col-s-3 sidebar">
 				<img id="profile_pic" src="me.jpg" alt="Image of me">
 				<br>
 				<div class="nav">
@@ -67,7 +58,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="container_content" class="col-9">
+			<div id="container_content" class="col-9 col-s-9">
 				<div id="sub_0">
 					<div id="sub_0-0">
 						<h3>Work in progress...</h3>
@@ -98,7 +89,7 @@
 				<div id="sub_2" style="display:none">
 					<div id="sub_2-0">
 						<h3>Ethics Essay</h3>
-						<iframe src="https://docs.google.com/gview?url=https://seangriffen.com/Sean_Griffen_A1_Ethics_Essay.pdf&embedded=true" style="width:500px; height: 700px" frameborder="0"></iframe>
+						<iframe src="https://docs.google.com/gview?url=https://seangriffen.com/Sean_Griffen_A1_Ethics_Essay.pdf&embedded=true" style="width: 100%; height:100%" frameborder="0"></iframe>
 					</div>
 				</div>
 				<div id="sub_3" style="display:none">
@@ -108,18 +99,15 @@
 				</div>
 			</div>
 		</div>
+	
+		<footer class="footer">
+			<div>Find me at</div>
+			<a class="inline button linkedin" id="open_linkedin" title="My linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
+			<a class="inline button twitter" id="open_twitter" title="My twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
+			<br>
+			<span>This web page is a continuing work in progress. It will be updated with current information frequently.</span>
+		</footer>
 		
-		<div class="row">
-			<div class="col-12">
-				<div class="footer">
-					<a class="inline button linkedin" id="open_linkedin" title="My linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
-					<a class="inline button github" id="open_twitter" title="My twitter profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
-					<a class="inline button twitter" id="open_twitter" title="My twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
-					<br>
-				</div>
-			</div>
-		</div>
-		
-		<script type="text/javascript" src="refs/general.js"></script>
+		<script type="text/javascript" src="refs/general_new.js"></script>
 	</body>
 </html>
