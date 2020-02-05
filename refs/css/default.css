@@ -14,12 +14,26 @@
 html {
 	font-family: Arial, Helvetica, sans-serif;
 	scroll-behavior: smooth;
+	overflow: scroll;
 }
 body {
 	background-color: #F1F1F1;
+	margin: 0 auto;
+	height: 100%;
 }
 
-#profile_pic {
+.content {
+	width: 100%;
+	height: 100%;
+}
+.content iframe {
+	display: block;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+.profile_pic {
 	max-width: 100%;
 	height: auto;
 }
@@ -38,16 +52,17 @@ body {
 	cursor: pointer;
 }
 .nav-active {
-	/* Left border color is Green */
-	border-left: 6px solid #4CAF50;
+	/* Left border color is light-blue */
+	border-left: 6px solid #87CEEB;
 }
 .nav-drop-active {
-	/* Left border color is Green */
-	border-left: 6px solid #4CAF50;
+	/* Left border color is light-blue */
+	border-left: 6px solid #87CEEB;
 }
 
 .footer a:hover {
-	background-color: #616161;
+	/* Background color is Teal */
+	background-color: #009688;
 	cursor: pointer;
 }
 .linkedin {

@@ -23,7 +23,6 @@ function update_navBar(parent, clicked, hasDrop) {
 		dropContainer.style.display = "block";
 	}
 }
-
 function update_dropBar(parent, clicked) {
 	
 	let idPrefix = parent.id + "_content_";
@@ -44,6 +43,8 @@ function update_dropBar(parent, clicked) {
 
 function collapse_all(parent, idFrom) {
  
+	//window.scroll({top: 0, left: 0, behavior: 'smooth'});
+	
 	let idPrefix = "sub_";
 	let i = 0;
 	
@@ -62,6 +63,13 @@ function toggle_display(toToggle) {
   
 	if (toToggle.style.display === "none") { toToggle.style.display = "inline-block"; }
 }
+
+function scroll_to(scrollToId, subId) {
+	
+	document.getElementById(scrollToId).contentWindow.scroll_iframe(subId);
+	document.getElementById(scrollToId).scrollIntoView();
+}
+function smoothScroll(y, x) { window.scroll({ top: y, left: x, behavior: 'smooth' }); }
 
 function childExists(element, id) {
 	

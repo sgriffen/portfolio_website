@@ -1,16 +1,9 @@
 /* Default column settings */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+[class*="col-"] {
+	width: 100%;
+	float: left;
+	padding: 15px;
+}
 
 h1 {
 	display: block;
@@ -29,18 +22,12 @@ h2 {
 	padding: 0% 1.5% 0% 1%;
 	
 	text-decoration: none;
-	/* Bottom border color is Dark-Gray */
+	/* Bottom border color is Teal */
 	border-bottom: 6px solid #009688;
 	/* Text color is Black */
 	color: #000;
 	font-size: 27px;
 	transition: 0.2s;
-}
-
-.sidebar {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
 }
 
 .nav {
@@ -63,14 +50,15 @@ h2 {
 	font-size: 20px;
 }
 
+#container_content {
+	height: 90vh;
+}
+
 .footer {
-	float: left;
+	clear: both;
 	display: block;
 	text-align: center;
-	width: 100%;
-	font-size: 15px;
-	position: fixed;
-	bottom: 0;
+	font-size: 12px;
 	
 	background-color: #9E9E9E;
 }
@@ -83,9 +71,14 @@ h2 {
 	text-align: center;
 	padding: 16px;
 	transition: all 0.3s ease;
-	font-size: 20px;
+	font-size: 15px;
 	
-	width: 75px;
+	width: 50px;
 	
 	color: #FFF;
+}
+
+.embed_pdf {
+	width: 100%;
+	height: auto;
 }

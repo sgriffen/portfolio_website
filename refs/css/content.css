@@ -1,0 +1,50 @@
+@charset "ISO-8859-1";
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	scroll-behavior: smooth;
+	overflow: scroll;
+}
+body {
+	background-color: #F1F1F1;
+}
+iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+	border: none;
+}
+li {
+	padding: 5px 5px 10px 5px;
+}
+
+
+.section-header {
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+	text-decoration: none;
+	/* Bottom border color is Green */
+	border-bottom: 3px solid #4CAF50;
+	/* Text color is Black */
+	color: #000;
+	font-size: 20px;
+	transition: 0.2s;
+}
+.section-content {
+	padding: 0% 2% 0% 2%;
+	font-size: 16px;
+	color: #000;
+}
+.section-breaker {
+	display: block;
+	/* Bottom border color is Dark-Gray */
+	border-bottom: 3px solid #616161;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
