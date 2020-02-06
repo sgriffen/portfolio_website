@@ -70,7 +70,7 @@ h2 {
 }
 
 #container_content {
-	height: 55vh;
+	height: 75vh;
 }
 
 .footer {
@@ -98,9 +98,4 @@ h2 {
 	width: 75px;
 	
 	color: #FFF;
-}
-
-.embed_pdf {
-	width: 576px;
-	height: auto;
 }
