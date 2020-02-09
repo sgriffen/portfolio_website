@@ -15,12 +15,19 @@
 				My group and I made a map and character displayer for Dungeons ‘n Dragons. 
 				We acomplished this using JFrames and buffered images in Java and created a "fog of war" mechanic that, if turned on, covered the map and as the character model on the screen moved around, by clicking and holding the mouse, the map would uncover itself.
 				<br>
+				<br>
 				What I learned:
 				<ul>
 					<li class="subheader">How java handles images and layering images on each other</li>
 					<li class="subheader">Scaling projects to the time-line available</li>
 					<li class="subheader">Partitioning large projects into smaller, easier projects that are easier to focus on and work on</li>
 				</ul>
+				<br>
+				<button class="action" onclick="toggle_display(findChildById(this.parentNode, 'sub_1-0_pdf'));" title="Display CprE 281 project report">View Final Presentation</button>
+				<br>
+				<div class="embed pdf" id="sub_1-0_pdf" style="display:none">
+					<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://seangriffen.com/refs/pdf/cpre186_final_presentation.pdf"></iframe>
+				</div>
 				<br>
 				<a href="https://github.com/sgriffen/DNDJava" target="_blank" title="DND Java repository">Source code</a>
 			</p>
@@ -34,10 +41,17 @@
 			<p class="section-content">
 				
 				<br>
+				<br>
 				What I learned:
 				<ul>
 					<li class="subheader"></li>
 				</ul>
+				<br>
+				<button class="action" onclick="toggle_display(findChildById(this.parentNode, 'sub_1-1_pdf'));" title="Display CprE 281 final project report">View Report</button>
+				<br>
+				<div class="embed pdf" id="sub_1-1_pdf" style="display:none">
+					<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://seangriffen.com/refs/pdf/cpre281_final_report.pdf"></iframe>
+				</div>
 				<br>
 				<a href="https://github.com/sgriffen/final_proj_cpre281" target="_blank" title="FPGA Traffic Light repository">Source code</a>
 			</p>
@@ -51,9 +65,10 @@
 			<p class="section-content">
 				
 				<br>
+				<br>
 				What I learned:
 				<ul>
-					<li class="subheader"></li>
+					<li class="subheader">How to </li>
 				</ul>
 				<br>
 				<a href="https://github.com/sgriffen/final_proj_cpre288" target="_blank" title="Roomba Rover repository">Source code</a>
@@ -68,10 +83,17 @@
 			<p class="section-content">
 				
 				<br>
+				<br>
 				What I learned:
 				<ul>
 					<li class="subheader"></li>
 				</ul>
+				<br>
+				<button class="action" onclick="toggle_display(findChildById(this.parentNode, 'sub_1-3_pdf'));" title="Display ComS 309 project report">View Report</button>
+				<br>
+				<div class="embed pdf" id="sub_1-3_pdf" style="display:none">
+					<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://seangriffen.com/refs/pdf/coms309_final_report.pdf"></iframe>
+				</div>
 				<br>
 				<a href="https://github.com/sgriffen/proj_coms309" target="_blank" title="007: Knockout repository">Source code</a>
 			</p>
@@ -83,21 +105,37 @@
 			</div>
 			<br>
 			<p class="section-content">
-				
+				My team and I made a system to alert parents if they left their child in a hot car. 
+				<br>
+				Using an Arduino Uno, temperature, GPS, ultrasonic sensors, buttons, and radio transceivers, we were able to
+				1) Tell if there was a child in a car seat,
+				2) Know the temperature of the car,
+				3) Get the location of the car seat,
+				and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver. 
+				<br>
+				Using all that, if the car seat and "key fob" lost communication with each other, the "key fob" would buzz if the last known location of the child was in the car seat, 
+				and the car seat would send data (temperature, GPS location, and status of the child) over seria to a Raspberry Pi, which would then parse the data and send that to a web server to display that data on an app on the parent's phone.
+				The web server would also send text notifications to the parent that something was left in their car seat, with a time limit to get back before the car got too hot. If the parent's location was too far away for them to get back, the car seat (using it's location data) would notify authorities to get the child out of the car.
+				<br>
 				<br>
 				What I learned:
-				<ul>
-					<li class="subheader"></li>
-				</ul>
+				<p>
+					<ul>
+						<li class="subheader">How to gather imformation quickly and make an informed decision</li>
+						<li class="subheader">How to make a working demo in a short period of time</li>
+						<li class="subheader">How to solve problems quickly, and switch to new solutions if one is taking too long to figure out</li>
+					</ul>
+				</p>
 				<br>
 				<a href="https://github.com/sgriffen/hackISU2019" target="_blank" title="Hot Car Ally repository">Source code</a>
-				<br>
 				<a href="https://devpost.com/software/hot-car-ally" target="_blank" title="Hot Car Ally DevPost">DevPost</a>
 			</p>
 			<span class="section-breaker"></span>
 		</div>
 		
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div id="spacer">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
 		<script type="text/javascript" src="/refs/js/content.js"></script>
 	</body>
 </html>

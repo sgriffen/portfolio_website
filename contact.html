@@ -7,9 +7,34 @@
 	</head>
 	<body>
 		<div id="sub_3-0">
-			<div class="section-header">Another work in progress...</div>
-			<br>
+			<form action="">
+				<label class="section_header" for="from_name">Your name</label>
+				<br>
+				<input type="text" id="from_name" name="from_name" required>
+				
+				<br>
+				<label class="section_header" for="from_email">Your email</label>
+				<br>
+				<div id="from_email-container">
+					<label class="imput_error" for="from_email" id="from_email-error" style="display:none;">Enter format: <i>recipient@domain.com</i></label>
+					<input type="text" id="from_email" name="from_email" onchange="validate_email(this);" required>
+				</div>
+				
+				<br>
+				<label class="section_header" for="from_message">Message</label>
+				<br>
+				<input type="textbox" id="from_message" name="from_message" required>
+			</form>
 		</div>
+		
+		<br>
+		<b>^^^NON FUNCTIONAL. FEATURE COMMING SOON^^^</b>
+		
+		<br>
+		<div class="section-header">
+			<a href="mailto:hire.seangriffen@gmail.com">Contact by Email</a>
+		</div>
+		<span class="section-breaker"></span>
 		
 		<script type="text/javascript" src="./refs/js/content.js"></script>
 	</body>

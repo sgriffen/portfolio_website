@@ -6,6 +6,23 @@ scroll_iframe = function(scrollToId) {
 
 function smoothScroll(y, x) { window.scroll({ top: y, left: x, behavior: 'smooth' }); }
 
+function toggle_display(toToggle) {
+  
+	if (toToggle.style.display === "none") { toToggle.style.display = "inline-block"; }
+	else { toToggle.style.display = "none"; }
+}
+
+function validate_email(email) {
+	
+	let val = email.value;
+	
+	if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(val))) {
+		
+		email.style = "border-bottom: 3px solid red;";
+		findChildById(email.parentNode, email.id + "-error").style.display = "inline-block";
+	}
+}
+
 function childExists(element, id) {
 	
 	let i;
