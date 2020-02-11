@@ -10,7 +10,11 @@ function update_navBar(parent, clicked, hasDrop) {
 		toUpdate.classList.remove("nav-active");
 		
 		let dropContainerId = id + "-drop";
-		if (childExists(toUpdate, dropContainerId)) { findChildById(toUpdate, dropContainerId).style.display = "none"; }
+		if (childExists(toUpdate, dropContainerId)) {
+			
+			let child = findChildById(toUpdate, dropContainerId);
+			child.style.display = "none";
+		}
 		
 		i++;
 		id = idPrefix + i;
@@ -52,7 +56,10 @@ function collapse_all(parent, idFrom) {
 	while(childExists(parent, id)) {
 		
 		let toCollapse = findChildById(parent, id);
-		if (toCollapse.id !== idFrom) { toCollapse.style.display = "none";}
+		if (toCollapse.id !== idFrom) {
+			
+			toCollapse.style.display = "none";
+		}
 		
 		i++;
 		id = idPrefix + i;
@@ -61,7 +68,10 @@ function collapse_all(parent, idFrom) {
 
 function toggle_display(toToggle) {
   
-	if (toToggle.style.display === "none") { toToggle.style.display = "inline-block"; }
+	if (toToggle.style.display === "none") {
+		
+		toToggle.style.display = "inline-block";
+	}
 }
 
 function scroll_to(scrollToId, subId) {
@@ -91,3 +101,8 @@ function findChildById(element, id) {
 	}
 	return null;
 }
+
+window.addEventListener("load", () => {
+	document.querySelector(".display_before").classList.add("loaded_l");
+	document.querySelector(".display_after").classList.add("loaded_l");
+});

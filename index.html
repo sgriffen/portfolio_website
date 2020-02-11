@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
 		<link rel="stylesheet" type="text/css" href="refs/css/default.css">
+		<link rel="stylesheet" type="text/css" href="refs/css/animation.css">
 		<link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="/refs/css/box_sizing-xs.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)" href="/refs/css/box_sizing-s.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="/refs/css/box_sizing-m.css">
@@ -15,92 +16,103 @@
 	</head>
 	<body id="body">
 		
-		<div class="row" id="container_title">
-			<div class="col-12 col-xl-12 col-xxl-12">
-				<h1><b>Sean Griffen in Summary (Working Title)</b></h1>
-				<br>
-				<h2><i>Junior, Computer Engineering, Iowa State University</i></h2>
-			</div>
-		</div>
-		<br>
-		<div class="row" id="container_main">
-			<div class="col-3 col-xl-2 col-xxl-1 sidebar">
-				<img class="profile_pic" id="profile" src="./refs/img/me.jpg" alt="Image of me">
-				<br>
-				<div class="nav">
-					<ul>
-						<li class="nav-active" id="display_0" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_0'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
-							About
-							<ul class="nav-drop" id="display_0-drop">
-								<!-- Scroll to Mission Statement -->
-								<li class="nav-drop-active" id="display_0-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-0');">Mission Statement</li>
-								<!-- Scroll to Awards -->
-								<li id="display_0-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-1');">Awards</li>
-								<!-- Scroll to Job Experience -->
-								<li id="display_0-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-2');">Job Experience</li>
-								<!-- Scroll to Education -->
-								<li id="display_0-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-3');">Education</li>
-								<!-- Scroll to Activities -->
-								<li id="display_0-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-4');">Activities</li>
-							</ul>
-						</li>
-						<li id="display_1" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_1'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
-							Projects
-							<ul class="nav-drop" id="display_1-drop" style="display:none;">
-								<!-- Scroll to DND Java -->
-								<li class="nav-drop-active" id="display_1-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-0');">DND Java</li>
-								<!-- Scroll to FPGA Traffic Light -->
-								<li id="display_1-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-1');">FPGA Traffic Light</li>
-								<!-- Scroll to Roomba<span>&#174;</span> Rover -->
-								<li id="display_1-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-2');">Roomba<span>&#174;</span> Rover</li>
-								<!-- Scroll to 007: Knockout -->
-								<li id="display_1-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-3');">007: Knockout</li>
-								<!-- Scroll to  -->
-								<li id="display_1-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-4');">Hot Car Ally</li>
-							</ul>
-						</li>
-						<li id="display_2" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_2'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_2'));">
-							Documents
-							<ul class="nav-drop" id="display_2-drop" style="display:none;">
-								<!-- Scroll to Resume -->
-								<li class="nav-drop-active" id="display_2-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2_page', 'sub_2-0');">Resume</li>
-								<!-- Scroll to Ethics Essay -->
-								<li id="display_2-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2_page', 'sub_2-1');">Ethics Essay</li>
-							</ul>
-						</li>
-						<li id="display_3" onclick="update_navBar(this.parentNode, this, false); collapse_all(document.getElementById('container_content'), 'sub_3'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
-						Contact
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div id="container_content" class="col-9 col-xl-10 col-xxl-11">
-				<div class="content" id="sub_0">
-					<iframe class="content_page" id="sub_0_page" src="about.html"></iframe>
-				</div>
-				<div class="content" id="sub_1" style="display:none">
-					<iframe class="content_page" id="sub_1_page" src="projects.html"></iframe>
-				</div>
-				<div class="content" id="sub_2" style="display:none">
-					<iframe class="content_page" id="sub_2_page" src="documents.html"></iframe>
-				</div>
-				<div class="content" id="sub_3" style="display:none">
-					<iframe class="content_page" id="sub_3_page" src="contact.html"></iframe>
-				</div>
-			</div>
+		<div class="display_before">
+			<p class="text_blink_cursor">
+				Loading Elements
+			</p>
 		</div>
 		
-		<div class="row" id="container_footer">
-			<div class="col-12 col-xl-12 col-xxl-12">
-				<div class="footer bottom">
-					<a class="inline button linkedin" id="open_linkedin" title="Linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
-					<a class="inline button github" id="open_twitter" title="Github profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
-					<a class="inline button twitter" id="open_twitter" title="Twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
+		<div class="display_after">
+			<div class="row" id="container_title">
+				<div class="col-12 col-xl-12 col-xxl-12">
+					<h1><b>Sean Griffen in Summary (Working Title)</b></h1>
 					<br>
+					<h2><i>Junior, Computer Engineering, Iowa State University</i></h2>
+				</div>
+			</div>
+			<br>
+			<div class="row" id="container_main">
+				<div class="col-3 col-xl-2 col-xxl-1 sidebar">
+					<img class="profile_pic" id="profile" src="./refs/img/me.jpg" alt="Image of me">
+					<br>
+					<div class="nav">
+						<ul>
+							<li class="nav-active" id="display_0" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_0'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
+								About
+								<ul class="nav-drop" id="display_0-drop">
+									<!-- Scroll to Mission Statement -->
+									<li class="nav-drop-active" id="display_0-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-0');">Mission Statement</li>
+									<!-- Scroll to Awards -->
+									<li id="display_0-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-1');">Awards</li>
+									<!-- Scroll to Job Experience -->
+									<li id="display_0-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-2');">Job Experience</li>
+									<!-- Scroll to Education -->
+									<li id="display_0-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-3');">Education</li>
+									<!-- Scroll to Activities -->
+									<li id="display_0-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0_page', 'sub_0-4');">Activities</li>
+								</ul>
+							</li>
+							<li id="display_1" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_1'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
+								Projects
+								<ul class="nav-drop" id="display_1-drop" style="display:none;">
+									<!-- Scroll to DND Java -->
+									<li class="nav-drop-active" id="display_1-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-0');">DND Java</li>
+									<!-- Scroll to FPGA Traffic Light -->
+									<li id="display_1-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-1');">FPGA Traffic Light</li>
+									<!-- Scroll to Roomba<span>&#174;</span> Rover -->
+									<li id="display_1-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-2');">Roomba<span>&#174;</span> Rover</li>
+									<!-- Scroll to 007: Knockout -->
+									<li id="display_1-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-3');">007: Knockout</li>
+									<!-- Scroll to  -->
+									<li id="display_1-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1_page', 'sub_1-4');">Hot Car Ally</li>
+								</ul>
+							</li>
+							<li id="display_2" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_2'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_2'));">
+								Documents
+								<ul class="nav-drop" id="display_2-drop" style="display:none;">
+									<!-- Scroll to Resume -->
+									<li class="nav-drop-active" id="display_2-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2_page', 'sub_2-0');">Resume</li>
+									<!-- Scroll to Ethics Essay -->
+									<li id="display_2-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2_page', 'sub_2-1');">Ethics Essay</li>
+								</ul>
+							</li>
+							<li id="display_3" onclick="update_navBar(this.parentNode, this, false); collapse_all(document.getElementById('container_content'), 'sub_3'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
+							Contact
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="container_content" class="col-9 col-xl-10 col-xxl-11">
+					<div class="content" id="sub_0">
+						<iframe class="content_page" id="sub_0_page" src="about.html"></iframe>
+					</div>
+					<div class="content" id="sub_1" style="display:none;">
+						<iframe class="content_page" id="sub_1_page" src="projects.html"></iframe>
+					</div>
+					<div class="content" id="sub_2" style="display:none;">
+						<iframe class="content_page" id="sub_2_page" src="documents.html"></iframe>
+					</div>
+					<div class="content" id="sub_3" style="display:none;">
+						<iframe class="content_page" id="sub_3_page" src="contact.html"></iframe>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row" id="container_footer">
+				<div class="col-12 col-xl-12 col-xxl-12">
+					<div class="footer bottom">
+						<a class="inline button linkedin" id="open_linkedin" title="Linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
+						<a class="inline button github" id="open_twitter" title="Github profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
+						<a class="inline button twitter" id="open_twitter" title="Twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
+						<br>
+					</div>
 				</div>
 			</div>
 		</div>
 		
+		<script>
+			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
+		</script>
 		<script type="text/javascript" src="/refs/js/general.js"></script>
 	</body>
 </html>

@@ -27,7 +27,7 @@ h1 {
 	/* Text color is Black */
 	color: #000;
 	font-size: 35px;
-	transition: 0.2s;
+	transition: all 0.2s ease-in;
 }
 h2 {
 	display: inline-block;
@@ -39,7 +39,7 @@ h2 {
 	/* Text color is Black */
 	color: #000;
 	font-size: 27px;
-	transition: 0.2s;
+	transition: all 0.2s ease-in;
 }
 
 .sidebar {
@@ -61,7 +61,7 @@ h2 {
 	/* Text color is Black */
 	color: #000;
 	font-size: 25px;
-	transition: 0.2s;
+	transition: all 0.2s ease-in;
 }
 .nav-drop li {
 	padding: 2% 2% 2% 15%;
@@ -91,7 +91,7 @@ h2 {
 	display: inline-block;
 	text-align: center;
 	padding: 16px;
-	transition: all 0.3s ease;
+	transition: all 0.2s ease-in;
 	font-size: 20px;
 	
 	width: 75px;
