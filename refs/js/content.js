@@ -12,14 +12,22 @@ function toggle_display(toToggle) {
 	else { toToggle.style.display = "none"; }
 }
 
-function validate_email(email) {
+function validate_input(input) {
 	
-	let val = email.value;
+	let val = input.value;
+	let label = findChildById(input.parentNode, input.id + "-label");
 	
-	if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(val))) {
+	let regExp = new RegExp(input.pattern);
+	if (!(regExp.test(val))) {
 		
-		email.style = "border-bottom: 3px solid red;";
-		findChildById(email.parentNode, email.id + "-error").style.display = "inline-block";
+		input.style = "border-color: red;";
+		label.innerHTML = "Email - user@domain.com";
+		label.style.color = "red";
+	} else {
+		
+		input.style = "border-color: ";
+		label.innerHTML = "Your email";
+		label.style.color = "inherit";
 	}
 }
 
