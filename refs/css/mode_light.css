@@ -1,0 +1,13 @@
+body {
+	background-color: #F1F1F1;
+	color: black;
+}
+a.mode {
+	background-color: #3C3C3C;
+	color: LightGray;
+}
+a.mode:hover {
+	/* Background color is Teal */
+	background-color: #009688;
+	cursor: pointer;
+}

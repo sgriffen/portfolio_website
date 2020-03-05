@@ -9,13 +9,25 @@ html {
 	overflow: scroll;
 }
 body {
-	background-color: #F1F1F1;
+	margin: 0 auto;
+	height: 100%;
+	
+	transition: all 0.2s ease-out;
 }
 iframe {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
+
+a {
+	color: #009688;
+	transition: all 0.2s ease-out;
+}
+a:hover {
+	color: #4CAF50;
+}
+
 
 .section-header {
 	display: inline-block;
@@ -26,14 +38,12 @@ iframe {
 	/* Bottom border color is Green */
 	border-bottom: 4px solid #4CAF50;
 	/* Text color is Black */
-	color: #000;
 	font-size: 18px;
-	transition: all 0.2s ease-in;
+	transition: all 0.2s ease-out;
 }
 .section-content {
 	padding: 0% 2% 0% 2%;
 	font-size: 16px;
-	color: #000;
 }
 .section-breaker {
 	display: block;
@@ -56,7 +66,7 @@ iframe {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 14px;
-	transition: all 0.2s ease-in;
+	transition: all 0.2s ease-out;
 }
 .action:hover {
 	/* Button color is Teal */
@@ -77,11 +87,11 @@ iframe {
 	margin-bottom: 16px;
 	font-size: 16px;
 	
-	cursor: pointer;
+	cursor: text;
 }
 .input:hover {
 	border: 2px solid #009688;
-	cursor: pointer;
+	cursor: text;
 }
 .input:focus {
 	border: 2px solid #87CEEB;
@@ -115,7 +125,7 @@ iframe {
 		resize: vertical;
 		font-size: 16px;
 		
-		transition: 0.1s ease-out;
+		transition: 0.2s ease-out;
 	}
 	textarea {
 		width: 100%;
@@ -139,6 +149,9 @@ iframe {
 		margin-bottom: 16px;
 		resize: vertical;
 		font-size: 16px;
+		
+		background: inherit;
+		color: inherit;
 		
 		transition: 0.1s ease-out;
 	}

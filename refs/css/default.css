@@ -16,11 +16,12 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background-color: #F1F1F1;
 	margin: 0 auto;
 	height: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	
+	transition: all 0.2s ease-out;
 }
 
 .content {
@@ -43,6 +44,7 @@ body {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	transition: all 0.2s ease-out;
 }
 .nav li:hover {
 	
@@ -78,4 +80,8 @@ body {
 .github {
 	background: #211F1F;
 	color: #FFF;
+}
+
+a.mode {
+	float: right;
 }

@@ -7,6 +7,8 @@
 		
 		<link rel="stylesheet" type="text/css" href="refs/css/default.css">
 		<link rel="stylesheet" type="text/css" href="refs/css/animation.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_light.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_dark.css">
 		<link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="/refs/css/box_sizing-xs.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)" href="/refs/css/box_sizing-s.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="/refs/css/box_sizing-m.css">
@@ -17,6 +19,9 @@
 	<body id="body">
 		
 		<div class="display_before">
+			<div class="display_before_border">
+				
+			</div>
 			<p class="text_blink_cursor">
 				Loading Elements
 			</p>
@@ -108,14 +113,18 @@
 					<a class="inline button linkedin" id="open_linkedin" title="Linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
 					<a class="inline button github" id="open_twitter" title="Github profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
 					<a class="inline button twitter" id="open_twitter" title="Twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
-					<br>
+					<a class="inline button mode" id="switch_mode" title="Toggle dark/light mode" onclick="mode_switch(this, false);" style="width:150px;">Light Mode</a>
 				</div>
 			</div>
 		</div>
 		
-		<script>
-			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
-		</script>
 		<script type="text/javascript" src="/refs/js/general.js"></script>
+		<script>
+			//Show loading animations
+			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
+			//Set color scheme
+			let mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+			if (mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", true)); }
+		</script>
 	</body>
 </html>

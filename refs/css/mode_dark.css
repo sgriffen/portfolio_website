@@ -1,0 +1,13 @@
+/* Dark mode body settings */
+body.mode-dark {
+	background-color: #3C3C3C;
+	color: LightGray;
+}
+a.mode.mode-dark {
+	background-color: #F1F1F1;
+	color: black;
+}
+a.mode.mode-dark:hover {
+	background-color: #009688;
+	cursor: pointer;
+}

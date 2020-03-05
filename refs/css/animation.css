@@ -6,8 +6,15 @@
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
 	
-	border: 12px solid #009688;
+	border-radius: 50%
 	transition: 0.7s ease-in-out;
+}
+.display_before_border {
+	
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	position: absolute;
+	animation: spin 5s linear infinite;
 }
 .text_blink_cursor {
 	float: left;
@@ -42,4 +49,37 @@
 
 .loaded_l.display_after {
 	opacity: 1;
+}
+
+@keyframes spin {
+	0% {
+		border-top: 12px solid #009688;
+		border-bottom: 12px solid #87CEEB;
+		border-left: 12px solid #616161;
+		border-right: 12px solid #4CAF50;
+	}
+	25% { 
+		border-top: 12px solid #616161;
+		border-bottom: 12px solid #4CAF50;
+		border-left: 12px solid #87CEEB;
+		border-right: 12px solid #009688; 
+	}
+	50% { 
+		border-top: 12px solid #87CEEB;
+		border-bottom: 12px solid #87CEEB;
+		border-left: 12px solid #4CAF50;
+		border-right: 12px solid #616161; 
+	}
+	75% { 
+		border-top: 12px solid #4CAF50;
+		border-bottom: 12px solid #616161;
+		border-left: 12px solid #009688;
+		border-right: 12px solid #87CEEB; 
+	}
+	100% {
+		border-top: 12px solid #009688;
+		border-bottom: 12px solid #87CEEB;
+		border-left: 12px solid #616161;
+		border-right: 12px solid #4CAF50;  
+	}
 }

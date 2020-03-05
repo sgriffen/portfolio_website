@@ -4,6 +4,8 @@
 	<head>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/refs/css/content.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_light.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_dark.css">
 	</head>
 	<body>
 		<div id="sub_3-0">
@@ -41,5 +43,10 @@
 		<span class="section-breaker"></span>
 		
 		<script type="text/javascript" src="./refs/js/content.js"></script>
+		<script>
+			//Set color scheme
+			let mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+			if (mode == "mode-dark") { mode_switch(); }
+		</script>
 	</body>
 </html>

@@ -4,7 +4,10 @@
 	<head>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/refs/css/content.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_light.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_dark.css">
 	</head>
+	<script type="text/javascript" src="/refs/js/content.js"></script>
 	<body>
 		<!-- Mission Statement -->
 		<div id="sub_0-0">
@@ -13,7 +16,7 @@
 			</div>
 			<br>
 			<p class="section-content">
-				To learn and grow with the projects I make
+				To learn and grow with each opportunity I create
 			</p>
 			<span class="section-breaker"></span>
 		</div>
@@ -28,7 +31,7 @@
 					<li class="subheader">
 						2019 - Present: 
 						<p>
-							<u><a id="fmtcWebsite" title="FMTC Website" href="https://www.myfmtc.com" target="_blank">Farmers Mutual Telephone Company</a> - General developer</u>
+							<u><a id="fmtcWebsite" title="FMTC Website" href="https://www.myfmtc.com" target="_blank" class="mode-dark">Farmers Mutual Telephone Company</a> - General developer</u>
 							<p>
 								I am the only developer at FMTC working on projects ranging from making web interfaces for the sales team to fill out customer applications and gather sales quotes, to app development, to database management.
 								<br>
@@ -160,6 +163,12 @@
 		<div id="spacer">
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		</div>
+		
 		<script type="text/javascript" src="/refs/js/content.js"></script>
+		<script>
+			//Set color scheme
+			let mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+			if (mode == "mode-dark") { mode_switch(); }
+		</script>
 	</body>
 </html>

@@ -1,8 +1,10 @@
-scroll_iframe = function(scrollToId) {
+"use strict";
+var scroll_iframe = function(scrollToId) {
 	
 	let scrollTo = document.getElementById(scrollToId);
 	scrollTo.scrollIntoView();
 }
+ var mode_switch = function() { document.body.classList.toggle("mode-dark"); }
 
 function smoothScroll(y, x) { window.scroll({ top: y, left: x, behavior: 'smooth' }); }
 

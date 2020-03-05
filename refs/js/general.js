@@ -1,3 +1,4 @@
+"use strict";
 function update_navBar(parent, clicked, hasDrop) {
 	
 	let idPrefix = "display_";
@@ -100,6 +101,34 @@ function findChildById(element, id) {
 		if (childNodes[i].id === id) { return childNodes[i]; }
 	}
 	return null;
+}
+
+function mode_switch(node, load) {
+	
+	document.body.classList.toggle("mode-dark");
+	node.classList.toggle("mode-dark");
+	if (document.body.classList.contains("mode-dark")) {
+		
+		node.innerHTML = "Light Mode";
+		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
+	} else {
+		
+		node.innerHTML = "Dark Mode";
+		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
+	}
+	
+	//Toggle iframe color schemes
+	if (!load) {
+		let i = 0;
+		let iframe = document.getElementById("sub_" + i + "_page");
+		while (iframe != null) {
+			
+			iframe.contentWindow.mode_switch();
+			
+			i++;
+			iframe = document.getElementById("sub_" + i + "_page");
+		}
+	}
 }
 
 window.addEventListener("load", () => {
