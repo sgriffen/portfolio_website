@@ -1,4 +1,3 @@
-"use strict";
 function update_navBar(parent, clicked, hasDrop) {
 	
 	let idPrefix = "display_";
@@ -48,7 +47,7 @@ function update_dropBar(parent, clicked) {
 
 function collapse_all(parent, idFrom) {
  
-	//window.scroll({top: 0, left: 0, behavior: 'smooth'});
+	//smoothScroll(0, 0);
 	
 	let idPrefix = "sub_";
 	let i = 0;
@@ -69,16 +68,47 @@ function collapse_all(parent, idFrom) {
 
 function toggle_display(toToggle) {
   
-	if (toToggle.style.display === "none") {
+	if (toToggle.style.display == "none") {
 		
 		toToggle.style.display = "inline-block";
+		
+		let navId = "display_" + toToggle.id.split("_")[1];
+		let nav = document.getElementById(navId);
+		let navDropIdPrefix = navId + "-drop_content_";
+		
+		let scrollIdPrefix = toToggle.id + "-";
+		
+		let i = 0;
+		let dropId = navDropIdPrefix + i;
+		let scrollId = scrollIdPrefix + i;
+		while(childExists(toToggle, scrollId)) {
+			
+			let dropActive = document.getElementById(dropId);
+			if (dropActive != null) {
+				let scrollTo = findChildById(toToggle, scrollId);
+				if (dropActive.classList.contains("nav-drop-active")) { scrollTo.scrollIntoView({behavior: 'smooth'}); }
+			} else {
+				document.getElementById("from_name").scrollIntoView({behavior: 'smooth'});
+				break;
+			}
+			
+			i++;
+			dropId = navDropIdPrefix + i;
+			scrollId = scrollIdPrefix + i;
+		}
 	}
 }
 
-function scroll_to(scrollToId, subId) {
+function toggle_display_min(toToggle) {
 	
-	document.getElementById(scrollToId).contentWindow.scroll_iframe(subId);
-	document.getElementById(scrollToId).scrollIntoView();
+	if (toToggle.style.display == "none") { toToggle.style.display = "inline-block"; }
+	else { toToggle.style.display = "none"; }
+}
+
+function scroll_to(scrollToId) {
+	
+	let content = document.getElementById(scrollToId);
+	content.scrollIntoView({behavior: 'smooth'});
 }
 function smoothScroll(y, x) { window.scroll({ top: y, left: x, behavior: 'smooth' }); }
 
@@ -103,7 +133,7 @@ function findChildById(element, id) {
 	return null;
 }
 
-function mode_switch(node, load) {
+function mode_switch(node) {
 	
 	document.body.classList.toggle("mode-dark");
 	node.classList.toggle("mode-dark");
@@ -116,22 +146,11 @@ function mode_switch(node, load) {
 		node.innerHTML = "Dark Mode";
 		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
 	}
-	
-	//Toggle iframe color schemes
-	if (!load) {
-		let i = 0;
-		let iframe = document.getElementById("sub_" + i + "_page");
-		while (iframe != null) {
-			
-			iframe.contentWindow.mode_switch();
-			
-			i++;
-			iframe = document.getElementById("sub_" + i + "_page");
-		}
-	}
 }
 
 window.addEventListener("load", () => {
+	
 	document.querySelector(".display_before").classList.add("loaded_l");
 	document.querySelector(".display_after").classList.add("loaded_l");
+	smoothScroll(0, 0);
 });

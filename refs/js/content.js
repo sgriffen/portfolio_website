@@ -1,18 +1,3 @@
-"use strict";
-var scroll_iframe = function(scrollToId) {
-	
-	let scrollTo = document.getElementById(scrollToId);
-	scrollTo.scrollIntoView();
-}
- var mode_switch = function() { document.body.classList.toggle("mode-dark"); }
-
-function smoothScroll(y, x) { window.scroll({ top: y, left: x, behavior: 'smooth' }); }
-
-function toggle_display(toToggle) {
-  
-	if (toToggle.style.display === "none") { toToggle.style.display = "inline-block"; }
-	else { toToggle.style.display = "none"; }
-}
 
 function validate_input(input) {
 	

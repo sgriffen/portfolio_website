@@ -5,16 +5,16 @@
 
 html {
 	font-family: Arial, Helvetica, sans-serif;
-	scroll-behavior: smooth;
-	overflow: scroll;
+	
+	transition: all 0.2s ease-out;
 }
 body {
 	margin: 0 auto;
 	height: 100%;
 	
-	transition: all 0.2s ease-out;
+	transition: inherit;
 }
-iframe {
+iframe, embed, object {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -22,12 +22,11 @@ iframe {
 
 a {
 	color: #009688;
-	transition: all 0.2s ease-out;
+	transition: inherit;
 }
 a:hover {
 	color: #4CAF50;
 }
-
 
 .section-header {
 	display: inline-block;
@@ -39,7 +38,7 @@ a:hover {
 	border-bottom: 4px solid #4CAF50;
 	/* Text color is Black */
 	font-size: 18px;
-	transition: all 0.2s ease-out;
+	transition: inherit;
 }
 .section-content {
 	padding: 0% 2% 0% 2%;
@@ -66,7 +65,7 @@ a:hover {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 14px;
-	transition: all 0.2s ease-out;
+	transition: inherit;
 }
 .action:hover {
 	/* Button color is Teal */
@@ -79,14 +78,10 @@ a:hover {
 	font-size: 16px;
 }
 .input-label {
-	position: absolute;
 	left: 0;
 	line-height: 1;
-    padding: 12px;
-	margin-top: 16px;
-	margin-bottom: 16px;
 	font-size: 16px;
-	
+	display: block;
 	cursor: text;
 }
 .input:hover {
@@ -97,10 +92,8 @@ a:hover {
 	border: 2px solid #87CEEB;
 }
 .input:focus + .input-label, .input:not(:placeholder-shown) + .input-label {
-	transition: transform .25s, opacity .25s ease-in-out;
-	transform: translate(1%, -75%) scale(.8);
-	transform-origin: 0 0;
 	opacity: .5;
+	border-bottom: 2px solid #4CAF50;
 }
 
 .input::placeholder {
@@ -112,7 +105,7 @@ a:hover {
 		width: 100%;
 		height: 75vh;
 	}
-	img {
+	.embed.img {
 		width: 100%;
 		height: auto;
 	}
@@ -125,7 +118,10 @@ a:hover {
 		resize: vertical;
 		font-size: 16px;
 		
-		transition: 0.2s ease-out;
+		background-color: inherit;
+		color: inherit;
+		
+		transition: inherit;
 	}
 	textarea {
 		width: 100%;
@@ -137,7 +133,7 @@ a:hover {
 		width: 600px;
 		height: 75vh;
 	}
-	img {
+	.embed.img {
 		width: 600px;
 		height: auto;
 	}
@@ -150,10 +146,10 @@ a:hover {
 		resize: vertical;
 		font-size: 16px;
 		
-		background: inherit;
+		background-color: inherit;
 		color: inherit;
 		
-		transition: 0.1s ease-out;
+		transition: inherit;
 	}
 	textarea {
 		width: 100%;
@@ -165,7 +161,7 @@ a:hover {
 		width: 576px;
 		height: 75vh;
 	}
-	img {
+	.embed.img {
 		width: 576px;
 		height: auto;
 	}
@@ -178,7 +174,10 @@ a:hover {
 		resize: vertical;
 		font-size: 16px;
 		
-		transition: 0.1s ease-out;
+		background-color: inherit;
+		color: inherit;
+		
+		transition: inherit;
 	}
 	textarea {
 		width: 75%;
@@ -190,7 +189,7 @@ a:hover {
 		width: 744px;
 		height: 75vh;
 	}
-	img {
+	.embed.img {
 		width: 744px;
 		height: auto;
 	}
@@ -203,7 +202,10 @@ a:hover {
 		resize: vertical;
 		font-size: 16px;
 		
-		transition: 0.1s ease-out;
+		background-color: inherit;
+		color: inherit;
+		
+		transition: inherit;
 	}
 	textarea {
 		width: 75%;
@@ -215,7 +217,7 @@ a:hover {
 		width: 900px;
 		height: 75vh;
 	}
-	img {
+	.embed.img {
 		width: 900px;
 		height: auto;
 	}
@@ -228,7 +230,10 @@ a:hover {
 		resize: vertical;
 		font-size: 16px;
 		
-		transition: 0.1s ease-out;
+		background-color: inherit;
+		color: inherit;
+		
+		transition: inherit;
 	}
 	textarea {
 		width: 75%;
@@ -240,7 +245,7 @@ a:hover {
 		width: 900px;
 		height: 75vh;
 	}
-	img {
+	.embed.img {
 		width: 900px;
 		height: auto;
 	}
@@ -253,7 +258,10 @@ a:hover {
 		resize: vertical;
 		font-size: 16px;
 		
-		transition: 0.1s ease-out;
+		background-color: inherit;
+		color: inherit;
+		
+		transition: inherit;
 	}
 	textarea {
 		width: 75%;

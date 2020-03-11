@@ -1,20 +1,22 @@
 @charset "ISO-8859-1";
-
 .display_before {
 	
 	position: fixed; /* Sit on top of the page content */
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
 	
-	border-radius: 50%
-	transition: 0.7s ease-in-out;
+	border-radius: 50%;
+	transition: inherit;
 }
 .display_before_border {
 	
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
 	position: absolute;
-	animation: spin 5s linear infinite;
+	animation-name: spin;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 .text_blink_cursor {
 	float: left;
@@ -33,11 +35,11 @@
 	opacity: 0;
 	letter-spacing: .15em;
 	
-	transition: 0.5s ease-in-out;
+	transition: inherit;
 }
 .display_after {
 	opacity: 0;
-	transition: 0.5s ease-in-out;
+	transition:inherit;
 }
 
 .pre_loaded_l.text_blink_cursor { opacity: 1; }
