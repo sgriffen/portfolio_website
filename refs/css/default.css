@@ -24,51 +24,11 @@ body {
 	transition: inherit;
 }
 
-.content {
-	width: 100%;
-	height: 100%;
-}
-.content iframe {
-	display: block;
-	border: none;
-	width: inherit;
-	height: inherit;
-}
-
 .profile_pic {
 	max-width: 100%;
 	height: auto;
 }
 
-.nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	transition: inherit;
-}
-.nav li:hover {
-	
-	/* Right border color is Teal */
-	border-right: 12px solid #009688;
-	/* Left border color is Teal */
-	border-left: 6px solid #009688;
-	cursor: pointer;
-}
-.nav-active {
-	/* Left border color is light-blue */
-	border-left: 6px solid #87CEEB;
-}
-.nav-drop-active {
-	/* Left border color is light-blue */
-	border-left: 6px solid #87CEEB;
-	opacity: 1;
-}
-
-.footer a:hover {
-	/* Background color is Teal */
-	background-color: #009688;
-	cursor: pointer;
-}
 .linkedin {
 	background: #007bb5;
 	color: #FFF;

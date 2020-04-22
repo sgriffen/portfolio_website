@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<head>
 		<title>Sean Griffen's Portfolio</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,502 +19,515 @@
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 2500px)" href="/refs/css/box_sizing-xxl.css">
 	</head>
 	<body id="body">
+		
+		<input type="text"id="scroll_toChange" style="display:none" value="" disabled="true">
+		<input type="text"id="scroll_associated" style="display:none" value="" disabled="true">
+		
+		<div class="display_before">
+			<div class="display_before_border">
 
-	<div class="display_before">
-		<div class="display_before_border">
-
-		</div>
-		<p class="text_blink_cursor">
-			Loading Elements
-		</p>
-	</div>
-
-	<div class="display_after">
-		<div class="row" id="container_title">
-			<div class="col-12 col-xl-12 col-xxl-12">
-				<h1><b>Sean Griffen in Summary</b></h1>
-				<h2><i>Junior, Computer Engineering, Iowa State University</i></h2>
 			</div>
+			<p class="text_blink_cursor">
+				Loading Elements
+			</p>
 		</div>
-		<br>
-		<div class="row" id="container_main">
-			<div class="col-3 col-xl-2 col-xxl-1 sidebar">
-				<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Image of me">
-				<br>
-				<div class="nav">
-					<ul>
-						<li class="nav-active" id="display_0" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_0'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
-							About
-							<ul class="nav-drop" id="display_0-drop">
-								<!-- Scroll to Mission Statement -->
-								<li class="nav-drop-active" id="display_0-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-0');">Mission Statement</li>
-								<!-- Scroll to Job Experience -->
-								<li id="display_0-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-1');">Job Experience</li>
-								<!-- Scroll to Awards -->
-								<li id="display_0-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-2');">Awards</li>
-								<!-- Scroll to Education -->
-								<li id="display_0-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-3');">Education</li>
-								<!-- Scroll to Activities -->
-								<li id="display_0-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-4');">Activities</li>
-								<!-- Scroll to Activities -->
-								<li id="display_0-drop_content_5" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-5');">Website</li>
-							</ul>
-						</li>
-						<li id="display_1" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_1'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
-							Projects
-							<ul class="nav-drop" id="display_1-drop" style="display:none;">
-								<!-- Scroll to Hot Car Ally -->
-								<li class="nav-drop-active" id="display_1-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-0');">Hot Car Ally</li>
-								<!-- Scroll to 007: Knockout -->
-								<li id="display_1-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-1');">007: Knockout</li>
-								<!-- Scroll to Roomba<span>&#174;</span> Rover -->
-								<li id="display_1-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-2');">Roomba<span>&#174;</span> Rover</li>
-								<!-- Scroll to FPGA Traffic Light -->
-								<li id="display_1-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-3');">FPGA Traffic Light</li>
-								<!-- Scroll to DND Java -->
-								<li id="display_1-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-4');">DND Java</li>
-							</ul>
-						</li>
-						<li id="display_2" onclick="update_navBar(this.parentNode, this, true); collapse_all(document.getElementById('container_content'), 'sub_2'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_2'));">
-							Documents
-							<ul class="nav-drop" id="display_2-drop" style="display:none;">
-								<!-- Scroll to Resume -->
-								<li class="nav-drop-active" id="display_2-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-0');">Resume</li>
-								<!-- Scroll to Ethics Essay -->
-								<li id="display_2-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-1');">Ethics Essay</li>
-								<!-- Scroll to Transcript -->
-								<li id="display_2-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-2');">Transcript</li>
-								<!-- Scroll to Class Schedule -->
-								<li id="display_2-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-3');">Class Schedule</li>
-							</ul>
-						</li>
-						<li id="display_3" onclick="update_navBar(this.parentNode, this, false); collapse_all(document.getElementById('container_content'), 'sub_3'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
-							Contact
-						</li>
-					</ul>
+
+		<div class="display_after">
+			<div class="row sticky" id="container_title">
+				<div class="col-12 col-xl-12 col-xxl-12">
+					<h1><b>Sean Griffen in Summary</b></h1>
+					<h2><i>Junior, Computer Engineering, Iowa State University</i></h2>
 				</div>
 			</div>
-			<div id="container_content" class="col-9 col-xl-10 col-xxl-11">
-				<div class="content" id="sub_0">
-					<!-- Mission Statement -->
-					<div id="sub_0-0">
-						<div class="section-header">
-							Mission Statement
+			<br>
+			<div class="row" id="container_main">
+				<div class="col-3 col-xl-2 col-xxl-1 sidebar sticky">
+					<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Image of me">
+					<br>
+					<div class="nav">
+						<ul>
+							<li class="nav-active" id="display_0" onclick="update_navBar(this.parentNode, this, true, 'sub_0'); collapse_all(document.getElementById('container_content'), 'sub_0'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
+								About
+								<ul class="nav-drop" id="display_0-drop">
+									<!-- Scroll to Mission Statement -->
+									<li class="nav-drop-active" id="display_0-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-0');">Mission Statement</li>
+									<!-- Scroll to Job Experience -->
+									<li id="display_0-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-1');">Job Experience</li>
+									<!-- Scroll to Awards -->
+									<li id="display_0-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-2');">Awards</li>
+									<!-- Scroll to Education -->
+									<li id="display_0-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-3');">Education</li>
+									<!-- Scroll to Activities -->
+									<li id="display_0-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-4');">Activities</li>
+									<!-- Scroll to Activities -->
+									<li id="display_0-drop_content_5" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-5');">Website</li>
+								</ul>
+							</li>
+							<li id="display_1" onclick="update_navBar(this.parentNode, this, true, 'sub_1'); collapse_all(document.getElementById('container_content'), 'sub_1'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
+								Projects
+								<ul class="nav-drop" id="display_1-drop" style="display:none;">
+									<!-- Scroll to Hot Car Ally -->
+									<li class="nav-drop-active" id="display_1-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-0');">Hot Car Ally</li>
+									<!-- Scroll to 007: Knockout -->
+									<li id="display_1-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-1');">007: Knockout</li>
+									<!-- Scroll to Roomba<span>&#174;</span> Rover -->
+									<li id="display_1-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-2');">Roomba<span>&#174;</span> Rover</li>
+									<!-- Scroll to FPGA Traffic Light -->
+									<li id="display_1-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-3');">FPGA Traffic Light</li>
+									<!-- Scroll to DND Java -->
+									<li id="display_1-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-4');">DND Java</li>
+								</ul>
+							</li>
+							<li id="display_2" onclick="update_navBar(this.parentNode, this, true, 'sub_2'); collapse_all(document.getElementById('container_content'), 'sub_2'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_2'));">
+								Documents
+								<ul class="nav-drop" id="display_2-drop" style="display:none;">
+									<!-- Scroll to Resume -->
+									<li class="nav-drop-active" id="display_2-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-0');">Resume</li>
+									<!-- Scroll to Ethics Essay -->
+									<li id="display_2-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-1');">Ethics Essay</li>
+									<!-- Scroll to Transcript -->
+									<li id="display_2-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-2');">Transcript</li>
+									<!-- Scroll to Class Schedule -->
+									<li id="display_2-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-3');">Class Schedule</li>
+								</ul>
+							</li>
+							<li id="display_3" onclick="update_navBar(this.parentNode, this, false); collapse_all(document.getElementById('container_content'), 'sub_3'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
+								Contact
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="container_content" class="col-9 col-xl-10 col-xxl-11">
+					<div class="content" id="sub_0">
+						<!-- Mission Statement -->
+						<div id="sub_0-0">
+							<div id="sub_0-0_header" class="section-header">
+								Mission Statement
+							</div>
+							<br>
+							<p class="section-content">
+								To learn and grow with each opportunity I create
+							</p>
+							<span class="section-breaker"></span>
 						</div>
-						<br>
-						<p class="section-content">
-							To learn and grow with each opportunity I create
+						<!-- Job Experience -->
+						<div id="sub_0-1">
+							<div id="sub_0-1_header" class="section-header">
+								Job Experience
+							</div>
+							<br>
+							<p class="section-content">
+								<ul>
+									<li class="subheader">
+										May 2020 - Current: 
+										<p>
+											<u><a id="vermeerWebsite" class="mode-dark" title="Vermeer Corporation Website" href="https://www.vermeer.com" target="_blank">Vermeer Corporation</a> - Embedded Systems Engineer co-op</u>
+										</p>
+									</li>
+									<li class="subheader">
+										May 2019 - May 2020:
+										<p>
+											<u><a id="fmtcWebsite" class="mode-dark" title="Farmer's Mutual Telephone Company Website" href="https://www.myfmtc.com" target="_blank">Farmers Mutual Telephone Company</a> - General developer intern</u>
+											<p>
+												I was the first intern and first in-house developer at FMTC working on projects ranging from making web interfaces for the sales team to fill out customer applications and gather sales quotes, to app development, database management, and to startup scripts for windows machines. Being their first developer I also laid the groundwork for project flow including GitLab CI/CD pipelines, GitHub repositories, and documentation tools.
+												<br>
+												Skills obtained:
+												<ul>
+													<li>Spring framework usage for backend applications</li>
+													<li>Familarity with MySQL databases</li>
+													<li>Usage of Apache POI libraries to read and create Microsoft Excel Workbooks to and from Java Objects</li>
+													<li>
+														Coding in:
+														<ul>
+															<li>Java</li>
+															<li>HTML5</li>
+															<li>CSS3</li>
+															<li>Javascript</li>
+															<li>Visual Basic</li>
+														</ul>
+													</li>
+												</ul>
+											</p>
+										</p>
+									</li>
+									<li class="subheader">
+										2014 - 2016:
+										<p>
+											Montgomery County YMCA - Assistant youth tennis instructor
+										</p>
+									</li>
+							</ul>
 						</p>
 						<span class="section-breaker"></span>
-					</div>
-					<!-- Job Experience -->
-					<div id="sub_0-1">
-						<div class="section-header">
-							Job Experience
 						</div>
-						<br>
-						<p class="section-content">
+						<!-- Awards -->
+						<div id="sub_0-2">
+							<div id="sub_0-2_header" class="section-header">
+								Awards and Recognitions
+							</div>
+							<br>
+							<p class="section-content">
 							<ul>
 								<li class="subheader">
-									2019 - Present:
-						<p>
-							<u><a id="fmtcWebsite" title="FMTC Website" href="https://www.myfmtc.com" target="_blank" class="mode-dark">Farmers Mutual Telephone Company</a> - General developer</u>
-						<p>
-							I am the only developer at FMTC working on projects ranging from making web interfaces for the sales team to fill out customer applications and gather sales quotes, to app development, to database management.
-							<br>
-							Skills obtained:
-						<ul>
-							<li>Spring framework usage for backend applications</li>
-							<li>Familarity with MySQL databases</li>
-							<li>Usage of Apache POI libraries to read and create Microsoft Excel Workbooks to and from Java Objects</li>
-							<li>
-								Coding in:
-								<ul>
-									<li>Java</li>
-									<li>HTML5</li>
-									<li>CSS3</li>
-									<li>Javascript</li>
-								</ul>
-							</li>
-						</ul>
-						</p>
-						</p>
-						</li>
-						<li class="subheader">
-							2014 - 2016:
-							<p>
-								Montgomery County YMCA - Assistant youth tennis instructor
+									Squirrel Hacks XI:
+									<ul>
+										<li>1st Place Hardware</li>
+										<li>Vermeer Best IoT Device</li>
+									</ul>
+								</li>
+								<li class="subheader">
+									Boy Scouts of America:
+									<ul>
+										<li>Eagle Scout Rank</li>
+										<li>Order of the Arrow</li>
+									</ul>
+								</li>
+								<li class="subheader">Iowa Bar Association/Foundation - American Citizenship Award</li>
+								<li class="subheader">Corporation for National and Community Service - President's Volunteer Service Bronze Award</li>
+								<li class="subheader">United States Marine Corps - Sholastic Excellence Award</li>
+								<li class="subheader">State of Iowa Representatives - Certificate of Recognition for volunteer work in 2017</li>
+								<li class="subheader">Lions International - Young Leaders in Service Award</li>
+								<li class="subheader">
+									High School:
+									<ul>
+										<li>Salutatorian</li>
+										<li>National Honor Society</li>
+									</ul>
+								</li>
+								<li class="subheader">McLure/JFSCO Engineering Scholarship</li>
+								<li class="subheader">Help Our Youth Scholarship</li>
+								<li class="subheader">Altrusa International, Inc. of Red Oak, Iowa Scholarship</li>
+							</ul>
 							</p>
-						</li>
-						</ul>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<!-- Awards -->
-					<div id="sub_0-2">
-						<div class="section-header">
-							Awards and Recognitions
+							<span class="section-breaker"></span>
 						</div>
-						<br>
-						<p class="section-content">
-						<ul>
-							<li class="subheader">
-								Squirrel Hacks XI:
-								<ul>
-									<li>1st Place Hardware</li>
-									<li>Vermeer Best IoT Device</li>
-								</ul>
-							</li>
-							<li class="subheader">
-								Boy Scouts of America:
-								<ul>
-									<li>Eagle Scout Rank</li>
-									<li>Order of the Arrow</li>
-								</ul>
-							</li>
-							<li class="subheader">Iowa Bar Association/Foundation - American Citizenship Award</li>
-							<li class="subheader">Corporation for National and Community Service - President's Volunteer Service Bronze Award</li>
-							<li class="subheader">United States Marine Corps - Sholastic Excellence Award</li>
-							<li class="subheader">State of Iowa Representatives - Certificate of Recognition for volunteer work in 2017</li>
-							<li class="subheader">Lions International - Young Leaders in Service Award</li>
-							<li class="subheader">
-								High School:
-								<ul>
-									<li>Salutatorian</li>
-									<li>National Honor Society</li>
-								</ul>
-							</li>
-							<li class="subheader">McLure/JFSCO Engineering Scholarship</li>
-							<li class="subheader">Help Our Youth Scholarship</li>
-							<li class="subheader">Altrusa International, Inc. of Red Oak, Iowa Scholarship</li>
-						</ul>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<!-- Education -->
-					<div id="sub_0-3">
-						<div class="section-header">
-							Education
-						</div>
-						<br>
-						<p class="section-content">
-						<ul>
-							<li class="subheader">Iowa State University (expected graduation May 2021)</li>
-							<li class="subheader">Red Oak Community High School</li>
-						</ul>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<!-- Activities -->
-					<div id="sub_0-4">
-						<div class="section-header">
-							Activities
-						</div>
-						<br>
-						<p class="section-content">
-						<ul>
-							<li class="subheader">
-								University:
-								<ul>
-									<li>Iowa State University Cyclone Football Varsity Marching Band</li>
-									<li>Crossroads Percussion</li>
-								</ul>
-							</li>
-							<li class="subheader">
-								High School:
-								<ul>
-									<li>Boy Scouts of America</li>
-									<li>4H</li>
-									<li>Theater</li>
-									<li>Speech</li>
-									<li>Tennis</li>
-									<li>Cross Country</li>
-								</ul>
-							</li>
-						</ul>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<!-- Activities -->
-					<div id="sub_0-5">
-						<div class="section-header">
-							This Website
-						</div>
-						<br>
-						<p class="section-content">
-							This website is custom made by me using HTML5, CSS3, and JavaScript. The domain is managed using Cloudflare's free DNS managing services, and is hosted on a Linode "Nanode" Ubuntu server.
+						<!-- Education -->
+						<div id="sub_0-3">
+							<div id="sub_0-3_header" class="section-header">
+								Education
+							</div>
 							<br>
+							<p class="section-content">
+							<ul>
+								<li class="subheader">Iowa State University (expected graduation May 2021)</li>
+								<li class="subheader">Red Oak Community High School</li>
+							</ul>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<!-- Activities -->
+						<div id="sub_0-4">
+							<div id="sub_0-4_header" class="section-header">
+								Activities
+							</div>
 							<br>
-							<a href="https://github.com/sgriffen/sgriffen.github.io" target="_blank" title="Website repository">Source code</a>
-						</p>
-						<span class="section-breaker"></span>
+							<p class="section-content">
+							<ul>
+								<li class="subheader">
+									University:
+									<ul>
+										<li>Iowa State University Cyclone Football Varsity Marching Band</li>
+										<li>Crossroads Percussion</li>
+									</ul>
+								</li>
+								<li class="subheader">
+									High School:
+									<ul>
+										<li>Boy Scouts of America</li>
+										<li>4H</li>
+										<li>Theater</li>
+										<li>Speech</li>
+										<li>Tennis</li>
+										<li>Cross Country</li>
+									</ul>
+								</li>
+							</ul>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<!-- This Website -->
+						<div id="sub_0-5">
+							<div id="sub_0-5_header" class="section-header">
+								This Website
+							</div>
+							<br>
+							<p class="section-content">
+								This website is custom made by me using HTML5, CSS3, and JavaScript. The domain is managed using Cloudflare's free DNS managing services, and is hosted on a Linode "Nanode" Ubuntu server.
+								<br>
+								<br>
+								<a href="https://github.com/sgriffen/sgriffen.github.io" target="_blank" title="Website repository">Source code</a>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+
+						<div class="spacer">
+
+						</div>
 					</div>
+					<div class="content" id="sub_1" style="display:none;">
+						<div id="sub_1-0">
+							<div id="sub_1-0_header" class="section-header">
+								Squirrel Hacks XI (HackISU 2019) - Hot Car Ally
+							</div>
+							<br>
+							<p class="section-content">
+								My team and I made a system to alert parents if they left their child in a hot car.
+								<br>
+								Using an Arduino Uno, temperature, GPS, ultrasonic sensors, buttons, and radio transceivers, we were able to
+								1) Tell if there was a child in a car seat,
+								2) Know the temperature of the car,
+								3) Get the location of the car seat,
+								and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
+								<br>
+								Using all that, if the car seat and "key fob" lost communication with each other, the "key fob" would buzz if the last known location of the child was in the car seat,
+								and the car seat would send data (temperature, GPS location, and status of the child) over serial to a Raspberry Pi, which would then parse the data and send that to a web server to display that data on an app on the parent's phone.
+								The web server would also send text notifications to the parent that something was left in their car seat, with a time limit to get back before the car got too hot. If the parent's location was too far away for them to get back, the car seat (using its location data) would notify authorities to get the child out of the car.
+								<br>
+								<br>
+								What I learned:
+							<p>
+							<ul>
+								<li class="subheader">How to gather information quickly and make an informed decision</li>
+								<li class="subheader">How to make a working demo in a short period of time</li>
+								<li class="subheader">How to solve problems quickly, and switch to new solutions if one is taking too long to figure out</li>
+							</ul>
+							</p>
+							<br>
+							<a href="https://github.com/sgriffen/hackISU2019" target="_blank" title="Hot Car Ally repository">Source code</a>
+							<a href="https://devpost.com/software/hot-car-ally" target="_blank" title="Hot Car Ally DevPost">DevPost</a>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_1-1">
+							<div id="sub_1-1_header" class="section-header">
+								3rd year: ComS 309 Semester project - 007: Knockout
+							</div>
+							<br>
+							<p class="section-content">
+								In this project, my team and I created an augmented-reality Android app based off of the game <a title="Assassin wiki" href="https://en.wikipedia.org/wiki/Assassin_(game)" target="_blank">Assassin</a>.
+								<br>
+								I focused on the backend functions and API that delt with HTTP requests. Using the Spring framework, I created an API to get and create players, game sessions, items, and handle game logic.
+								This included assigning players to a game session desired using a pass code, communication with a frontend through Tokens instead of sensitive user and game information, distance calculation between two latitude and longitude points, and item inventory for players (including keeping track of items that persist over game sessions, and the buffs that items give to certain statistics of a player)
+								<br>
+								<br>
+								What I learned:
+							<ul>
+								<li class="subheader">The usage of Spring for HTTP requests</li>
+								<li class="subheader">How to use MySQL databases to save and retrieve Java objects</li>
+								<li class="subheader">Hot to use Postman to test backend APIs</li>
+								<li class="subheader">How to communicate effectively with a team</li>
+								<li class="subheader">Effective coordination of large-scale projects over a long time period</li>
+							</ul>
+							<br>
+							<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-3_pdf'));" title="Display ComS 309 project report">View Report</button>
+							<br>
+							<div class="embed pdf" id="sub_1-3_pdf" style="display:none">
+								<object data="/refs/pdf/sean_griffen_coms309_final_report.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_coms309_final_report.pdf"></iframe>
+								</object>
+							</div>
+							<br>
+							<a href="https://github.com/sgriffen/proj_coms309" target="_blank" title="007: Knockout repository">Source code</a>
+							<a href="https://documenter.getpostman.com/view/6678646/S1ETRwMK" target="_blank" title="007: Knockout Postman API documentation">Postman Documentation</a>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_1-2">
+							<div id="sub_1-2_header" class="section-header">
+								3rd year: CprE 288 Final project - Roomba<span>&#174;</span> Rover
+							</div>
+							<br>
+							<p class="section-content">
+								The final project for this class was to program a Roomba with a custom embedded chip to navigate an obstacle course by user input. My team and I had to figure out a way to get information from the ultrasonic and infrared, bump, and cliff sensors on the Roomba to display on a console on our control computer wirelessly, and display in a way that was easily digestible for us to determine our next move.
+								<br>
+								In order to display information, we decided to, using PuTTY and circle equations, print a top-down view of what was in front of the Roomba. The Roomba would figure out where obstacles were, and their circumference, and then it would send back a 2D array to project on our console. Movement was handled by mapping DS4 controller inputs to keyboard presses and was sent to the robot through PuTTY to move forward 10cm, backward 10cm, or turn right or left 10 degrees. After the goal of the obstacle course was found, we would then drive in it and play a victory song.
+								<br>
+								<br>
+								What I learned:
+							<ul>
+								<li class="subheader">How to gather data from multiple sensors on an embedded system and make decisions accordingly</li>
+								<li class="subheader">Display data in a console in an intuitive way</li>
+								<li class="subheader">Read an embedded processor's data sheet and initialize registers correctly</li>
+								<li class="subheader">Debug programming issues on an embedded system</li>
+							</ul>
+							<br>
+							<a href="https://github.com/sgriffen/final_proj_cpre288" target="_blank" title="Roomba Rover repository">Source code</a>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_1-3">
+							<div id="sub_1-3_header" class="section-header">
+								2nd year: CprE 281 Final project - FPGA Traffic Light
+							</div>
+							<br>
+							<p class="section-content">
+								This goal of this final project was to create a traffic control system for a 4-way intersection using the FPGA we've been using in lab. This involved keeping track of the number of cars in each lane, counting up the cars in a user-chosen lane to the user-defined max capacity of that lane, and automatically removing cars from each lane until either the lane has reached zero cars, or the lane has decreased by 5 cars.
+								<br>
+								I decided to use 4 of the number displays in conjunction with a register file to keep track of the number of cars in each lane. Each lane also had its own counter that could count up to 15, or a user-defined maximum. To decrement the cars in a lane, I used the FPGA's internal clock and slowed it down using T flip-flops to about 1 clock cycle every 2 seconds.
+								Using a seperate counter for each lane, I was able to detect the number of clock cycles a lane was decrementing for, and based on that or the number of the cars in the lane, I switched to the next available lane that had cars in it to keep the intersection fair. This repeated until all the lanes were empty.
+								<br>
+								<br>
+								What I learned:
+							<ul>
+								<li class="subheader">How to program an FPGA from project description to finalizing the last block connection</li>
+								<li class="subheader">Visualizing a project timeline and project design to follow</li>
+								<li class="subheader">Apply skills acquired in class to a "real-world" problem</li>
+							</ul>
+							<br>
+							<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-1_pdf'));" title="Display CprE 281 final project report">View Report</button>
+							<br>
+							<div class="embed pdf" id="sub_1-1_pdf" style="display:none">
+								<object data="/refs/pdf/sean_griffen_cpre281_final_report.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_cpre281_final_report.pdf"></iframe>
+								</object>
+							</div>
+							<br>
+							<a href="https://github.com/sgriffen/final_proj_cpre281" target="_blank" title="FPGA Traffic Light repository">Source code</a>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_1-4">
+							<div id="sub_1-4_header" class="section-header">
+								1st year: CprE 186 Semester project - DND Java
+							</div>
+							<br>
+							<p class="section-content">
+								My group and I made a map and character displayer for Dungeons ‘n Dragons.
+								We accomplished this using JFrames and buffered images in Java and created a "fog of war" mechanic that, if turned on, covered the map and as the character model on the screen moved around, by clicking and holding the mouse, the map would uncover itself.
+								<br>
+								<br>
+								What I learned:
+							<ul>
+								<li class="subheader">How java handles images and layering images on each other</li>
+								<li class="subheader">Scaling projects to the time-line available</li>
+								<li class="subheader">Partitioning large projects into smaller, easier projects that are easier to focus on and work on</li>
+							</ul>
+							<br>
+							<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-0_pdf'));" title="Display CprE 281 project report">View Final Presentation</button>
+							<br>
+							<div class="embed pdf" id="sub_1-0_pdf" style="display:none">
+								<object data="/refs/pdf/sean_griffen_cpre186_final_presentation.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_cpre186_final_presentation.pdf"></iframe>
+								</object>
+							</div>
+							<br>
+							<a href="https://github.com/sgriffen/DNDJava" target="_blank" title="DND Java repository">Source code</a>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
 
-					<div class="spacer">
+						<div class="spacer">
 
+						</div>
+					</div>
+					<div class="content" id="sub_2" style="display:none;">
+						<div id="sub_2-0">
+							<div id="sub_2-0_header" class="section-header">Resume</div>
+							<br>
+							<p class="section-content embed pdf">
+								<object data="/refs/pdf/sean_griffen_resume.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_resume.pdf"></iframe>
+								</object>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_2-1">
+							<div id="sub_2-1_header" class="section-header">Ethics Essay</div>
+							<br>
+							<p class="section-content embed pdf">
+								<object data="/refs/pdf/sean_griffen_ethics_essay.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_ethics_essay.pdf"></iframe>
+								</object>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_2-2">
+							<div id="sub_2-2_header" class="section-header">Unofficial Transcript</div>
+							<br>
+							<p class="section-content embed pdf">
+								<object data="/refs/pdf/sean_griffen_transcript.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_transcript.pdf"></iframe>
+								</object>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_2-3">
+							<div id="sub_2-3_header" class="section-header">Planned Class Schedule</div>
+							<br>
+							<p class="section-content embed img">
+								<embed src="/refs/img/sean_griffen_class_schedule.jpeg" />
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+
+						<div class="spacer">
+
+						</div>
+					</div>
+					<div class="content" id="sub_3" style="display:none;">
+						<div id="sub_3-0">
+							<form onSubmit="return message_send(this.elements);">
+								<br>
+								<div id="sub_3-0_header" class="container-input">
+									<label class="input-label" id="from_name-label" for="from_name">Your name</label>
+									<input class="input" type="text" id="from_name" name="from_name" placeholder="" required>
+								</div>
+
+								<br>
+								<div class="container-input">
+									<label class="input-label" id="from_email-label" for="from_email">Your email</label>
+									<input class="input" type="text" id="from_email" name="from_email" placeholder="" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" oninput="validate_input(this);" required>
+								</div>
+
+								<br>
+								<div class="container-input">
+									<label class="input-label" id="from_message-label" for="from_message">Message</label>
+									<textarea class="input" id="from_message" name="from_message" placeholder="" required></textarea>
+								</div>
+
+								<input id="send_submit" type="submit" class="action" value="Send Message">
+								<div id="send_feedback" style="display:none">
+									
+								</div>
+							</form>
+						</div>
+						
+						<!--
+						<br>
+						<br>
+						<div class="section-header"> Contact by Email </div>
+						<div class="section-content">
+							<a href="mailto:hire.seangriffen@gmail.com">hire.seangriffen@gmail.com</a>
+						</div>
+						<span class="section-breaker"></span>
+
+						<div class="spacer">
+
+						</div>
+						-->
 					</div>
 				</div>
-				<div class="content" id="sub_1" style="display:none;">
-					<div id="sub_1-0">
-						<div class="section-header">
-							Squirrel Hacks XI (HackISU 2019) - Hot Car Ally
-						</div>
-						<br>
-						<p class="section-content">
-							My team and I made a system to alert parents if they left their child in a hot car.
-							<br>
-							Using an Arduino Uno, temperature, GPS, ultrasonic sensors, buttons, and radio transceivers, we were able to
-							1) Tell if there was a child in a car seat,
-							2) Know the temperature of the car,
-							3) Get the location of the car seat,
-							and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
-							<br>
-							Using all that, if the car seat and "key fob" lost communication with each other, the "key fob" would buzz if the last known location of the child was in the car seat,
-							and the car seat would send data (temperature, GPS location, and status of the child) over serial to a Raspberry Pi, which would then parse the data and send that to a web server to display that data on an app on the parent's phone.
-							The web server would also send text notifications to the parent that something was left in their car seat, with a time limit to get back before the car got too hot. If the parent's location was too far away for them to get back, the car seat (using its location data) would notify authorities to get the child out of the car.
-							<br>
-							<br>
-							What I learned:
-						<p>
-						<ul>
-							<li class="subheader">How to gather information quickly and make an informed decision</li>
-							<li class="subheader">How to make a working demo in a short period of time</li>
-							<li class="subheader">How to solve problems quickly, and switch to new solutions if one is taking too long to figure out</li>
-						</ul>
-						</p>
-						<br>
-						<a href="https://github.com/sgriffen/hackISU2019" target="_blank" title="Hot Car Ally repository">Source code</a>
-						<a href="https://devpost.com/software/hot-car-ally" target="_blank" title="Hot Car Ally DevPost">DevPost</a>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<div id="sub_1-1">
-						<div class="section-header">
-							3rd year: ComS 309 Semester project - 007: Knockout
-						</div>
-						<br>
-						<p class="section-content">
-							In this project, my team and I created an augmented-reality Android app based off of the game <a title="Assassin wiki" href="https://en.wikipedia.org/wiki/Assassin_(game)" target="_blank">Assassin</a>.
-							<br>
-							I focused on the backend functions and API that delt with HTTP requests. Using the Spring framework, I created an API to get and create players, game sessions, items, and handle game logic.
-							This included assigning players to a game session desired using a pass code, communication with a frontend through Tokens instead of sensitive user and game information, distance calculation between two latitude and longitude points, and item inventory for players (including keeping track of items that persist over game sessions, and the buffs that items give to certain statistics of a player)
-							<br>
-							<br>
-							What I learned:
-						<ul>
-							<li class="subheader">The usage of Spring for HTTP requests</li>
-							<li class="subheader">How to use MySQL databases to save and retrieve Java objects</li>
-							<li class="subheader">Hot to use Postman to test backend APIs</li>
-							<li class="subheader">How to communicate effectively with a team</li>
-							<li class="subheader">Effective coordination of large-scale projects over a long time period</li>
-						</ul>
-						<br>
-						<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-3_pdf'));" title="Display ComS 309 project report">View Report</button>
-						<br>
-						<div class="embed pdf" id="sub_1-3_pdf" style="display:none">
-							<object data="/refs/pdf/sean_griffen_coms309_final_report.pdf" type="application/pdf">
-								<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_coms309_final_report.pdf"></iframe>
-							</object>
-						</div>
-						<br>
-						<a href="https://github.com/sgriffen/proj_coms309" target="_blank" title="007: Knockout repository">Source code</a>
-						<a href="https://documenter.getpostman.com/view/6678646/S1ETRwMK" target="_blank" title="007: Knockout Postman API documentation">Postman Documentation</a>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<div id="sub_1-2">
-						<div class="section-header">
-							3rd year: CprE 288 Final project - Roomba<span>&#174;</span> Rover
-						</div>
-						<br>
-						<p class="section-content">
-							The final project for this class was to program a Roomba with a custom embedded chip to navigate an obstacle course by user input. My team and I had to figure out a way to get information from the ultrasonic and infrared, bump, and cliff sensors on the Roomba to display on a console on our control computer wirelessly, and display in a way that was easily digestible for us to determine our next move.
-							<br>
-							In order to display information, we decided to, using PuTTY and circle equations, print a top-down view of what was in front of the Roomba. The Roomba would figure out where obstacles were, and their circumference, and then it would send back a 2D array to project on our console. Movement was handled by mapping DS4 controller inputs to keyboard presses and was sent to the robot through PuTTY to move forward 10cm, backward 10cm, or turn right or left 10 degrees. After the goal of the obstacle course was found, we would then drive in it and play a victory song.
-							<br>
-							<br>
-							What I learned:
-						<ul>
-							<li class="subheader">How to gather data from multiple sensors on an embedded system and make decisions accordingly</li>
-							<li class="subheader">Display data in a console in an intuitive way</li>
-							<li class="subheader">Read an embedded processor's data sheet and initialize registers correctly</li>
-							<li class="subheader">Debug programming issues on an embedded system</li>
-						</ul>
-						<br>
-						<a href="https://github.com/sgriffen/final_proj_cpre288" target="_blank" title="Roomba Rover repository">Source code</a>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<div id="sub_1-3">
-						<div class="section-header">
-							2nd year: CprE 281 Final project - FPGA Traffic Light
-						</div>
-						<br>
-						<p class="section-content">
-							This goal of this final project was to create a traffic control system for a 4-way intersection using the FPGA we've been using in lab. This involved keeping track of the number of cars in each lane, counting up the cars in a user-chosen lane to the user-defined max capacity of that lane, and automatically removing cars from each lane until either the lane has reached zero cars, or the lane has decreased by 5 cars.
-							<br>
-							I decided to use 4 of the number displays in conjunction with a register file to keep track of the number of cars in each lane. Each lane also had its own counter that could count up to 15, or a user-defined maximum. To decrement the cars in a lane, I used the FPGA's internal clock and slowed it down using T flip-flops to about 1 clock cycle every 2 seconds.
-							<br>
-							<b>------TODO------</b>
-							<br>
-							<br>
-							What I learned:
-						<ul>
-							<li class="subheader">How to program an FPGA from project description to finalizing the last block connection</li>
-							<li class="subheader">Visualizing a project timeline and project design to follow</li>
-							<li class="subheader">Apply skills acquired in class to a "real-world" problem</li>
-						</ul>
-						<br>
-						<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-1_pdf'));" title="Display CprE 281 final project report">View Report</button>
-						<br>
-						<div class="embed pdf" id="sub_1-1_pdf" style="display:none">
-							<object data="/refs/pdf/sean_griffen_cpre281_final_report.pdf" type="application/pdf">
-								<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_cpre281_final_report.pdf"></iframe>
-							</object>
-						</div>
-						<br>
-						<a href="https://github.com/sgriffen/final_proj_cpre281" target="_blank" title="FPGA Traffic Light repository">Source code</a>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<div id="sub_1-4">
-						<div class="section-header">
-							1st year: CprE 186 Semester project - DND Java
-						</div>
-						<br>
-						<p class="section-content">
-							My group and I made a map and character displayer for Dungeons ‘n Dragons.
-							We accomplished this using JFrames and buffered images in Java and created a "fog of war" mechanic that, if turned on, covered the map and as the character model on the screen moved around, by clicking and holding the mouse, the map would uncover itself.
-							<br>
-							<br>
-							What I learned:
-						<ul>
-							<li class="subheader">How java handles images and layering images on each other</li>
-							<li class="subheader">Scaling projects to the time-line available</li>
-							<li class="subheader">Partitioning large projects into smaller, easier projects that are easier to focus on and work on</li>
-						</ul>
-						<br>
-						<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-0_pdf'));" title="Display CprE 281 project report">View Final Presentation</button>
-						<br>
-						<div class="embed pdf" id="sub_1-0_pdf" style="display:none">
-							<object data="/refs/pdf/sean_griffen_cpre186_final_presentation.pdf" type="application/pdf">
-								<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_cpre186_final_presentation.pdf"></iframe>
-							</object>
-						</div>
-						<br>
-						<a href="https://github.com/sgriffen/DNDJava" target="_blank" title="DND Java repository">Source code</a>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
+			</div>
 
-					<div class="spacer">
-
-					</div>
-				</div>
-				<div class="content" id="sub_2" style="display:none;">
-					<div id="sub_2-0">
-						<div class="section-header">Resume</div>
-						<br>
-						<p class="section-content embed pdf">
-							<object data="/refs/pdf/sean_griffen_resume.pdf" type="application/pdf">
-								<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_resume.pdf"></iframe>
-							</object>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<div id="sub_2-1">
-						<div class="section-header">Ethics Essay</div>
-						<br>
-						<p class="section-content embed pdf">
-							<object data="/refs/pdf/sean_griffen_ethics_essay.pdf" type="application/pdf">
-								<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_ethics_essay.pdf"></iframe>
-							</object>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<div id="sub_2-2">
-						<div class="section-header">Unofficial Transcript</div>
-						<br>
-						<p class="section-content embed pdf">
-							<object data="/refs/pdf/sean_griffen_transcript.pdf" type="application/pdf">
-								<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_transcript.pdf"></iframe>
-							</object>
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-					<div id="sub_2-3">
-						<div class="section-header">Planned Class Schedule</div>
-						<br>
-						<p class="section-content embed img">
-							<embed src="/refs/img/sean_griffen_class_schedule.jpeg" />
-						</p>
-						<span class="section-breaker"></span>
-					</div>
-
-					<div class="spacer">
-
-					</div>
-				</div>
-				<div class="content" id="sub_3" style="display:none;">
-					<div id="sub_3-0">
-						<form action="/refs/php/message_send.php" method="POST">
-							<br>
-							<div class="container-input">
-								<label class="input-label" id="from_name-label" for="from_name">Your name</label>
-								<input class="input" type="text" id="from_name" name="from_name" placeholder="" required>
-							</div>
-
-							<br>
-							<div class="container-input">
-								<label class="input-label" id="from_email-label" for="from_email">Your email</label>
-								<input class="input" type="text" id="from_email" name="from_email" placeholder="" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" oninput="validate_input(this);" required>
-							</div>
-
-							<br>
-							<div class="container-input">
-								<label class="input-label" id="from_message-label" for="from_message">Message</label>
-								<textarea class="input" id="from_message" name="from_message" placeholder="" required></textarea>
-							</div>
-
-							<input type="submit" class="action" value="Send Message">
-						</form>
-					</div>
-
-					<br>
-					<b>^^^NON FUNCTIONAL. FEATURE COMMING SOON^^^</b>
-
-					<br>
-					<div class="section-header"> Contact by Email </div>
-					<div class="section-content">
-						<a href="mailto:hire.seangriffen@gmail.com">hire.seangriffen@gmail.com</a>
-					</div>
-					<span class="section-breaker"></span>
-
-					<div class="spacer">
-
-					</div>
+			<div class="row" id="container_footer">
+				<div class="footer bottom">
+					<a class="inline button linkedin" id="open_linkedin" title="Linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
+					<a class="inline button github" id="open_github" title="Github profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
+					<a class="inline button twitter" id="open_twitter" title="Twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
+					<a class="inline button mode" id="switch_mode" title="Toggle dark/light mode" onclick="mode_switch(this, true);" style="width:125px;">Dark Mode</a>
 				</div>
 			</div>
 		</div>
 
-		<div class="row" id="container_footer">
-			<div class="footer bottom">
-				<a class="inline button linkedin" id="open_linkedin" title="Linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
-				<a class="inline button github" id="open_github" title="Github profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
-				<a class="inline button twitter" id="open_twitter" title="Twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
-				<a class="inline button mode" id="switch_mode" title="Toggle dark/light mode" onclick="mode_switch(this, true);" style="width:125px;">Dark Mode</a>
-			</div>
-		</div>
-	</div>
-
-	<script type="text/javascript" src="/refs/js/general.js"></script>
-	<script type="text/javascript" src="/refs/js/content.js"></script>
-	<script>
-				//Show loading animations
-				document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
-				//Set color scheme
-				let mode = window.localStorage.getItem("com.seangriffen.resources-mode");
-				if (mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); }
-			</script>
+		<script type="text/javascript" src="/refs/js/general.js"></script>
+		<script type="text/javascript" src="/refs/js/content.js"></script>
+		<script type="text/javascript" src="/refs/js/message_send.js"></script>
+		<script>
+			//Show loading animations
+			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
+			//Set color scheme
+			let mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+			if (mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); }
+		</script>
 	</body>
 </html>

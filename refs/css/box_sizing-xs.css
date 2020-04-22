@@ -1,27 +1,8 @@
-/* Default column settings */
-[class*="col-"] {
-	width: 100%;
-	float: left;
-	padding: 5px;
-}
-
 h1 {
-	display: block;
-	
-	text-decoration: none;
-	/* Bottom border color is Dark-Gray */
-	border-bottom: 12px solid #616161;
 	font-size: 25px;
-	transition: all 0.2s ease-out;
 }
 h2 {
-	display: inline-block;
-	
-	text-decoration: none;
-	/* Bottom border color is Teal */
-	border-bottom: 6px solid #009688;
 	font-size: 22px;
-	transition: all 0.2s ease-out;
 }
 
 .spacer {
@@ -29,49 +10,19 @@ h2 {
 }
 
 .nav {
-	padding-top: 20px; /* Place content 60px from the top */
+	padding-top: 20px; /* Place content 20px from the top */
 }
 .nav li {
-	display: block;
-	padding: 2% 2% 2% 2%;
-	
-	text-decoration: none;
-	/* Right border color is Dark-Gray */
-	border-right: 12px solid #616161;
 	font-size: 18px;
-	transition: all 0.2s ease-out;
 }
 .nav-drop li {
-	padding: 2% 2% 2% 15%;
 	font-size: 16px;
-}
-
-#container_content {
-	height: 90vh;
 }
 
 .footer {
-	clear: both;
-	display: block;
-	text-align: center;
 	font-size: 12px;
-	width: 100%;
-	bottom: 0;
-	position: fixed;
-	background-color: #9E9E9E;
-}
-.footer .inline {
-	display: inline-block;
 }
 .footer a {
-	
-	display: inline-block;
-	text-align: center;
-	padding: 12px;
-	transition: all 0.2s ease-out;
 	font-size: 16px;
-	
 	width: 50px;
-	
-	color: #FFF;
 }

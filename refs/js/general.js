@@ -1,4 +1,4 @@
-function update_navBar(parent, clicked, hasDrop) {
+function update_navBar(parent, clicked, hasDrop, drop_associatedId) {
 	
 	let idPrefix = "display_";
 	let i = 0;
@@ -25,6 +25,9 @@ function update_navBar(parent, clicked, hasDrop) {
 		
 		let dropContainer = findChildById(clicked, clicked.id + "-drop");
 		dropContainer.style.display = "block";
+		
+		document.getElementById("scroll_toChange").value = dropContainer.id + "_content_";
+		document.getElementById("scroll_associated").value = drop_associatedId + "-";
 	}
 }
 function update_dropBar(parent, clicked) {
@@ -43,6 +46,37 @@ function update_dropBar(parent, clicked) {
 	}
 	
 	clicked.classList.add("nav-drop-active");
+}
+
+function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
+	
+	let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || window.scrollY;
+	let clientTop = document.documentElement.clientTop || document.body.clientTop || 0;
+	let topOffsets = [];
+	
+	let i = 0;
+	let toChange = document.getElementById(toChangePrefix + i);
+	while(toChange != null) {
+		
+		toChange.classList.remove("nav-drop-active");
+		
+		let rect = findChildById(document.getElementById(associatedPrefix + i), associatedPrefix + i + "_header").getBoundingClientRect();
+		topOffsets.push(Math.round((rect.top + scrollTop - clientTop)));
+		
+		i++;
+		toChange = document.getElementById(toChangePrefix + i);
+	}
+	
+	if (scrollTop < topOffsets[0]) { document.getElementById(toChangePrefix + 0).classList.add("nav-drop-active");  }
+	else {
+		for (i = 1; i < topOffsets.length; i++) {
+			
+			if (scrollTop >= topOffsets[i - 1] && scrollTop < topOffsets[i]) { 
+				document.getElementById(toChangePrefix + i).classList.add("nav-drop-active"); 
+				break;
+			}
+		}
+	}
 }
 
 function collapse_all(parent, idFrom) {
@@ -88,7 +122,7 @@ function toggle_display(toToggle) {
 				let scrollTo = findChildById(toToggle, scrollId);
 				if (dropActive.classList.contains("nav-drop-active")) { scrollTo.scrollIntoView({behavior: 'smooth'}); }
 			} else {
-				document.getElementById("from_name").scrollIntoView({behavior: 'smooth'});
+				document.getElementById("from_name-label").scrollIntoView({behavior: 'smooth'});
 				break;
 			}
 			
@@ -153,4 +187,10 @@ window.addEventListener("load", () => {
 	document.querySelector(".display_before").classList.add("loaded_l");
 	document.querySelector(".display_after").classList.add("loaded_l");
 	smoothScroll(0, 0);
+	
+	document.getElementById("scroll_toChange").value = "display_0-drop_content_";
+	document.getElementById("scroll_associated").value = "sub_0-";
+	window.addEventListener("scroll", () => { 
+		update_dropBar_onscroll(document.getElementById("scroll_toChange").value, document.getElementById("scroll_associated").value); 
+	});
 });
