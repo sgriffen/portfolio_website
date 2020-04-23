@@ -16,7 +16,7 @@
 	overflow-y: hidden;
 }
 
-@media only screen and (min-height: 600px) {
+@media only screen and (min-height: 700px) {
 	h1 {
 		font-size: 25px;
 	}
@@ -39,7 +39,7 @@
 	}
 
 	.spacer {
-		height: 900px;
+		height: 100px;
 	}
 	
 	.footer {
@@ -53,7 +53,7 @@
 		width: 75px;
 	}
 }
-@media only screen and (min-height: 825px) {
+@media only screen and (min-height: 850px) {
 	h1 {
 		font-size: 27px;
 	}
@@ -76,7 +76,7 @@
 	}
 
 	.spacer {
-		height: 900px;
+		height: 350px;
 	}
 	
 	.footer {
@@ -90,7 +90,7 @@
 		width: 75px;
 	}
 }
-@media only screen and (min-height: 950px) {
+@media only screen and (min-height: 975px) {
 	h1 {
 		font-size: 35px;
 	}
@@ -113,7 +113,7 @@
 	}
 
 	.spacer {
-		height: 900px;
+		height: 500px;
 	}
 	
 	.footer {

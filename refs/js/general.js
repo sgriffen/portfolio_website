@@ -55,7 +55,7 @@ function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 	let topOffsets = [];
 	
 	let i = 0;
-	let toChange = document.getElementById(toChangePrefix + i);
+	let toChange = document.getElementById(associatedPrefix + i);
 	while(toChange != null) {
 		
 		toChange.classList.remove("nav-drop-active");
@@ -68,6 +68,7 @@ function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 	}
 	
 	if (scrollTop < topOffsets[0]) { document.getElementById(toChangePrefix + 0).classList.add("nav-drop-active");  }
+	else if (scrollTop >= topOffsets[topOffsets.length - 1]) { document.getElementById(toChangePrefix + (topOffsets.length - 1)).classList.add("nav-drop-active"); }
 	else {
 		for (i = 1; i < topOffsets.length; i++) {
 			
