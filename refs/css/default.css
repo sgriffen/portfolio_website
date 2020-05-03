@@ -13,15 +13,13 @@
 /* Default page and font settings */
 html {
 	font-family: Arial, Helvetica, sans-serif;
-	overflow-y: scroll;
-	overflow-x: hidden;
 	transition: all 0.2s ease-out;
 }
 body {
 	margin: 0 auto;
 	height: 100%;
 	
-	transition: inherit;
+	transition: all 0.2s ease-out;
 }
 
 .profile_pic {

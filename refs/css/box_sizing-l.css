@@ -11,12 +11,17 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.sticky {
-	position: sticky;
-	overflow-y: hidden;
+#container_title, #container_nav {
+	overflow: hidden;
+}
+
+#container_content {
+	overflow-y: scroll;
+	height: 75vh;
 }
 
 @media only screen and (max-height: 700px) {
+	
 	h1 {
 		font-size: 25px;
 	}
@@ -39,7 +44,43 @@
 	}
 
 	.spacer {
-		height: 100px;
+		height: 100vh;
+	}
+	
+	.footer {
+		font-size: 15px;
+		bottom: 0;
+	}
+	.footer a {
+		font-size: 16px;
+		width: 75px;
+	}
+}
+
+@media only screen and (min-height: 700px) {
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 22px;
+	}
+
+	.sidebar {
+		float: left;
+		top: 0;
+	}
+	.nav {
+		padding-top: 30px; /* Place content 30px from the top */
+	}
+	.nav li {
+		font-size: 20px;
+	}
+	.nav-drop li {
+		font-size: 16px;
+	}
+
+	.spacer {
+		height: 100vh;
 	}
 	
 	.footer {
@@ -74,7 +115,7 @@
 	}
 
 	.spacer {
-		height: 350px;
+		height: 1vh;
 	}
 	
 	.footer {
@@ -111,7 +152,7 @@
 	}
 
 	.spacer {
-		height: 500px;
+		height: 1vh;
 	}
 	
 	.footer {

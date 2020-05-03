@@ -50,19 +50,21 @@ function update_dropBar(parent, clicked) {
 
 function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 	
-	let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || window.scrollY;
-	let clientTop = document.documentElement.clientTop || document.body.clientTop || 0;
+	let container = document.getElementById("container_content");
+	let scrollTop = container.scrollTop + container.offsetTop;
+	let clientTop = container.clientTop;
 	let topOffsets = [];
 	
 	let i = 0;
-	let toChange = document.getElementById(associatedPrefix + i);
+	let toChange = document.getElementById(toChangePrefix + i);
 	while(toChange != null) {
 		
 		toChange.classList.remove("nav-drop-active");
 		
-		let rect = findChildById(document.getElementById(associatedPrefix + i), associatedPrefix + i + "_header").getBoundingClientRect();
-		topOffsets.push(Math.round((rect.top + scrollTop - clientTop)));
-		
+		let associated = document.getElementById(associatedPrefix + i + "_header");
+		topOffsets.push(Math.round(associated.offsetTop + associated.parentNode.offsetHeight - 75));
+		//let rect = findChildById(associated, associatedPrefix + i + "_header").getBoundingClientRect();
+		//topOffsets.push(Math.round(findChildById(associated, associatedPrefix + i + "_header").offsetTop));
 		i++;
 		toChange = document.getElementById(toChangePrefix + i);
 	}
@@ -191,7 +193,7 @@ window.addEventListener("load", () => {
 	
 	document.getElementById("scroll_toChange").value = "display_0-drop_content_";
 	document.getElementById("scroll_associated").value = "sub_0-";
-	window.addEventListener("scroll", () => { 
+	document.getElementById("container_content").addEventListener("scroll", () => { 
 		update_dropBar_onscroll(document.getElementById("scroll_toChange").value, document.getElementById("scroll_associated").value); 
 	});
 });

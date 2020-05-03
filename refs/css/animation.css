@@ -6,7 +6,7 @@
 	height: 100%; /* Full height (cover the whole page) */
 	
 	border-radius: 50%;
-	transition: inherit;
+	transition: all 0.2s ease-out;
 }
 .display_before_border {
 	
@@ -35,7 +35,7 @@
 	opacity: 0;
 	letter-spacing: .15em;
 	
-	transition: inherit;
+	transition: all 0.2s ease-out;
 }
 .display_after {
 	opacity: 0;

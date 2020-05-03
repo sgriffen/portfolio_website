@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="display_after">
-			<div class="row sticky" id="container_title">
+			<div id="container_title" class="row">
 				<div class="col-12 col-xl-12 col-xxl-12">
 					<h1><b>Sean Griffen in Summary</b></h1>
 					<h2><i>Junior, Computer Engineering, Iowa State University</i></h2>
@@ -41,7 +41,7 @@
 			</div>
 			<br>
 			<div class="row" id="container_main">
-				<div class="col-3 col-xl-2 col-xxl-1 sidebar sticky">
+				<div id="container_nav" class="col-3 col-xl-2 col-xxl-1 sidebar">
 					<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Image of me">
 					<br>
 					<div class="nav">
@@ -259,9 +259,9 @@
 							</p>
 							<span class="section-breaker"></span>
 						</div>
-
+						
 						<div class="spacer">
-
+							
 						</div>
 					</div>
 					<div class="content" id="sub_1" style="display:none;">
@@ -274,11 +274,10 @@
 								My team and I made a system to alert parents if they left their child in a hot car.
 								<br>
 								Using an Arduino Uno, temperature, GPS, ultrasonic sensors, buttons, and radio transceivers, we were able to
-								1) Tell if there was a child in a car seat,
-								2) Know the temperature of the car,
-								3) Get the location of the car seat,
-								and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
-								<br>
+									 1) Tell if there was a child in a car seat,
+									 2) Know the temperature of the car,
+									 3) Get the location of the car seat,
+									 and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
 								Using all that, if the car seat and "key fob" lost communication with each other, the "key fob" would buzz if the last known location of the child was in the car seat,
 								and the car seat would send data (temperature, GPS location, and status of the child) over serial to a Raspberry Pi, which would then parse the data and send that to a web server to display that data on an app on the parent's phone.
 								The web server would also send text notifications to the parent that something was left in their car seat, with a time limit to get back before the car got too hot. If the parent's location was too far away for them to get back, the car seat (using its location data) would notify authorities to get the child out of the car.
@@ -415,9 +414,9 @@
 							</p>
 							<span class="section-breaker"></span>
 						</div>
-
+						
 						<div class="spacer">
-
+							
 						</div>
 					</div>
 					<div class="content" id="sub_2" style="display:none;">
@@ -459,11 +458,12 @@
 							</p>
 							<span class="section-breaker"></span>
 						</div>
-
+						
 						<div class="spacer">
-
+							
 						</div>
 					</div>
+					
 					<div class="content" id="sub_3" style="display:none;">
 						<div id="sub_3-0">
 							<form onSubmit="return message_send(this.elements);">
@@ -492,19 +492,20 @@
 							</form>
 						</div>
 						
-						<!--
 						<br>
 						<br>
-						<div class="section-header"> Contact by Email </div>
-						<div class="section-content">
-							<a href="mailto:hire.seangriffen@gmail.com">hire.seangriffen@gmail.com</a>
+						<div id="container_message_fail" style="display:none">
+							<div class="section-header"> Oops, looks like something went wrong :(</div>
+							<div class="section-content">
+								Contact manually by Email instead:
+								<a href="mailto:hire.seangriffen@gmail.com">hire.seangriffen@gmail.com</a>
+							</div>
+							<span class="section-breaker"></span>
 						</div>
-						<span class="section-breaker"></span>
-
+						
 						<div class="spacer">
-
+							
 						</div>
-						-->
 					</div>
 				</div>
 			</div>
