@@ -21,7 +21,7 @@ function message_send(elements) {
 			+ "\n]";
 		
 		let data = {
-			"access_token": "",
+			"access_token": "b1suhx27u32o1n3jryuxxjl6",
 			"subject": send_subject,
 			"text": data_payload
 		};

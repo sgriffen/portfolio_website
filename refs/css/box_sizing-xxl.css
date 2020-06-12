@@ -20,7 +20,7 @@
 	height: 75vh;
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 650px) {
 	
 	h1 {
 		font-size: 25px;
@@ -34,7 +34,7 @@
 		top: 0;
 	}
 	.nav {
-		padding-top: 30px; /* Place content 30px from the top */
+		padding-top: 20px; /* Place content 30px from the top */
 	}
 	.nav li {
 		font-size: 20px;

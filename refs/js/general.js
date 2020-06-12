@@ -68,14 +68,13 @@ function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 		i++;
 		toChange = document.getElementById(toChangePrefix + i);
 	}
-	
-	if (scrollTop < topOffsets[0]) { document.getElementById(toChangePrefix + 0).classList.add("nav-drop-active");  }
-	else if (scrollTop >= topOffsets[topOffsets.length - 1]) { document.getElementById(toChangePrefix + (topOffsets.length - 1)).classList.add("nav-drop-active"); }
+	if (scrollTop <= topOffsets[(topOffsets.length - 1)]) { document.getElementById(toChangePrefix + (topOffsets.length - 1)).classList.add("nav-drop-active");  }
+	else if (scrollTop > topOffsets[0]) { document.getElementById(toChangePrefix + (0)).classList.add("nav-drop-active"); }
 	else {
-		for (i = 1; i < topOffsets.length; i++) {
+		for (i = topOffsets.length - 2; i >= 0; i--) {
 			
-			if (scrollTop >= topOffsets[i - 1] && scrollTop < topOffsets[i]) { 
-				document.getElementById(toChangePrefix + i).classList.add("nav-drop-active"); 
+			if (scrollTop > topOffsets[i + 1] && scrollTop <= topOffsets[i]) { 
+				document.getElementById(toChangePrefix + (i)).classList.add("nav-drop-active"); 
 				break;
 			}
 		}
@@ -183,6 +182,15 @@ function mode_switch(node) {
 		node.innerHTML = "Dark Mode";
 		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
 	}
+}
+
+function array_reverse(arr) {
+	
+	let result = [];
+	let i;
+	for (i = arr.length; i > 0; i--) { result.push(arr[i - 1]); }
+	
+	return result;
 }
 
 window.addEventListener("load", () => {
