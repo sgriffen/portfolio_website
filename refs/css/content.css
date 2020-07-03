@@ -6,19 +6,22 @@ iframe, embed, object {
 	height: 100%;
 }
 
-h1 {
+#title {
+	margin: 5px;
+	border-bottom: 12px solid #009688; /* Bottom border color is Teal */
+}
+
+#title h1 {
 	display: block;
-	padding: 5px;
+	margin: 3px;
 	
-	border-bottom: 12px solid #616161; /* Bottom border color is Dark-Gray */
 	text-decoration: none;
 	transition: all 0.2s ease-out;
 }
-h2 {
+#title h2 {
 	display: inline-block;
-	padding: 5px;
+	margin: 3px;
 	
-	border-bottom: 6px solid #009688; /* Bottom border color is Teal */
 	text-decoration: none;
 	transition: all 0.2s ease-out;
 }

@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<head>
 		<title>Sean Griffen's Portfolio</title>
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<link rel="stylesheet" type="text/css" href="/refs/css/animation.css">
@@ -34,7 +35,7 @@
 
 		<div class="display_after">
 			<div id="container_title" class="row">
-				<div class="col-12 col-xl-12 col-xxl-12">
+				<div id="title" class="col-12 col-xl-12 col-xxl-12">
 					<h1><b>Sean Griffen in Summary</b></h1>
 					<h2><i>Senior, Computer Engineering, Iowa State University</i></h2>
 				</div>
@@ -66,10 +67,12 @@
 							<li id="display_1" onclick="update_navBar(this.parentNode, this, true, 'sub_1'); collapse_all(document.getElementById('container_content'), 'sub_1'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
 								Projects
 								<ul class="nav-drop" id="display_1-drop" style="display:none;">
+									<!-- Scroll to Hot Car Ally -->
+									<li id="display_1-drop_content_6" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-6');">Hot Car Ally</li>
 									<!-- Scroll to Game Zone -->
 									<li class="nav-drop-active" id="display_1-drop_content_5" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-5');">Game Zone</li>
-									<!-- Scroll to Hot Car Ally -->
-									<li id="display_1-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-4');">Hot Car Ally</li>
+									<!-- Scroll to MIPS Processor -->
+									<li id="display_1-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-4');">MIPS Processor</li>
 									<!-- Scroll to 007: Knockout -->
 									<li id="display_1-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-3');">Roomba<span>&#174;</span> Rover</li>
 									<!-- Scroll to Roomba<span>&#174;</span> Rover -->
@@ -125,18 +128,19 @@
 										<p>
 											<u><a id="vermeerWebsite" class="mode-dark" title="Vermeer Corporation Website" href="https://www.vermeer.com" target="_blank">Vermeer Corporation</a> - Embedded software engineer intern</u>
 											<p class="section-content">
-												I am currently a co-op at Vermeer's industrial underground division working on and testing software that controlls their pile drivers and horizontal directional drills.
+												I am currently a co-op at Vermeer's industrial underground division working on and testing software that controls their pile drivers and horizontal directional drills.
 												<br>
 												<br>
 												Skills developing:
 												<ul>
-													<li>Coding in Matlab with and Simulink</li>
 													<li>Delivery of system messages through a CAN bus using the J1939 protocol</li>
-													<li>Good development of integration testing</li>
+													<li>Good development of unit and machine testing</li>
+													<li>Communicating my ideas clearly, and taking the initiative on new projects</li>
 													<li>
 														Coding in:
 														<ul>
-															<li>Matlab with Simulink</li>
+															<li>Matlab</li>
+															<li>Simulink</li>
 														</ul>
 													</li>
 												</ul>
@@ -175,7 +179,7 @@
 									<li class="subheader">
 										May 2014 - September 2016:
 										<p>
-											<u><a id="fmtcWebsite" class="mode-dark" title="Montgomery County YMCA Website" href="http://www.mcymca.com/" target="_blank">Montgomery County YMCA</a> - Assistant summer youth tennis instructor</u>
+											<u><a id="fmtcWebsite" class="mode-dark" title="Montgomery County YMCA Website (Unsecure)" href="http://www.mcymca.com/" target="_blank">Montgomery County YMCA</a> - Assistant summer youth tennis instructor</u>
 											<p class="section-content">
 												For my first two years in High School I worked at the local YMCA as an assistant tennis coach, helping the main instructor teach and demonstrate to youth the basics of tennis
 												<br>
@@ -297,9 +301,41 @@
 						</div>
 					</div>
 					<div class="content" id="sub_1" style="display:none;">
+					<div id="sub_1-6">
+							<div id="sub_1-6_header" class="section-header">
+								Squirrel Hacks XI (HackISU 2019) - Hot Car Ally
+							</div>
+							<br>
+							<p class="section-content">
+								My team and I made a system to alert parents if they left their child in a hot car.
+								<br>
+								Using an Arduino Uno, temperature, GPS, ultrasonic sensors, buttons, and radio transceivers, we were able to
+									 1) Tell if there was a child in a car seat,
+									 2) Know the temperature of the car,
+									 3) Get the location of the car seat,
+									 and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
+								Using all that, if the car seat and "key fob" lost communication with each other, the "key fob" would buzz if the last known location of the child was in the car seat,
+								and the car seat would send data (temperature, GPS location, and status of the child) over serial to a Raspberry Pi, which would then parse the data and send that to a web server to display that data on an app on the parent's phone.
+								The web server would also send text notifications to the parent that something was left in their car seat, with a time limit to get back before the car got too hot. If the parent's location was too far away for them to get back, the car seat (using its location data) would notify authorities to get the child out of the car.
+								<br>
+								<br>
+								What I learned:
+								<p>
+									<ul>
+										<li class="subheader">How to gather information quickly and make an informed decision</li>
+										<li class="subheader">How to make a working demo in a short period of time</li>
+										<li class="subheader">How to solve problems quickly, and switch to new solutions if one is taking too long to figure out</li>
+									</ul>
+								</p>
+								<br>
+								<a href="https://github.com/sgriffen/hackISU2019" target="_blank" title="Hot Car Ally repository">Source code</a>
+								<a href="https://devpost.com/software/hot-car-ally" target="_blank" title="Hot Car Ally DevPost">DevPost</a>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
 						<div id="sub_1-5">
 							<div id="sub_1-5_header" class="section-header">
-								3rd year: SE 319 Half-Semester Project - Game Zone
+								School 3rd year: SE 319 Half-Semester Project - Game Zone
 							</div>
 							<br>
 							<p class="section-content">
@@ -335,39 +371,28 @@
 						</div>
 						<div id="sub_1-4">
 							<div id="sub_1-4_header" class="section-header">
-								3rd year: Squirrel Hacks XI (HackISU 2019) - Hot Car Ally
+								School 3rd year: CprE 381 Final Project - MIPS Processor
 							</div>
 							<br>
 							<p class="section-content">
-								My team and I made a system to alert parents if they left their child in a hot car.
-								<br>
-								Using an Arduino Uno, temperature, GPS, ultrasonic sensors, buttons, and radio transceivers, we were able to
-									 1) Tell if there was a child in a car seat,
-									 2) Know the temperature of the car,
-									 3) Get the location of the car seat,
-									 and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
-								Using all that, if the car seat and "key fob" lost communication with each other, the "key fob" would buzz if the last known location of the child was in the car seat,
-								and the car seat would send data (temperature, GPS location, and status of the child) over serial to a Raspberry Pi, which would then parse the data and send that to a web server to display that data on an app on the parent's phone.
-								The web server would also send text notifications to the parent that something was left in their car seat, with a time limit to get back before the car got too hot. If the parent's location was too far away for them to get back, the car seat (using its location data) would notify authorities to get the child out of the car.
+								
+								<b>TODO</b>
 								<br>
 								<br>
 								What I learned:
 								<p>
 									<ul>
-										<li class="subheader">How to gather information quickly and make an informed decision</li>
-										<li class="subheader">How to make a working demo in a short period of time</li>
-										<li class="subheader">How to solve problems quickly, and switch to new solutions if one is taking too long to figure out</li>
+										<li class="subheader"><b>TODO</b></li>
 									</ul>
 								</p>
 								<br>
-								<a href="https://github.com/sgriffen/hackISU2019" target="_blank" title="Hot Car Ally repository">Source code</a>
-								<a href="https://devpost.com/software/hot-car-ally" target="_blank" title="Hot Car Ally DevPost">DevPost</a>
+								<a href="" target="_blank" title="MIPS Processor repository">Source code: <b>TODO</b></a>
 							</p>
 							<span class="section-breaker"></span>
 						</div>
 						<div id="sub_1-3">
 							<div id="sub_1-3_header" class="section-header">
-								3rd year: CprE 288 Final Project - Roomba<span>&#174;</span> Rover
+								School 2nd year: CprE 288 Final Project - Roomba<span>&#174;</span> Rover
 							</div>
 							<br>
 							<p class="section-content">
@@ -396,7 +421,7 @@
 						</div>
 						<div id="sub_1-2">
 							<div id="sub_1-2_header" class="section-header">
-								2nd year: ComS 309 Semester Project - 007: Knockout
+								School 2nd year: ComS 309 Semester Project - 007: Knockout
 							</div>
 							<br>
 							<p class="section-content">
@@ -432,7 +457,7 @@
 						</div>
 						<div id="sub_1-1">
 							<div id="sub_1-1_header" class="section-header">
-								2nd year: CprE 281 Final Project - FPGA Traffic Light
+								School 2nd year: CprE 281 Final Project - FPGA Traffic Light
 							</div>
 							<br>
 							<p class="section-content">
@@ -465,7 +490,7 @@
 						</div>
 						<div id="sub_1-0">
 							<div id="sub_1-0_header" class="section-header">
-								1st year: CprE 186 Semester Project - DND Java
+								School 1st year: CprE 186 Semester Project - DND Java
 							</div>
 							<br>
 							<p class="section-content">
@@ -552,14 +577,10 @@
 									<label class="input-label" id="from_name-label" for="from_name">Your name</label>
 									<input class="input" type="text" id="from_name" name="from_name" placeholder="" required>
 								</div>
-
-								<br>
 								<div class="container-input">
 									<label class="input-label" id="from_email-label" for="from_email">Your email</label>
 									<input class="input" type="text" id="from_email" name="from_email" placeholder="" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" oninput="validate_input(this);" required>
 								</div>
-
-								<br>
 								<div class="container-input">
 									<label class="input-label" id="from_message-label" for="from_message">Message</label>
 									<textarea class="input" id="from_message" name="from_message" placeholder="" required></textarea>
@@ -571,8 +592,6 @@
 								</div>
 							</form>
 						</div>
-						
-						<br>
 						<br>
 						<div id="container_message_fail" style="display:none">
 							<div class="section-header"> Oops, looks like something went wrong :(</div>

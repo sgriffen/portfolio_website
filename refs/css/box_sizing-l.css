@@ -21,12 +21,11 @@
 }
 
 @media only screen and (max-height: 650px) {
-	
-	h1 {
+	#title h1 {
 		font-size: 25px;
 	}
-	h2 {
-		font-size: 22px;
+	#title h2 {
+		font-size: 20px;
 	}
 
 	.sidebar {
@@ -58,11 +57,11 @@
 }
 
 @media only screen and (min-height: 700px) {
-	h1 {
+	#title h1 {
 		font-size: 25px;
 	}
-	h2 {
-		font-size: 22px;
+	#title h2 {
+		font-size: 20px;
 	}
 
 	.sidebar {
@@ -86,6 +85,7 @@
 	.footer {
 		font-size: 15px;
 		bottom: 0;
+		position: fixed;
 	}
 	.footer a {
 		font-size: 16px;
@@ -93,11 +93,11 @@
 	}
 }
 @media only screen and (min-height: 850px) {
-	h1 {
+	#title h1 {
 		font-size: 27px;
 	}
-	h2 {
-		font-size: 25px;
+	#title h2 {
+		font-size: 22px;
 	}
 
 	.sidebar {
@@ -130,11 +130,11 @@
 	}
 }
 @media only screen and (min-height: 975px) {
-	h1 {
+	#title h1 {
 		font-size: 35px;
 	}
-	h2 {
-		font-size: 27px;
+	#title h2 {
+		font-size: 25px;
 	}
 
 	.sidebar {
@@ -142,7 +142,7 @@
 		top: 0;
 	}
 	.nav {
-		padding-top: 53px; /* Place content 53px from the top */
+		padding-top: 50px; /* Place content 53px from the top */
 	}
 	.nav li {
 		font-size: 25px;

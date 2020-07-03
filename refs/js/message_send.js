@@ -2,7 +2,7 @@ function message_send(elements) {
 	
 	let message_counter = window.sessionStorage.getItem("com.seangriffen.resources-message_counter");
 	
-	if (message_counter == null || message_counter === "") {
+	if (message_counter == null || message_counter == "") {
 		let submit_but = document.getElementById("send_submit");
 		let feedback = document.getElementById("send_feedback");
 		
@@ -77,8 +77,16 @@ function message_error(xhr) {
 	let submit_but = document.getElementById("send_submit");
 	let feedback = document.getElementById("send_feedback");
 	
-	submit_but.value = "Message unable to send D:";
-	submit_but.style = "background-color: #B22222;"; //background color is FireBrick
+	let message_counter = window.sessionStorage.getItem("com.seangriffen.resources-message_counter");
+	if (message_counter != null || message_counter != "") {
+		
+		submit_but.value = "Message limit reached for session";
+		submit_but.style = "background-color: #B22222;"; //background color is FireBrick
+	} else {
+	
+		submit_but.value = "Message unable to send D:";
+		submit_but.style = "background-color: #B22222;"; //background color is FireBrick
+	}
 	
 	document.getElementById("container_message_fail").style.display = "block";
 
