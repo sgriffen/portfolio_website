@@ -27,11 +27,11 @@ iframe, embed, object {
 }
 
 a {
-	color: #009688;
+	color: #009688;  /* Hyperlink default color is Teal */
 	transition: all 0.2s ease-out;
 }
 a:hover {
-	color: #4CAF50;
+	color: #4CAF50; /* Hyperlink hover color is Green */
 }
 
 .nav ul {
@@ -44,7 +44,7 @@ a:hover {
 	display: block;
 	padding: 2% 2% 2% 2%;
 	
-	border-right: 12px solid #616161; /* Bottom border color is Dark-Gray */
+	border-right: 12px solid #616161; /* Right border color is Dark-Gray */
 	text-decoration: none;
 	transition: all 0.2s ease-out;
 }

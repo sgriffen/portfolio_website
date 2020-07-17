@@ -169,17 +169,21 @@ function findChildById(element, id) {
 	return null;
 }
 
-function mode_switch(node) {
+function mode_switch(node, override) {
 	
 	document.body.classList.toggle("mode-dark");
 	node.classList.toggle("mode-dark");
 	if (document.body.classList.contains("mode-dark")) {
 		
 		node.innerHTML = "Light Mode";
+		if (override == true) { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
+		else { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
 		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
 	} else {
 		
 		node.innerHTML = "Dark Mode";
+		if (override == true) { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
+		else { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
 		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
 	}
 }
@@ -191,6 +195,16 @@ function array_reverse(arr) {
 	for (i = arr.length; i > 0; i--) { result.push(arr[i - 1]); }
 	
 	return result;
+}
+
+function mode_default(e) {
+	
+	let curr_mode_override = window.localStorage.getItem("com.seangriffen.resources-mode-override");
+	let curr_mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+	if (curr_mode_override == null || curr_mode_override == "" || curr_mode_override == "override-false") { //if there is no mode override or it's false
+		if (e.matches && curr_mode != "mode-dark") { mode_switch(document.getElementById("switch_mode", false)); } //if system default is dark mode, turn page to dark mode
+		else if (curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", false)); } //if mode is currently dark, switch to light
+	}
 }
 
 window.addEventListener("load", () => {

@@ -1,11 +1,11 @@
 /* Light mode body settings */
 body {
 	background-color: #F1F1F1;
-	color: black;
+	color: #222222; /* Text color is Dark Grey in dark mode */
 }
 a.mode {
 	background-color: #3C3C3C;
-	color: LightGray;
+	color: #D3D3D3; /* Mode switch button text color is Light Gray in dark mode */
 }
 a.mode:hover {
 	/* Background color is Teal */

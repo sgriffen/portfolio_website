@@ -622,12 +622,35 @@
 		<script type="text/javascript" src="/refs/js/general.js"></script>
 		<script type="text/javascript" src="/refs/js/content.js"></script>
 		<script type="text/javascript" src="/refs/js/message_send.js"></script>
-		<script>
+		<script type="text/javascript">
 			//Show loading animations
 			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
+			
 			//Set color scheme
-			let mode = window.localStorage.getItem("com.seangriffen.resources-mode");
-			if (mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); }
+			var sys_theme = window.matchMedia('(prefers-color-scheme: dark)');
+			sys_theme.addListener(mode_default);
+			let mode_override = window.localStorage.getItem("com.seangriffen.resources-mode-override");
+			let curr_mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+			if (mode_override != null && mode_override != "") {
+			
+				if (mode_override == "override-true") {
+					if (curr_mode == null || curr_mode == "" || curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", true)); }
+				} else {
+					
+					if (sys_theme.matches && curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); } //if the system default mode is dark and there is no manual override and the page currently isn't in dark mode, switch to dark mode
+					else { //else, set current mode to light
+						window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
+						window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
+					}
+				}
+			} else {
+			
+				if (sys_theme.matches && curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); } //if system default is dark mode and there is no override and the page currently isn't in dark mode, switch to dark mode
+				else { //else, set current mode to light
+					window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
+					window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
+				}
+			}
 		</script>
 	</body>
 </html>
