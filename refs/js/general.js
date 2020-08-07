@@ -1,3 +1,32 @@
+async function update_slideBar(parent, clicked, slideRight, val) {
+	
+	let id = "";
+	let display = "";
+	if (slideRight) { //if sliding right
+	
+		id = parent.id + "-slide_" + val;
+		display = findChildById(parent.parentNode, id);
+	} else { //else if sliding left
+	
+		id = parent.id.split("-")[0];
+		display = findChildById(parent.parentNode, id);
+	}
+	
+	parent.removeEventListener("transitionend", element_display_block(parent));
+	display.removeEventListener("transitionend", element_hide(display));
+	
+	parent.addEventListener("transitionend", element_hide(parent));
+	display.addEventListener("transitionend", element_display_block(display));
+	
+	//hide current menu
+	parent.classList.toggle("hidden");
+	
+	await sleep(150);
+	
+	//display sub menu
+	display.classList.toggle("hidden");
+}
+
 function update_navBar(parent, clicked, hasDrop, drop_associatedId) {
 	
 	let idPrefix = "display_";
@@ -39,14 +68,55 @@ function update_dropBar(parent, clicked) {
 	while(childExists(parent, id)) {
 		
 		let toUpdate = findChildById(parent, id);
-		toUpdate.classList.remove("nav-drop-active");
+		toUpdate.classList.remove("nav-slide-active");
 		
 		i++;
 		id = idPrefix + i;
 	}
 	
-	clicked.classList.add("nav-drop-active");
+	clicked.classList.add("nav-slide-active");
 }
+
+async function update_slideBar(parent, clicked, slideRight, val) {
+	
+	let id = "";
+	let display = "";
+	if (slideRight) { //if sliding right
+	
+		id = parent.id + "-slide_" + val;
+		display = findChildById(parent.parentNode, id);
+	} else { //else if sliding left
+	
+		id = parent.id.split("-")[0];
+		display = findChildById(parent.parentNode, id);
+	}
+	
+	parent.removeEventListener("transitionend", element_display_block(parent));
+	display.removeEventListener("transitionend", element_hide(display));
+	
+	parent.addEventListener("transitionend", element_hide(parent));
+	display.addEventListener("transitionend", element_display_block(display));
+	
+	//hide current menu
+	parent.classList.toggle("hidden");
+	
+	await sleep(150);
+	
+	//display sub menu
+	display.classList.toggle("hidden");
+}
+
+function element_hide(elem) {
+	elem.style.display = "none";
+}
+function element_display_block(elem) {
+	elem.style.display = "block";
+}
+
+function element_display_inline(elem) {
+	elem.style.display = "inline-block";
+}
+
 
 function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 	
@@ -59,7 +129,7 @@ function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 	let toChange = document.getElementById(toChangePrefix + i);
 	while(toChange != null) {
 		
-		toChange.classList.remove("nav-drop-active");
+		toChange.classList.remove("nav-slide-active");
 		
 		let associated = document.getElementById(associatedPrefix + i + "_header");
 		topOffsets.push(Math.round(associated.offsetTop + associated.parentNode.offsetHeight - 75));
@@ -68,13 +138,13 @@ function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 		i++;
 		toChange = document.getElementById(toChangePrefix + i);
 	}
-	if (scrollTop <= topOffsets[(topOffsets.length - 1)]) { document.getElementById(toChangePrefix + (topOffsets.length - 1)).classList.add("nav-drop-active");  }
-	else if (scrollTop > topOffsets[0]) { document.getElementById(toChangePrefix + (0)).classList.add("nav-drop-active"); }
+	if (scrollTop <= topOffsets[(topOffsets.length - 1)]) { document.getElementById(toChangePrefix + (topOffsets.length - 1)).classList.add("nav-slide-active");  }
+	else if (scrollTop > topOffsets[0]) { document.getElementById(toChangePrefix + (0)).classList.add("nav-slide-active"); }
 	else {
 		for (i = topOffsets.length - 2; i >= 0; i--) {
 			
 			if (scrollTop > topOffsets[i + 1] && scrollTop <= topOffsets[i]) { 
-				document.getElementById(toChangePrefix + (i)).classList.add("nav-drop-active"); 
+				document.getElementById(toChangePrefix + (i)).classList.add("nav-slide-active"); 
 				break;
 			}
 		}
@@ -122,7 +192,7 @@ function toggle_display(toToggle) {
 			let dropActive = document.getElementById(dropId);
 			if (dropActive != null) {
 				let scrollTo = findChildById(toToggle, scrollId);
-				if (dropActive.classList.contains("nav-drop-active")) { scrollTo.scrollIntoView({behavior: 'smooth'}); }
+				if (dropActive.classList.contains("nav-slide-active")) { scrollTo.scrollIntoView({behavior: 'smooth'}); }
 			} else {
 				document.getElementById("from_name-label").scrollIntoView({behavior: 'smooth'});
 				break;
@@ -206,6 +276,11 @@ function mode_default(e) {
 		else if (curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", false)); } //if mode is currently dark, switch to light
 	}
 }
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 window.addEventListener("load", () => {
 	

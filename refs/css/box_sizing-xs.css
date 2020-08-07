@@ -11,11 +11,13 @@
 
 .nav {
 	padding-top: 20px; /* Place content 20px from the top */
-}
-.nav li {
+	
 	font-size: 18px;
 }
-.nav-drop li {
+.nav-drop {
+	font-size: 16px;
+}
+.nav-slide {
 	font-size: 16px;
 }
 
