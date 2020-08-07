@@ -35,12 +35,14 @@
 	}
 	.nav {
 		padding-top: 20px; /* Place content 30px from the top */
-	}
-	.nav li {
+		
 		font-size: 20px;
 	}
-	.nav-drop li {
+	.nav-drop {
 		font-size: 16px;
+	}
+	.nav-slide {
+		font-size: 20px;
 	}
 
 	.spacer {
@@ -71,12 +73,14 @@
 	}
 	.nav {
 		padding-top: 30px; /* Place content 30px from the top */
-	}
-	.nav li {
+		
 		font-size: 20px;
 	}
-	.nav-drop li {
+	.nav-drop {
 		font-size: 16px;
+	}
+	.nav-slide {
+		font-size: 20px;
 	}
 
 	.spacer {
@@ -108,12 +112,14 @@
 	}
 	.nav {
 		padding-top: 45px; /* Place content 45px from the top */
-	}
-	.nav li {
+		
 		font-size: 20px;
 	}
-	.nav-drop li {
+	.nav-drop {
 		font-size: 18px;
+	}
+	.nav-slide {
+		font-size: 20px;
 	}
 
 	.spacer {
@@ -145,11 +151,13 @@
 	}
 	.nav {
 		padding-top: 50px; /* Place content 53px from the top */
-	}
-	.nav li {
+		
 		font-size: 25px;
 	}
-	.nav-drop li {
+	.nav-drop {
+		font-size: 20px;
+	}
+	.nav-slide {
 		font-size: 20px;
 	}
 

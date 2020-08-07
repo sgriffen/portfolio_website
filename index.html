@@ -5,6 +5,10 @@
 	<head>
 		<title>Sean Griffen's Portfolio</title>
 		
+		
+		<script src="https://use.fontawesome.com/4bc42436a1.js"></script>
+
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<link rel="stylesheet" type="text/css" href="/refs/css/animation.css">
@@ -45,63 +49,130 @@
 				<div id="container_nav" class="col-3 col-xl-2 col-xxl-1 sidebar">
 					<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Image of me">
 					<br>
-					<div class="nav">
+					<div class="nav" id="nav">
+						<div class="slide-header slide_right nav-active" onclick="update_slideBar(this.parentNode, this, true, 0); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
+							<div style="display: inline-block">About</div>
+							<span class="arrow-right">&#8594;</span>
+						</div>
+						<div class="slide-header slide_right" onclick="update_slideBar(this.parentNode, this, true, 1); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
+							<div style="display: inline-block">Projects</div>
+							<span class="arrow-right">&#8594;</span>
+						</div>
+						<div class="slide-header slide_right" onclick="update_slideBar(this.parentNode, this, true, 2); toggle_display(findChildById(document.getElementById('container_content'), 'sub_2'));">
+							<div style="display: inline-block">Documents</div>
+							<span class="arrow-right">&#8594;</span>
+						</div>
+						<div class="slide-header" id="nav_3" onclick="update_navBar(this.parentNode, this, false); collapse_all(document.getElementById('container_content'), 'sub_3'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
+							Contact
+						</div>
+					</div>
+					<div class="nav hidden" id="nav-slide_0" style="display:none">
+						<div class="slide-header slide_left nav-active" onclick="update_slideBar(this.parentNode, this, false);">
+							<span class="arrow-left">&#8592;</span>
+							<div style="display: inline-block">About</div>
+						</div>
 						<ul>
-							<li class="nav-active" id="display_0" onclick="update_navBar(this.parentNode, this, true, 'sub_0'); collapse_all(document.getElementById('container_content'), 'sub_0'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
-								About
-								<ul class="nav-drop" id="display_0-drop">
+							<li>
+								<ul class="nav-slide" id="nav-slide_0-display">
 									<!-- Scroll to Mission Statement -->
-									<li class="nav-drop-active" id="display_0-drop_content_5" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-5');">Mission Statement</li>
+									<li class="nav-slide-active" id="nav-slide_0-display_content_5" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-5');">
+										Mission Statement
+									</li>
 									<!-- Scroll to Job Experience -->
-									<li id="display_0-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-4');">Job Experience</li>
+									<li id="nav-slide_0-display_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-4');">
+										Job Experience
+									</li>
 									<!-- Scroll to Awards -->
-									<li id="display_0-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-3');">Awards</li>
+									<li id="nav-slide_0-display_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-3');">
+										Awards
+									</li>
 									<!-- Scroll to Education -->
-									<li id="display_0-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-2');">Education</li>
+									<li id="nav-slide_0-display_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-2');">
+										Education
+									</li>
 									<!-- Scroll to Activities -->
-									<li id="display_0-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-1');">Activities</li>
+									<li id="nav-slide_0-display_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-1');">
+										Activities
+									</li>
 									<!-- Scroll to Activities -->
-									<li id="display_0-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-0');">Website</li>
+									<li id="nav-slide_0-display_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_0-0');">
+										Website
+									</li>
 								</ul>
 							</li>
-							<li id="display_1" onclick="update_navBar(this.parentNode, this, true, 'sub_1'); collapse_all(document.getElementById('container_content'), 'sub_1'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
-								Projects
-								<ul class="nav-drop" id="display_1-drop" style="display:none;">
+						</ul>
+					</div>
+					<div class="nav hidden" id="nav-slide_1" style="display:none">
+						<div class="slide-header slide_left" onclick="update_slideBar(this.parentNode, this, 0);">
+							<span class="arrow-left">&#8592;</span>
+							<div style="display: inline-block">Projects</div>
+						</div>
+						<ul>
+							<li>
+								<ul class="nav-slide" id="nav-slide_1-display">
 									<!-- Scroll to Hot Car Ally -->
-									<li id="display_1-drop_content_6" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-6');">Hot Car Ally</li>
+									<li class="nav-slide-active" id="nav-slide_1-display_content_6" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-6');">
+										Hot Car Ally
+									</li>
 									<!-- Scroll to Game Zone -->
-									<li class="nav-drop-active" id="display_1-drop_content_5" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-5');">Game Zone</li>
+									<li id="nav-slide_1-display_content_5" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-5');">
+										Game Zone
+									</li>
 									<!-- Scroll to MIPS Processor -->
-									<li id="display_1-drop_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-4');">MIPS Processor</li>
+									<li id="nav-slide_1-display_content_4" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-4');">
+										MIPS Processor
+									</li>
 									<!-- Scroll to 007: Knockout -->
-									<li id="display_1-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-3');">Roomba<span>&#174;</span> Rover</li>
+									<li id="nav-slide_1-display_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-3');">
+										Roomba<span>&#174;</span> Rover
+									</li>
 									<!-- Scroll to Roomba<span>&#174;</span> Rover -->
-									<li id="display_1-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-2');">007: Knockout</li>
+									<li id="nav-slide_1-display_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-2');">
+										007: Knockout
+									</li>
 									<!-- Scroll to FPGA Traffic Light -->
-									<li id="display_1-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-1');">FPGA Traffic Light</li>
+									<li id="nav-slide_1-display_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-1');">
+										FPGA Traffic Light
+									</li>
 									<!-- Scroll to DND Java -->
-									<li id="display_1-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-0');">DND Java</li>
+									<li id="nav-slide_1-display_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_1-0');">
+										DND Java
+									</li>
 								</ul>
 							</li>
-							<li id="display_2" onclick="update_navBar(this.parentNode, this, true, 'sub_2'); collapse_all(document.getElementById('container_content'), 'sub_2'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_2'));">
-								Documents
-								<ul class="nav-drop" id="display_2-drop" style="display:none;">
+						</ul>
+					</div>
+					<div class="nav hidden" id="nav-slide_2" style="display:none">
+						<div class="slide-header slide_left" onclick="update_slideBar(this.parentNode, this, 0);">
+							<span class="arrow-left">&#8592;</span>
+							<div style="display: inline-block">Documents</div>
+						</div>
+						<ul>
+							<li>
+								<ul class="nav-slide" id="nav-slide_2-display">
 									<!-- Scroll to Resume -->
-									<li class="nav-drop-active" id="display_2-drop_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-3');">Resume</li>
+									<li class="nav-slide-active" id="nav-slide_2-display_content_3" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-3');">
+										Resume
+									</li>
 									<!-- Scroll to Ethics Essay -->
-									<li id="display_2-drop_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-2');">Ethics Essay</li>
+									<li id="nav-slide_2-display_content_2" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-2');">
+										Ethics Essay
+									</li>
 									<!-- Scroll to Transcript -->
-									<li id="display_2-drop_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-1');">Transcript</li>
+									<li id="nav-slide_2-display_content_1" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-1');">
+										Transcript
+									</li>
 									<!-- Scroll to Class Schedule -->
-									<li id="display_2-drop_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-0');">Class Schedule</li>
+									<li id="nav-slide_2-display_content_0" onclick="update_dropBar(this.parentNode, this); scroll_to('sub_2-0');">
+										Class Schedule
+									</li>
 								</ul>
-							</li>
-							<li id="display_3" onclick="update_navBar(this.parentNode, this, false); collapse_all(document.getElementById('container_content'), 'sub_3'); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
-								Contact
 							</li>
 						</ul>
 					</div>
 				</div>
+				
+				<!-- START WEBSITE CONTENT -->
 				<div id="container_content" class="col-9 col-xl-10 col-xxl-11">
 					<div class="content" id="sub_0">
 						<!-- Mission Statement -->
