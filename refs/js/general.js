@@ -1,13 +1,41 @@
 async function update_slideBar(parent, clicked, slideRight, val) {
 	
-	let id = "";
-	let display = "";
-	if (slideRight) { //if sliding right
+	let i = 0;
+	//set all nav elements as inactive
+	let id = parent.id + "_" + i;
+	let child = findChildById(parent, id);
+	while(child != null && child != "") {
+		
+		child.classList.remove("nav-active");
+		
+		i++;
+		id = parent.id + "_" + i;
+		child = findChildById(parent, id);
+	}
+	i = 0;
+	//set all slide headers as inactive
+	id = parent.id + "-slide_" + i;
+	while(child != null && child != "") {
+		
+		let header = findChildById(child, id + "-header");
+		header.classList.remove("nav-active");
+		
+		i++;
+		id = parent.id + "-slide_" + i;
+		child = findChildById(parent, id);
+	}
 	
+	let displayHeader = null;
+	let display;
+	if (slideRight) { /* if sliding right */
+		
+		//display slide menu
 		id = parent.id + "-slide_" + val;
 		display = findChildById(parent.parentNode, id);
-	} else { //else if sliding left
-	
+		displayHeader = findChildById(display, id + "-header");
+	} else { /* else if sliding left */
+		
+		//display top-level nav menu
 		id = parent.id.split("-")[0];
 		display = findChildById(parent.parentNode, id);
 	}
@@ -18,13 +46,15 @@ async function update_slideBar(parent, clicked, slideRight, val) {
 	parent.addEventListener("transitionend", element_hide(parent));
 	display.addEventListener("transitionend", element_display_block(display));
 	
-	//hide current menu
-	parent.classList.toggle("hidden");
+	clicked.classList.add("nav-active");
 	
-	await sleep(150);
+	parent.classList.add("hidden"); /* hide current menu */
 	
-	//display sub menu
-	display.classList.toggle("hidden");
+	await sleep(150); /* wait for transition to be over */
+	
+	//display desired menu
+	display.classList.remove("hidden");
+	if (displayHeader != null) { displayHeader.classList.add("nav-active"); }
 }
 
 function update_navBar(parent, clicked, hasDrop, drop_associatedId) {
@@ -59,7 +89,7 @@ function update_navBar(parent, clicked, hasDrop, drop_associatedId) {
 		document.getElementById("scroll_associated").value = drop_associatedId + "-";
 	}
 }
-function update_dropBar(parent, clicked) {
+function update_subBar(parent, clicked) {
 	
 	let idPrefix = parent.id + "_content_";
 	let i = 0;
@@ -76,47 +106,6 @@ function update_dropBar(parent, clicked) {
 	
 	clicked.classList.add("nav-slide-active");
 }
-
-async function update_slideBar(parent, clicked, slideRight, val) {
-	
-	let id = "";
-	let display = "";
-	if (slideRight) { //if sliding right
-	
-		id = parent.id + "-slide_" + val;
-		display = findChildById(parent.parentNode, id);
-	} else { //else if sliding left
-	
-		id = parent.id.split("-")[0];
-		display = findChildById(parent.parentNode, id);
-	}
-	
-	parent.removeEventListener("transitionend", element_display_block(parent));
-	display.removeEventListener("transitionend", element_hide(display));
-	
-	parent.addEventListener("transitionend", element_hide(parent));
-	display.addEventListener("transitionend", element_display_block(display));
-	
-	//hide current menu
-	parent.classList.toggle("hidden");
-	
-	await sleep(150);
-	
-	//display sub menu
-	display.classList.toggle("hidden");
-}
-
-function element_hide(elem) {
-	elem.style.display = "none";
-}
-function element_display_block(elem) {
-	elem.style.display = "block";
-}
-
-function element_display_inline(elem) {
-	elem.style.display = "inline-block";
-}
-
 
 function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 	
@@ -176,32 +165,24 @@ function toggle_display(toToggle) {
   
 	if (toToggle.style.display == "none") {
 		
+		let i = 0;
+		//hide all content
+		let id = "sub_" + i;
+		let child = findChildById(toToggle.parentNode, id);
+		while(child != null && child != "") {
+			
+			child.style.display = "none";
+
+			i++;
+			id = "sub_" + i;
+			child = findChildById(toToggle.parentNode, id);
+		}
+		
+		//display desired content
 		toToggle.style.display = "inline-block";
 		
-		let navId = "display_" + toToggle.id.split("_")[1];
-		let nav = document.getElementById(navId);
-		let navDropIdPrefix = navId + "-drop_content_";
-		
-		let scrollIdPrefix = toToggle.id + "-";
-		
-		let i = 0;
-		let dropId = navDropIdPrefix + i;
-		let scrollId = scrollIdPrefix + i;
-		while(childExists(toToggle, scrollId)) {
-			
-			let dropActive = document.getElementById(dropId);
-			if (dropActive != null) {
-				let scrollTo = findChildById(toToggle, scrollId);
-				if (dropActive.classList.contains("nav-slide-active")) { scrollTo.scrollIntoView({behavior: 'smooth'}); }
-			} else {
-				document.getElementById("from_name-label").scrollIntoView({behavior: 'smooth'});
-				break;
-			}
-			
-			i++;
-			dropId = navDropIdPrefix + i;
-			scrollId = scrollIdPrefix + i;
-		}
+		//find active slideBar element
+		scrollIntoView(toToggle.id);
 	}
 }
 
@@ -281,6 +262,16 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function element_hide(elem) {
+	elem.style.display = "none";
+}
+function element_display_block(elem) {
+	elem.style.display = "block";
+}
+
+function element_display_inline(elem) {
+	elem.style.display = "inline-block";
+}
 
 window.addEventListener("load", () => {
 	
