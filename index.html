@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8" />
 	<head>
+	
 		<title>Sean Griffen's Portfolio</title>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<meta name="author" content="Sean Griffen" />
+		<meta name="description" content="Reference for employers for summary of professional work and achievements of Sean Griffen" />
+		
+		<link rel="icon" type="image/jpg" href="/refs/img/sean_griffen.jpg" size="64x64" />
 		
 		<link rel="stylesheet" type="text/css" href="/refs/css/animation.css">
 		<link rel="stylesheet" type="text/css" href="/refs/css/default.css">
@@ -16,8 +23,6 @@
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 992px)" href="/refs/css/box_sizing-l.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="/refs/css/box_sizing-xl.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width: 2500px)" href="/refs/css/box_sizing-xxl.css">
-		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body id="body">
 		
@@ -42,7 +47,7 @@
 			<br>
 			<div class="row" id="container_main">
 				<div id="container_nav" class="col-4 col-xl-2 col-xxl-2 sidebar">
-					<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Image of me">
+					<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Headshot of a handsome lad (if I do say so myself...)">
 					<br>
 					<div class="nav" id="nav">
 						<div id="nav_0" class="slide-header slide_right nav-active" onclick="update_slideBar(this.parentNode, this, true, 0); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
@@ -57,7 +62,7 @@
 							<div style="display: inline-block">Documents</div>
 							<span class="arrow-right">&#8594;</span>
 						</div>
-						<div id="nav_3" class="slide-header slide_right" onclick="update_navBar(this.parentNode, this, false); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
+						<div id="nav_3" class="slide-header slide_right" onclick="update_slideBar(this.parentNode, this, null); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
 							<div style="display: inline-block">Contact</div>
 						</div>
 					</div>

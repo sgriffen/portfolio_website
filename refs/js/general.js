@@ -27,67 +27,41 @@ async function update_slideBar(parent, clicked, slideRight, val) {
 	
 	let displayHeader = null;
 	let display;
-	if (slideRight) { /* if sliding right */
+	if (slideRight != null) {
 		
-		//display slide menu
-		id = parent.id + "-slide_" + val;
-		display = findChildById(parent.parentNode, id);
-		displayHeader = findChildById(display, id + "-header");
-	} else { /* else if sliding left */
+		if (slideRight) { /* if sliding right */
+			
+			//display slide menu
+			id = parent.id + "-slide_" + val;
+			display = findChildById(parent.parentNode, id);
+			displayHeader = findChildById(display, id + "-header");
+		} else { /* else if sliding left */
+			
+			//display top-level nav menu
+			id = parent.id.split("-")[0];
+			display = findChildById(parent.parentNode, id);
+		}
 		
-		//display top-level nav menu
+		parent.removeEventListener("transitionend", element_display_block(parent));
+		display.removeEventListener("transitionend", element_hide(display));
+		
+		parent.addEventListener("transitionend", element_hide(parent));
+		display.addEventListener("transitionend", element_display_block(display));
+		
+		parent.classList.add("hidden"); /* hide current menu */
+		
+		await sleep(150); /* wait for transition to be over */
+	} else {
+		
 		id = parent.id.split("-")[0];
 		display = findChildById(parent.parentNode, id);
 	}
 	
-	parent.removeEventListener("transitionend", element_display_block(parent));
-	display.removeEventListener("transitionend", element_hide(display));
-	
-	parent.addEventListener("transitionend", element_hide(parent));
-	display.addEventListener("transitionend", element_display_block(display));
-	
 	clicked.classList.add("nav-active");
-	
-	parent.classList.add("hidden"); /* hide current menu */
-	
-	await sleep(150); /* wait for transition to be over */
 	
 	//display desired menu
 	display.classList.remove("hidden");
 	if (displayHeader != null) { displayHeader.classList.add("nav-active"); }
-}
-
-function update_navBar(parent, clicked, hasDrop, drop_associatedId) {
-	
-	let idPrefix = "display_";
-	let i = 0;
-	
-	let id = idPrefix + i;
-	while(childExists(parent, id)) {
-		
-		let toUpdate = findChildById(parent, id);
-		toUpdate.classList.remove("nav-active");
-		
-		let dropContainerId = id + "-drop";
-		if (childExists(toUpdate, dropContainerId)) {
-			
-			let child = findChildById(toUpdate, dropContainerId);
-			child.style.display = "none";
-		}
-		
-		i++;
-		id = idPrefix + i;
-	}
-	
-	clicked.classList.add("nav-active");
-	if (hasDrop) {
-		
-		let dropContainer = findChildById(clicked, clicked.id + "-drop");
-		dropContainer.style.display = "block";
-		
-		document.getElementById("scroll_toChange").value = dropContainer.id + "_content_";
-		document.getElementById("scroll_associated").value = drop_associatedId + "-";
-	}
 }
 function update_subBar(parent, clicked) {
 	
