@@ -55,33 +55,33 @@
 
 @keyframes spin {
 	0% {
-		border-top: 12px solid #009688;
-		border-bottom: 12px solid #87CEEB;
-		border-left: 12px solid #616161;
-		border-right: 12px solid #4CAF50;
+		border-top: 12px solid #009688; /* Top border color is Teal */
+		border-bottom: 12px solid #87CEEB; /* Bottom border color is light-blue */
+		border-left: 12px solid #616161; /* Left border color is Dark-Gray */
+		border-right: 12px solid #4CAF50; /* Right border color is Green */
 	}
 	25% { 
-		border-top: 12px solid #616161;
-		border-bottom: 12px solid #4CAF50;
-		border-left: 12px solid #87CEEB;
-		border-right: 12px solid #009688; 
+		border-top: 12px solid #616161; /* Top border color is Dark-Gray */
+		border-bottom: 12px solid #4CAF50; /* Bottom border color is Green */
+		border-left: 12px solid #87CEEB; /* Left border color is light-blue */
+		border-right: 12px solid #009688; /* Right border color is Teal */
 	}
 	50% { 
-		border-top: 12px solid #87CEEB;
-		border-bottom: 12px solid #87CEEB;
-		border-left: 12px solid #4CAF50;
-		border-right: 12px solid #616161; 
+		border-top: 12px solid #87CEEB; /* Top border color is light-blue */
+		border-bottom: 12px solid #009688; /* Bottom border color is Teal */
+		border-left: 12px solid #4CAF50; /* Left border color is Green */
+		border-right: 12px solid #616161; /* Right border color is Dark-Gray */
 	}
 	75% { 
-		border-top: 12px solid #4CAF50;
-		border-bottom: 12px solid #616161;
-		border-left: 12px solid #009688;
-		border-right: 12px solid #87CEEB; 
+		border-top: 12px solid #4CAF50; /* Top border color is Green */
+		border-bottom: 12px solid #616161; /* Bottom border color is Dark-Gray */
+		border-left: 12px solid #009688; /* Left border color is Teal */
+		border-right: 12px solid #87CEEB; /* Right border color is light-blue */
 	}
 	100% {
-		border-top: 12px solid #009688;
-		border-bottom: 12px solid #87CEEB;
-		border-left: 12px solid #616161;
-		border-right: 12px solid #4CAF50;  
+		border-top: 12px solid #009688; /* Top border color is Teal */
+		border-bottom: 12px solid #87CEEB; /* Bottom border color is light-blue */
+		border-left: 12px solid #616161; /* Left border color is Dark-Gray */
+		border-right: 12px solid #4CAF50; /* Right border color is Green */
 	}
 }

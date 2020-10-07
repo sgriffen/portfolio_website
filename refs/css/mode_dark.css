@@ -1,13 +1,14 @@
 /* Dark mode body settings */
-body.mode-dark {
+body {
 	background-color: #3C3C3C;
 	color: #D3D3D3; /* Text color is Light Gray in dark mode */
 }
-a.mode.mode-dark {
+
+a.mode {
 	background-color: #F1F1F1;
 	color: #222222; /* Mode switch button text color is Dark Gray in dark mode */
 }
-a.mode.mode-dark:hover {
+a.mode:hover {
 	background-color: #009688;
 	cursor: pointer;
 }

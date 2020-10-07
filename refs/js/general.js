@@ -62,6 +62,10 @@ async function update_slideBar(parent, clicked, slideRight, val) {
 	//display desired menu
 	display.classList.remove("hidden");
 	if (displayHeader != null) { displayHeader.classList.add("nav-active"); }
+	
+	//set scroll to settings
+	document.getElementById("scroll_toChange").value = "nav-slide_" + val + "-display_content_";
+	document.getElementById("scroll_associated").value = "sub_" + val + "-";
 }
 function update_subBar(parent, clicked) {
 	
@@ -95,7 +99,7 @@ function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 		toChange.classList.remove("nav-slide-active");
 		
 		let associated = document.getElementById(associatedPrefix + i + "_header");
-		topOffsets.push(Math.round(associated.offsetTop + associated.parentNode.offsetHeight - 75));
+		topOffsets.push(Math.round(associated.offsetTop + associated.parentNode.offsetHeight - 90));
 		//let rect = findChildById(associated, associatedPrefix + i + "_header").getBoundingClientRect();
 		//topOffsets.push(Math.round(findChildById(associated, associatedPrefix + i + "_header").offsetTop));
 		i++;
@@ -196,20 +200,20 @@ function findChildById(element, id) {
 
 function mode_switch(node, override) {
 	
-	document.body.classList.toggle("mode-dark");
-	node.classList.toggle("mode-dark");
-	if (document.body.classList.contains("mode-dark")) {
-		
-		node.innerHTML = "Light Mode";
-		if (override == true) { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
-		else { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
-		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
-	} else {
+	document.body.classList.toggle("mode-light");
+	node.classList.toggle("mode-light");
+	if (document.body.classList.contains("mode-light")) {
 		
 		node.innerHTML = "Dark Mode";
-		if (override == true) { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
-		else { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
-		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
+		if (override) { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
+		else { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
+		window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-light");
+	} else {
+		
+		node.innerHTML = "Light Mode";
+		if (override) { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
+		else { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
+		window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
 	}
 }
 
@@ -224,11 +228,11 @@ function array_reverse(arr) {
 
 function mode_default(e) {
 	
-	let curr_mode_override = window.localStorage.getItem("com.seangriffen.resources-mode-override");
-	let curr_mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+	let curr_mode_override = window.sessionStorage.getItem("com.seangriffen.resources-mode-override");
+	let curr_mode = window.sessionStorage.getItem("com.seangriffen.resources-mode");
 	if (curr_mode_override == null || curr_mode_override == "" || curr_mode_override == "override-false") { //if there is no mode override or it's false
-		if (e.matches && curr_mode != "mode-dark") { mode_switch(document.getElementById("switch_mode", false)); } //if system default is dark mode, turn page to dark mode
-		else if (curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", false)); } //if mode is currently dark, switch to light
+		if (e.matches && curr_mode != "mode-light") { mode_switch(document.getElementById("switch_mode", false)); } //if system default is light mode, turn page to light mode
+		else if (curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode", false)); } //if mode is currently light, switch to dark
 	}
 }
 
@@ -251,9 +255,9 @@ window.addEventListener("load", () => {
 	
 	document.querySelector(".display_before").classList.add("loaded_l");
 	document.querySelector(".display_after").classList.add("loaded_l");
-	smoothScroll(0, 0);
+	document.getElementById("container_content").scrollTop = 0;
 	
-	document.getElementById("scroll_toChange").value = "display_0-drop_content_";
+	document.getElementById("scroll_toChange").value = "nav-slide_0-display_content_";
 	document.getElementById("scroll_associated").value = "sub_0-";
 	document.getElementById("container_content").addEventListener("scroll", () => { 
 		update_dropBar_onscroll(document.getElementById("scroll_toChange").value, document.getElementById("scroll_associated").value); 

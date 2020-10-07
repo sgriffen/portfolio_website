@@ -697,7 +697,7 @@
 					<a class="inline button linkedin" id="open_linkedin" title="Linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
 					<a class="inline button github" id="open_github" title="Github profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
 					<a class="inline button twitter" id="open_twitter" title="Twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
-					<a class="inline button mode" id="switch_mode" title="Toggle dark/light mode" onclick="mode_switch(this, true);" style="width:125px;">Dark Mode</a>
+					<a class="inline button mode" id="switch_mode" title="Toggle dark/light mode" onclick="mode_switch(this, true);" style="width:125px;">Light Mode</a>
 				</div>
 			</div>
 		</div>
@@ -710,28 +710,28 @@
 			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
 			
 			//Set color scheme
-			var sys_theme = window.matchMedia('(prefers-color-scheme: dark)');
+			var sys_theme = window.matchMedia("(prefers-color-scheme: light)");
 			sys_theme.addListener(mode_default);
-			let mode_override = window.localStorage.getItem("com.seangriffen.resources-mode-override");
-			let curr_mode = window.localStorage.getItem("com.seangriffen.resources-mode");
-			if (mode_override != null && mode_override != "") {
+			let mode_override = window.sessionStorage.getItem("com.seangriffen.resources-mode-override");
+			let curr_mode = window.sessionStorage.getItem("com.seangriffen.resources-mode");
+			if (mode_override != null && mode_override != "") { //if user is potentially overriding the color scheme
 			
-				if (mode_override == "override-true") {
-					if (curr_mode == null || curr_mode == "" || curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", true)); }
+				if (mode_override == "override-true") { //if user is definitely overriding the color scheme
+					if (curr_mode == null || curr_mode == "" || curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode", true)); }
 				} else {
 					
-					if (sys_theme.matches && curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); } //if the system default mode is dark and there is no manual override and the page currently isn't in dark mode, switch to dark mode
-					else { //else, set current mode to light
-						window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
-						window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
+					if (sys_theme.matches && curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode")); } //if the system default mode is light and there is no manual override and the page currently isn't in light mode, switch to light mode
+					else { //else, set current mode to dark
+						window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
+						window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-true")
 					}
 				}
-			} else {
+			} else { //else
 			
 				if (sys_theme.matches && curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); } //if system default is dark mode and there is no override and the page currently isn't in dark mode, switch to dark mode
-				else { //else, set current mode to light
-					window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
-					window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
+				else { //else, set current mode to dark
+					window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
+					window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
 				}
 			}
 		</script>
