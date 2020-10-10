@@ -27,67 +27,45 @@ async function update_slideBar(parent, clicked, slideRight, val) {
 	
 	let displayHeader = null;
 	let display;
-	if (slideRight) { /* if sliding right */
+	if (slideRight != null) {
 		
-		//display slide menu
-		id = parent.id + "-slide_" + val;
-		display = findChildById(parent.parentNode, id);
-		displayHeader = findChildById(display, id + "-header");
-	} else { /* else if sliding left */
+		if (slideRight) { /* if sliding right */
+			
+			//display slide menu
+			id = parent.id + "-slide_" + val;
+			display = findChildById(parent.parentNode, id);
+			displayHeader = findChildById(display, id + "-header");
+		} else { /* else if sliding left */
+			
+			//display top-level nav menu
+			id = parent.id.split("-")[0];
+			display = findChildById(parent.parentNode, id);
+		}
 		
-		//display top-level nav menu
+		parent.removeEventListener("transitionend", element_display_block(parent));
+		display.removeEventListener("transitionend", element_hide(display));
+		
+		parent.addEventListener("transitionend", element_hide(parent));
+		display.addEventListener("transitionend", element_display_block(display));
+		
+		parent.classList.add("hidden"); /* hide current menu */
+		
+		await sleep(150); /* wait for transition to be over */
+	} else {
+		
 		id = parent.id.split("-")[0];
 		display = findChildById(parent.parentNode, id);
 	}
 	
-	parent.removeEventListener("transitionend", element_display_block(parent));
-	display.removeEventListener("transitionend", element_hide(display));
-	
-	parent.addEventListener("transitionend", element_hide(parent));
-	display.addEventListener("transitionend", element_display_block(display));
-	
 	clicked.classList.add("nav-active");
-	
-	parent.classList.add("hidden"); /* hide current menu */
-	
-	await sleep(150); /* wait for transition to be over */
 	
 	//display desired menu
 	display.classList.remove("hidden");
 	if (displayHeader != null) { displayHeader.classList.add("nav-active"); }
-}
-
-function update_navBar(parent, clicked, hasDrop, drop_associatedId) {
 	
-	let idPrefix = "display_";
-	let i = 0;
-	
-	let id = idPrefix + i;
-	while(childExists(parent, id)) {
-		
-		let toUpdate = findChildById(parent, id);
-		toUpdate.classList.remove("nav-active");
-		
-		let dropContainerId = id + "-drop";
-		if (childExists(toUpdate, dropContainerId)) {
-			
-			let child = findChildById(toUpdate, dropContainerId);
-			child.style.display = "none";
-		}
-		
-		i++;
-		id = idPrefix + i;
-	}
-	
-	clicked.classList.add("nav-active");
-	if (hasDrop) {
-		
-		let dropContainer = findChildById(clicked, clicked.id + "-drop");
-		dropContainer.style.display = "block";
-		
-		document.getElementById("scroll_toChange").value = dropContainer.id + "_content_";
-		document.getElementById("scroll_associated").value = drop_associatedId + "-";
-	}
+	//set scroll to settings
+	document.getElementById("scroll_toChange").value = "nav-slide_" + val + "-display_content_";
+	document.getElementById("scroll_associated").value = "sub_" + val + "-";
 }
 function update_subBar(parent, clicked) {
 	
@@ -121,7 +99,7 @@ function update_dropBar_onscroll(toChangePrefix, associatedPrefix) {
 		toChange.classList.remove("nav-slide-active");
 		
 		let associated = document.getElementById(associatedPrefix + i + "_header");
-		topOffsets.push(Math.round(associated.offsetTop + associated.parentNode.offsetHeight - 75));
+		topOffsets.push(Math.round(associated.offsetTop + associated.parentNode.offsetHeight - 90));
 		//let rect = findChildById(associated, associatedPrefix + i + "_header").getBoundingClientRect();
 		//topOffsets.push(Math.round(findChildById(associated, associatedPrefix + i + "_header").offsetTop));
 		i++;
@@ -222,20 +200,20 @@ function findChildById(element, id) {
 
 function mode_switch(node, override) {
 	
-	document.body.classList.toggle("mode-dark");
-	node.classList.toggle("mode-dark");
-	if (document.body.classList.contains("mode-dark")) {
-		
-		node.innerHTML = "Light Mode";
-		if (override == true) { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
-		else { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
-		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
-	} else {
+	document.body.classList.toggle("mode-light");
+	node.classList.toggle("mode-light");
+	if (document.body.classList.contains("mode-light")) {
 		
 		node.innerHTML = "Dark Mode";
-		if (override == true) { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
-		else { window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
-		window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
+		if (override) { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
+		else { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
+		window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-light");
+	} else {
+		
+		node.innerHTML = "Light Mode";
+		if (override) { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-true"); }
+		else { window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-false"); }
+		window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
 	}
 }
 
@@ -250,11 +228,11 @@ function array_reverse(arr) {
 
 function mode_default(e) {
 	
-	let curr_mode_override = window.localStorage.getItem("com.seangriffen.resources-mode-override");
-	let curr_mode = window.localStorage.getItem("com.seangriffen.resources-mode");
+	let curr_mode_override = window.sessionStorage.getItem("com.seangriffen.resources-mode-override");
+	let curr_mode = window.sessionStorage.getItem("com.seangriffen.resources-mode");
 	if (curr_mode_override == null || curr_mode_override == "" || curr_mode_override == "override-false") { //if there is no mode override or it's false
-		if (e.matches && curr_mode != "mode-dark") { mode_switch(document.getElementById("switch_mode", false)); } //if system default is dark mode, turn page to dark mode
-		else if (curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", false)); } //if mode is currently dark, switch to light
+		if (e.matches && curr_mode != "mode-light") { mode_switch(document.getElementById("switch_mode", false)); } //if system default is light mode, turn page to light mode
+		else if (curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode", false)); } //if mode is currently light, switch to dark
 	}
 }
 
@@ -277,9 +255,9 @@ window.addEventListener("load", () => {
 	
 	document.querySelector(".display_before").classList.add("loaded_l");
 	document.querySelector(".display_after").classList.add("loaded_l");
-	smoothScroll(0, 0);
+	document.getElementById("container_content").scrollTop = 0;
 	
-	document.getElementById("scroll_toChange").value = "display_0-drop_content_";
+	document.getElementById("scroll_toChange").value = "nav-slide_0-display_content_";
 	document.getElementById("scroll_associated").value = "sub_0-";
 	document.getElementById("container_content").addEventListener("scroll", () => { 
 		update_dropBar_onscroll(document.getElementById("scroll_toChange").value, document.getElementById("scroll_associated").value); 

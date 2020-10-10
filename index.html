@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8" />
 	<head>
+	
 		<title>Sean Griffen's Portfolio</title>
 		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
-		<script src="https://use.fontawesome.com/4bc42436a1.js"></script>
-
+		<meta name="author" content="Sean Griffen" />
+		<meta name="description" content="Reference for employers for summary of professional work and achievements of Sean Griffen" />
 		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+		<link rel="icon" type="image/jpg" href="/refs/img/icon.jpg" size="32x32" />
+		
 		<link rel="stylesheet" type="text/css" href="/refs/css/animation.css">
 		<link rel="stylesheet" type="text/css" href="/refs/css/default.css">
 		<link rel="stylesheet" type="text/css" href="/refs/css/content.css">
@@ -46,7 +47,7 @@
 			<br>
 			<div class="row" id="container_main">
 				<div id="container_nav" class="col-4 col-xl-2 col-xxl-2 sidebar">
-					<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Image of me">
+					<img class="profile_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Headshot of a handsome lad (if I do say so myself...)">
 					<br>
 					<div class="nav" id="nav">
 						<div id="nav_0" class="slide-header slide_right nav-active" onclick="update_slideBar(this.parentNode, this, true, 0); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
@@ -61,7 +62,7 @@
 							<div style="display: inline-block">Documents</div>
 							<span class="arrow-right">&#8594;</span>
 						</div>
-						<div id="nav_3" class="slide-header slide_right" onclick="update_navBar(this.parentNode, this, false); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
+						<div id="nav_3" class="slide-header slide_right" onclick="update_slideBar(this.parentNode, this, null); toggle_display(findChildById(document.getElementById('container_content'), 'sub_3'));">
 							<div style="display: inline-block">Contact</div>
 						</div>
 					</div>
@@ -81,13 +82,13 @@
 									<li id="nav-slide_0-display_content_4" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-4');">
 										Job Experience
 									</li>
-									<!-- Scroll to Awards -->
-									<li id="nav-slide_0-display_content_3" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-3');">
-										Awards
-									</li>
 									<!-- Scroll to Education -->
-									<li id="nav-slide_0-display_content_2" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-2');">
+									<li id="nav-slide_0-display_content_3" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-3');">
 										Education
+									</li>
+									<!-- Scroll to Awards -->
+									<li id="nav-slide_0-display_content_2" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-2');">
+										Awards
 									</li>
 									<!-- Scroll to Activities -->
 									<li id="nav-slide_0-display_content_1" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-1');">
@@ -262,62 +263,74 @@
 											</p>
 										</p>
 									</li>
-							</ul>
-						</p>
-						<span class="section-breaker"></span>
-						</div>
-						<!-- Awards -->
-						<div id="sub_0-3">
-							<div id="sub_0-3_header" class="section-header">
-								Awards and Recognitions
-							</div>
-							<br>
-							<p class="section-content">
-							<ul>
-								<li class="subheader">
-									Squirrel Hacks XI:
-									<ul>
-										<li>1st Place Hardware</li>
-										<li>Vermeer Best IoT Device</li>
-									</ul>
-								</li>
-								<li class="subheader">
-									Boy Scouts of America:
-									<ul>
-										<li>Eagle Scout Rank</li>
-										<li>Order of the Arrow</li>
-									</ul>
-								</li>
-								<li class="subheader">Iowa Bar Association/Foundation - American Citizenship Award</li>
-								<li class="subheader">Corporation for National and Community Service - President's Volunteer Service Bronze Award</li>
-								<li class="subheader">United States Marine Corps - Sholastic Excellence Award</li>
-								<li class="subheader">State of Iowa Representatives - Certificate of Recognition for volunteer work in 2017</li>
-								<li class="subheader">Lions International - Young Leaders in Service Award</li>
-								<li class="subheader">
-									High School:
-									<ul>
-										<li>Salutatorian</li>
-										<li>National Honor Society</li>
-									</ul>
-								</li>
-								<li class="subheader">McLure/JFSCO Engineering Scholarship</li>
-								<li class="subheader">Help Our Youth Scholarship</li>
-								<li class="subheader">Altrusa International, Inc. of Red Oak, Iowa Scholarship</li>
-							</ul>
+								</ul>
 							</p>
 							<span class="section-breaker"></span>
 						</div>
 						<!-- Education -->
-						<div id="sub_0-2">
-							<div id="sub_0-2_header" class="section-header">
+						<div id="sub_0-3">
+							<div id="sub_0-3_header" class="section-header">
 								Education
 							</div>
 							<br>
 							<p class="section-content">
 							<ul>
-								<li class="subheader">Iowa State University (expected graduation December 2021)</li>
-								<li class="subheader">Red Oak Community High School</li>
+								<li class="subheader">
+									Iowa State University
+									<ul>
+										<li>Bachelor of Science in Computer Engineering (expected graduation December 2021)</li>
+										<li>Cumulative GPA: 3.12</li>
+									</ul>
+								</li>
+								<li class="subheader">
+									Red Oak Community High School
+									<ul>
+										<li>Salutatorian</li>
+										<li>Graduating weighted GPA: <b>TODO</b></li>
+									</ul>
+								</li>
 							</ul>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<!-- Awards -->
+						<div id="sub_0-2">
+							<div id="sub_0-2_header" class="section-header">
+								Awards and Recognitions
+							</div>
+							<br>
+							<p class="section-content">
+								<ul>
+									<li class="subheader">
+										Squirrel Hacks XI:
+										<ul>
+											<li>1st Place Hardware</li>
+											<li>Vermeer Best IoT Device</li>
+										</ul>
+									</li>
+									<li class="subheader">
+										Boy Scouts of America:
+										<ul>
+											<li>Eagle Scout Rank</li>
+											<li>Order of the Arrow</li>
+										</ul>
+									</li>
+									<li class="subheader">Iowa Bar Association/Foundation - American Citizenship Award</li>
+									<li class="subheader">Corporation for National and Community Service - President's Volunteer Service Bronze Award</li>
+									<li class="subheader">United States Marine Corps - Sholastic Excellence Award</li>
+									<li class="subheader">State of Iowa Representatives - Certificate of Recognition for volunteer work in 2017</li>
+									<li class="subheader">Lions International - Young Leaders in Service Award</li>
+									<li class="subheader">
+										High School:
+										<ul>
+											<li>Salutatorian</li>
+											<li>National Honor Society</li>
+										</ul>
+									</li>
+									<li class="subheader">McLure/JFSCO Engineering Scholarship</li>
+									<li class="subheader">Help Our Youth Scholarship</li>
+									<li class="subheader">Altrusa International, Inc. of Red Oak, Iowa Scholarship</li>
+								</ul>
 							</p>
 							<span class="section-breaker"></span>
 						</div>
@@ -328,26 +341,26 @@
 							</div>
 							<br>
 							<p class="section-content">
-							<ul>
-								<li class="subheader">
-									University:
-									<ul>
-										<li>Iowa State University Cyclone Football Varsity Marching Band</li>
-										<li>Crossroads Percussion</li>
-									</ul>
-								</li>
-								<li class="subheader">
-									High School:
-									<ul>
-										<li>Boy Scouts of America</li>
-										<li>4H</li>
-										<li>Theater</li>
-										<li>Speech</li>
-										<li>Tennis</li>
-										<li>Cross Country</li>
-									</ul>
-								</li>
-							</ul>
+								<ul>
+									<li class="subheader">
+										University:
+										<ul>
+											<li>Iowa State University Cyclone Football Varsity Marching Band</li>
+											<li>Crossroads Percussion</li>
+										</ul>
+									</li>
+									<li class="subheader">
+										High School:
+										<ul>
+											<li>Boy Scouts of America</li>
+											<li>4H</li>
+											<li>Theater</li>
+											<li>Speech</li>
+											<li>Tennis</li>
+											<li>Cross Country</li>
+										</ul>
+									</li>
+								</ul>
 							</p>
 							<span class="section-breaker"></span>
 						</div>
@@ -684,7 +697,7 @@
 					<a class="inline button linkedin" id="open_linkedin" title="Linkedin profile" onclick="window.open('https://www.linkedin.com/in/sean-griffen-b7531b15b', '_blank');"><i class="fa fa-linkedin"></i></a>
 					<a class="inline button github" id="open_github" title="Github profile" onclick="window.open('https://github.com/sgriffen', '_blank');"><i class="fa fa-github"></i></a>
 					<a class="inline button twitter" id="open_twitter" title="Twitter profile" onclick="window.open('https://twitter.com/NerdAvenger3', '_blank');"><i class="fa fa-twitter"></i></a>
-					<a class="inline button mode" id="switch_mode" title="Toggle dark/light mode" onclick="mode_switch(this, true);" style="width:125px;">Dark Mode</a>
+					<a class="inline button mode" id="switch_mode" title="Toggle dark/light mode" onclick="mode_switch(this, true);" style="width:125px;">Light Mode</a>
 				</div>
 			</div>
 		</div>
@@ -697,30 +710,32 @@
 			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
 			
 			//Set color scheme
-			var sys_theme = window.matchMedia('(prefers-color-scheme: dark)');
+			var sys_theme = window.matchMedia("(prefers-color-scheme: light)");
 			sys_theme.addListener(mode_default);
-			let mode_override = window.localStorage.getItem("com.seangriffen.resources-mode-override");
-			let curr_mode = window.localStorage.getItem("com.seangriffen.resources-mode");
-			if (mode_override != null && mode_override != "") {
+			let mode_override = window.sessionStorage.getItem("com.seangriffen.resources-mode-override");
+			let curr_mode = window.sessionStorage.getItem("com.seangriffen.resources-mode");
+			if (mode_override != null && mode_override != "") { //if user is potentially overriding the color scheme
 			
-				if (mode_override == "override-true") {
-					if (curr_mode == null || curr_mode == "" || curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode", true)); }
+				if (mode_override == "override-true") { //if user is definitely overriding the color scheme
+					if (curr_mode == null || curr_mode == "" || curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode", true)); }
 				} else {
 					
-					if (sys_theme.matches && curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); } //if the system default mode is dark and there is no manual override and the page currently isn't in dark mode, switch to dark mode
-					else { //else, set current mode to light
-						window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
-						window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
+					if (sys_theme.matches && curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode")); } //if the system default mode is light and there is no manual override and the page currently isn't in light mode, switch to light mode
+					else { //else, set current mode to dark
+						window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
+						window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-true")
 					}
 				}
-			} else {
+			} else { //else
 			
 				if (sys_theme.matches && curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); } //if system default is dark mode and there is no override and the page currently isn't in dark mode, switch to dark mode
-				else { //else, set current mode to light
-					window.localStorage.setItem("com.seangriffen.resources-mode", "mode-light");
-					window.localStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
+				else { //else, set current mode to dark
+					window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
+					window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
 				}
 			}
 		</script>
+		
+		<script src="https://use.fontawesome.com/4bc42436a1.js"></script>
 	</body>
 </html>

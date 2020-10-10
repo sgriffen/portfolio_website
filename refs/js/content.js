@@ -6,12 +6,12 @@ function validate_input(input) {
 	let regExp = new RegExp(input.pattern);
 	if (!(regExp.test(val))) {
 		
-		input.style = "border-color: #B22222;"; //border color is FireBrick
+		input.style.borderColor = "#B22222;"; //border color is FireBrick
 		label.innerHTML = "Email - user@domain.com";
 		label.style.color = "#B22222"; //text color is FireBrick
 	} else {
 		
-		input.style = "border-color: ";
+		input.style.borderColor = "";
 		label.innerHTML = "Your email";
 		label.style.color = "inherit";
 	}

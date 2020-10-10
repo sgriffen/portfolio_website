@@ -20,6 +20,9 @@ body {
 	height: 100%;
 	
 	transition: all 0.2s ease-out;
+	
+	background-color: #3C3C3C;
+	color: #D3D3D3; /* Text color is Light Gray in dark mode */
 }
 
 .profile_pic {

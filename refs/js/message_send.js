@@ -1,6 +1,6 @@
 function message_send(elements) {
 	
-	let message_counter = window.sessionStorage.getItem("com.seangriffen.resources-message_counter");
+	let message_counter = window.localStorage.getItem("com.seangriffen.resources-message_counter");
 	
 	if (message_counter == null || message_counter == "") {
 		let submit_but = document.getElementById("send_submit");
@@ -69,7 +69,7 @@ function message_success(xhr) {
 	
 	submit_but.disabled = false;
 	
-	window.sessionStorage.setItem("com.seangriffen.resources-message_counter", "1");
+	window.localStorage.setItem("com.seangriffen.resources-message_counter", "1");
 }
 
 function message_error(xhr) {
@@ -77,7 +77,7 @@ function message_error(xhr) {
 	let submit_but = document.getElementById("send_submit");
 	let feedback = document.getElementById("send_feedback");
 	
-	let message_counter = window.sessionStorage.getItem("com.seangriffen.resources-message_counter");
+	let message_counter = window.localStorage.getItem("com.seangriffen.resources-message_counter");
 	if (message_counter != null || message_counter != "") {
 		
 		submit_but.value = "Message limit reached for session";
