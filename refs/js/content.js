@@ -1,10 +1,9 @@
-function validate_input(input) {
+function validate_input_email(input) {
 	
-	let val = input.value;
 	let label = findChildById(input.parentNode, input.id + "-label");
 	
-	let regExp = new RegExp(input.pattern);
-	if (!(regExp.test(val))) {
+	let val = input.value.toLowerCase();
+	if (!val.includes("@") || val.includes(".")) {
 		
 		input.style.borderColor = "#B22222;"; //border color is FireBrick
 		label.innerHTML = "Email - user@domain.com";

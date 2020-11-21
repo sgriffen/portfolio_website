@@ -160,7 +160,7 @@ function toggle_display(toToggle) {
 		toToggle.style.display = "inline-block";
 		
 		//find active slideBar element
-		scrollIntoView(toToggle.id);
+		scroll_to(toToggle.id);
 	}
 }
 

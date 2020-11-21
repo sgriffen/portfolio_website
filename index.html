@@ -2,7 +2,7 @@
 <html>
 	<head>
 	
-		<title>Sean Griffen's Portfolio</title>
+		<title>Portfolio by Sean Griffen</title>
 		
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -74,10 +74,6 @@
 						<ul>
 							<li>
 								<ul class="nav-slide" id="nav-slide_0-display">
-									<!-- Scroll to Mission Statement -->
-									<li class="nav-slide-active" id="nav-slide_0-display_content_5" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-5');">
-										Mission Statement
-									</li>
 									<!-- Scroll to Job Experience -->
 									<li id="nav-slide_0-display_content_4" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-4');">
 										Job Experience
@@ -175,17 +171,6 @@
 				<!-- START WEBSITE CONTENT -->
 				<div id="container_content" class="col-8 col-xl-8 col-xxl-10">
 					<div class="content" id="sub_0">
-						<!-- Mission Statement -->
-						<div id="sub_0-5">
-							<div id="sub_0-5_header" class="section-header">
-								Mission Statement
-							</div>
-							<br>
-							<p class="section-content">
-								To accelerate beyond my own expectations
-							</p>
-							<span class="section-breaker"></span>
-						</div>
 						<!-- Job Experience -->
 						<div id="sub_0-4">
 							<div id="sub_0-4_header" class="section-header">
@@ -197,7 +182,7 @@
 									<li class="subheader">
 										May 2020 - Current: 
 										<p>
-											<u><a id="vermeerWebsite" class="mode-dark" title="Vermeer Corporation Website" href="https://www.vermeer.com" target="_blank">Vermeer Corporation</a> - Embedded software engineer intern</u>
+											<u><a id="vermeerWebsite_0" class="mode-dark" title="Vermeer Corporation Website" href="https://www.vermeer.com" target="_blank">Vermeer Corporation</a> - Embedded software engineer intern</u>
 											<p class="section-content">
 												I am currently a co-op at Vermeer's industrial underground division working on and testing software that controls their pile drivers and horizontal directional drills.
 												<br>
@@ -212,16 +197,24 @@
 														<ul>
 															<li>Matlab</li>
 															<li>Simulink</li>
+															<li>Qt</li>
+															<li>QML</li>
 														</ul>
 													</li>
 												</ul>
+											</p>
+											<br>
+											
+											<u><a id="fmtcWebsite_0" class="mode-dark" title="Farmers Mutual Telephone Company Website" href="https://www.myfmtc.com" target="_blank">Farmers Mutual Telephone Company</a> - General developer contractor</u>
+											<p class="section-content">
+												After my internship with FMTC ended, I became a contract developer to provide support for the projects I worked on. I continue to add features and make updates as necessary to various tools.
 											</p>
 										</p>
 									</li>
 									<li class="subheader">
 										May 2019 - May 2020:
 										<p>
-											<u><a id="fmtcWebsite" class="mode-dark" title="Farmers Mutual Telephone Company Website" href="https://www.myfmtc.com" target="_blank">Farmers Mutual Telephone Company</a> - General developer intern</u>
+											<u><a id="fmtcWebsite_1" class="mode-dark" title="Farmers Mutual Telephone Company Website" href="https://www.myfmtc.com" target="_blank">Farmers Mutual Telephone Company</a> - General developer intern</u>
 											<p class="section-content">
 												I was the first intern and first in-house developer at FMTC working on projects ranging from making web interfaces for the sales team to fill out customer applications and gather sales quotes, to app development, database management, and to startup scripts for windows machines. Being their first developer I also laid the groundwork for project flow including GitLab CI/CD pipelines, GitHub repositories, and documentation tools.
 												<br>
@@ -242,8 +235,6 @@
 														</ul>
 													</li>
 												</ul>
-												<br>
-												I continue to provide software support for the projects I worked on.
 											</p>
 										</p>
 									</li>
@@ -662,7 +653,7 @@
 								</div>
 								<div class="container-input">
 									<label class="input-label" id="from_email-label" for="from_email">Your email</label>
-									<input class="input" type="text" id="from_email" name="from_email" placeholder="" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" oninput="validate_input(this);" required>
+									<input class="input" type="email" id="from_email" name="from_email" placeholder="" oninput="validate_input_email(this);" required>
 								</div>
 								<div class="container-input">
 									<label class="input-label" id="from_message-label" for="from_message">Message</label>
