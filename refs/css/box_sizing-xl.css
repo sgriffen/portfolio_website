@@ -14,12 +14,18 @@
 #container_title, #container_nav {
 	overflow: hidden;
 }
-
 #container_content {
 	overflow-y: scroll;
 	height: 75vh;
 }
+#container_nav {
+	max-width: 300px;
+}
 
+.sidebar {
+	float: left;
+	top: 0;
+}
 
 @media only screen and (max-height: 650px) {
 	#title h1 {
@@ -29,10 +35,6 @@
 		font-size: 20px;
 	}
 
-	.sidebar {
-		float: left;
-		top: 0;
-	}
 	.nav {
 		padding-top: 20px; /* Place content 30px from the top */
 		
@@ -67,10 +69,6 @@
 		font-size: 20px;
 	}
 
-	.sidebar {
-		float: left;
-		top: 0;
-	}
 	.nav {
 		padding-top: 30px; /* Place content 30px from the top */
 		
@@ -106,10 +104,6 @@
 		font-size: 22px;
 	}
 
-	.sidebar {
-		float: left;
-		top: 0;
-	}
 	.nav {
 		padding-top: 45px; /* Place content 45px from the top */
 		
@@ -145,10 +139,6 @@
 		font-size: 25px;
 	}
 
-	.sidebar {
-		float: left;
-		top: 0;
-	}
 	.nav {
 		padding-top: 50px; /* Place content 53px from the top */
 		

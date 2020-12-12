@@ -25,7 +25,10 @@ body {
 	color: #D3D3D3; /* Text color is Light Gray in dark mode */
 }
 
-.profile_pic {
+.nav_pic {
+	
+	display: block;
+
 	max-width: 100%;
 	height: auto;
 }
