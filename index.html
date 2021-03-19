@@ -2,7 +2,7 @@
 <html>
 	<head>
 	
-		<title>Portfolio by Sean Griffen</title>
+		<title>Sean Griffen's Portfolio</title>
 		
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -106,6 +106,10 @@
 							<li>
 								<ul class="nav-slide" id="nav-slide_1-display">
 									<!-- Scroll to Hot Car Ally -->
+									<li class="nav-slide-active" id="nav-slide_1-display_content_7" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-7');">
+										Senior Design
+									</li>
+									<!-- Scroll to Hot Car Ally -->
 									<li class="nav-slide-active" id="nav-slide_1-display_content_6" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-6');">
 										Hot Car Ally
 									</li>
@@ -146,20 +150,28 @@
 							<li>
 								<ul class="nav-slide" id="nav-slide_2-display">
 									<!-- Scroll to Resume -->
-									<li class="nav-slide-active" id="nav-slide_2-display_content_3" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-3');">
+									<li class="nav-slide-active" id="nav-slide_2-display_content_5" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-5');">
 										Resume
 									</li>
-									<!-- Scroll to Ethics Essay -->
-									<li id="nav-slide_2-display_content_2" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-2');">
-										Ethics Essay
-									</li>
 									<!-- Scroll to Transcript -->
-									<li id="nav-slide_2-display_content_1" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-1');">
+									<li id="nav-slide_2-display_content_4" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-4');">
 										Transcript
 									</li>
 									<!-- Scroll to Class Schedule -->
-									<li id="nav-slide_2-display_content_0" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-0');">
+									<li id="nav-slide_2-display_content_3" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-3');">
 										Class Schedule
+									</li>
+									<!-- Scroll to Cumulative Reflection -->
+									<li id="nav-slide_2-display_content_2" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-2');">
+										Cumulative Review of Education
+									</li>
+									<!-- Scroll to Gen Ed Reflection -->
+									<li id="nav-slide_2-display_content_1" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-1');">
+										General Education Reflection
+									</li>
+									<!-- Scroll to Ethics Essay -->
+									<li id="nav-slide_2-display_content_0" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-0');">
+										Ethics in the Workplace
 									</li>
 								</ul>
 							</li>
@@ -183,7 +195,9 @@
 										<p>
 											<u><a id="vermeerWebsite_0" class="mode-dark" title="Vermeer Corporation Website" href="https://www.vermeer.com" target="_blank">Vermeer Corporation</a> - Embedded software engineer intern</u>
 											<p class="section-content">
-												I am currently a co-op at Vermeer's industrial underground division working on and testing software that controls their pile drivers and horizontal directional drills.
+												From May 2020 through Mid-January 2021 I was a co-op at Vermeer's industrial underground division working on and testing software that controls their pile drivers and horizontal directional drills.
+												<br>
+												I have since transitioned to part time work during the Spring 2021 school semester, and have accepted a new internship position in Vermeer's environmental management division for the Summer of 2021.
 												<br>
 												<br>
 												Skills developing:
@@ -269,7 +283,7 @@
 									Iowa State University
 									<ul>
 										<li>Bachelor of Science in Computer Engineering (expected graduation December 2021)</li>
-										<li>Cumulative GPA: 3.12</li>
+										<li>Cumulative GPA: 3.11</li>
 									</ul>
 								</li>
 								<li class="subheader">
@@ -290,12 +304,27 @@
 							</div>
 							<br>
 							<p class="section-content">
+								<u><b>During Upper Education</b></u>
 								<ul>
 									<li class="subheader">
 										Squirrel Hacks XI:
 										<ul>
 											<li>1st Place Hardware</li>
 											<li>Vermeer Best IoT Device</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+							<br>
+							
+							<p class="section-content">
+								<u><b>During Lower Education</b></u>
+								<ul>
+									<li class="subheader">
+										Graduation:
+										<ul>
+											<li>Salutatorian</li>
+											<li>National Honor Society</li>
 										</ul>
 									</li>
 									<li class="subheader">
@@ -307,16 +336,9 @@
 									</li>
 									<li class="subheader">Iowa Bar Association/Foundation - American Citizenship Award</li>
 									<li class="subheader">Corporation for National and Community Service - President's Volunteer Service Bronze Award</li>
-									<li class="subheader">United States Marine Corps - Sholastic Excellence Award</li>
+									<li class="subheader">United States Marine Corps - Scholastic Excellence Award</li>
 									<li class="subheader">State of Iowa Representatives - Certificate of Recognition for volunteer work in 2017</li>
 									<li class="subheader">Lions International - Young Leaders in Service Award</li>
-									<li class="subheader">
-										High School:
-										<ul>
-											<li>Salutatorian</li>
-											<li>National Honor Society</li>
-										</ul>
-									</li>
 									<li class="subheader">McLure/JFSCO Engineering Scholarship</li>
 									<li class="subheader">Help Our Youth Scholarship</li>
 									<li class="subheader">Altrusa International, Inc. of Red Oak, Iowa Scholarship</li>
@@ -374,7 +396,38 @@
 						</div>
 					</div>
 					<div class="content" id="sub_1" style="display:none;">
-					<div id="sub_1-6">
+						<div id="sub_1-7">
+							<div id="sub_1-7_header" class="section-header">
+								Senior Design - BeagleBoard IoT Gateway Extension
+							</div>
+							<br>
+							<p class="section-content">
+								This two semester-long project, proposed by <a id="tiWebsite_0" href="https://www.ti.com/" target="_blank" title="Texas Instruments Website">Texas Instruments</a> aims to extend the functionality of the <a id="beableboardWebsite_0" href="https://beagleboard.org/" target="_blank" title="BeagleBoard Website">BeagleBoard</a> IoT development platform
+									by adding the Zigbee wireless protocol and the abilty to parse an automotive CAN bus. This involves designing and manufacturing any new PCBs/custom hardware and developing the supporting firmware and software for the additional wireless protocol and any other services we want to add such as connecting to cloud services and existing home automation platforms.
+								<br>
+								Mainly, I'll be working on the firmware for the Zigbee MCUs we plan on developing, adding on to the existing BeagleBone Green api, and any supporting software (web servers, mobile apps, databases) needed to complete this project.
+								<br>
+								<br>
+								At the end of the project, our development progress will be made opensource, in sprit of the BeagleBoard platform.
+								<br>
+								<br>
+								Skills in development:
+								<p>
+									<ul>
+										<li class="subheader">Development of a protocol api from stracth</li>
+										<li>Creating firmware for custom hardware</li>
+										<li>Communicating to wireless sensors in real time asynchronously</li>
+										<li>Connecting to multiple third-party services and handling communication to each independently</li>
+									</ul>
+								</p>
+								<br>
+								<!--
+								<a href="" target="_blank" title="">Source code</a>
+								<a href="" target="_blank" title="">Wiki</a>
+								-->
+							</p>
+						</div>
+						<div id="sub_1-6">
 							<div id="sub_1-6_header" class="section-header">
 								Squirrel Hacks XI (HackISU 2019) - Hot Car Ally
 							</div>
@@ -598,8 +651,8 @@
 						</div>
 					</div>
 					<div class="content" id="sub_2" style="display:none;">
-						<div id="sub_2-3">
-							<div id="sub_2-3_header" class="section-header">Resume</div>
+						<div id="sub_2-5">
+							<div id="sub_2-5_header" class="section-header">Resume</div>
 							<br>
 							<p class="section-content embed pdf">
 								<object data="/refs/pdf/sean_griffen_resume.pdf" type="application/pdf">
@@ -608,18 +661,8 @@
 							</p>
 							<span class="section-breaker"></span>
 						</div>
-						<div id="sub_2-2">
-							<div id="sub_2-2_header" class="section-header">Ethics Essay</div>
-							<br>
-							<p class="section-content embed pdf">
-								<object data="/refs/pdf/sean_griffen_ethics_essay.pdf" type="application/pdf">
-									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_ethics_essay.pdf"></iframe>
-								</object>
-							</p>
-							<span class="section-breaker"></span>
-						</div>
-						<div id="sub_2-1">
-							<div id="sub_2-1_header" class="section-header">Unofficial Transcript</div>
+						<div id="sub_2-4">
+							<div id="sub_2-4_header" class="section-header">Unofficial Transcript</div>
 							<br>
 							<p class="section-content embed pdf">
 								<object data="/refs/pdf/sean_griffen_transcript.pdf" type="application/pdf">
@@ -628,11 +671,41 @@
 							</p>
 							<span class="section-breaker"></span>
 						</div>
-						<div id="sub_2-0">
-							<div id="sub_2-0_header" class="section-header">Planned Class Schedule</div>
+						<div id="sub_2-3">
+							<div id="sub_2-3_header" class="section-header">Planned Class Schedule</div>
 							<br>
 							<p class="section-content embed img">
-								<embed src="/refs/img/sean_griffen_class_schedule.png" />
+								<embed src="/refs/img/sean_griffen_class_schedule.jpg" />
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_2-2">
+							<div id="sub_2-2_header" class="section-header">Cumulative Review of Education</div>
+							<br>
+							<p class="section-content embed pdf">
+								<object data="/refs/pdf/sean_griffen_edu_review.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_edu_review.pdf"></iframe>
+								</object>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_2-1">
+							<div id="sub_2-1_header" class="section-header">Review of General Education</div>
+							<br>
+							<p class="section-content embed pdf">
+								<object data="/refs/pdf/sean_griffen_gened_review.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_gened_review.pdf"></iframe>
+								</object>
+							</p>
+							<span class="section-breaker"></span>
+						</div>
+						<div id="sub_2-0">
+							<div id="sub_2-0_header" class="section-header">Ethics in the Workplace</div>
+							<br>
+							<p class="section-content embed pdf">
+								<object data="/refs/pdf/sean_griffen_ethics_essay.pdf" type="application/pdf">
+									<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_ethics_essay.pdf"></iframe>
+								</object>
 							</p>
 							<span class="section-breaker"></span>
 						</div>
@@ -652,7 +725,7 @@
 								</div>
 								<div class="container-input">
 									<label class="input-label" id="from_email-label" for="from_email">Your email</label>
-									<input class="input" type="email" id="from_email" name="from_email" placeholder="" oninput="validate_input_email(this);" required>
+									<input class="input" type="email" id="from_email" name="from_email" placeholder="" pattern="\S+[@]{1}\S+[.]{1}[a-zA-Z]{2,5}" oninput="validate_input_email(this);" required>
 								</div>
 								<div class="container-input">
 									<label class="input-label" id="from_message-label" for="from_message">Message</label>

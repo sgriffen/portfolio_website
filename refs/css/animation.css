@@ -1,6 +1,7 @@
 @charset "ISO-8859-1";
 .display_before {
 	
+	margin: 0px;
 	position: fixed; /* Sit on top of the page content */
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
@@ -10,6 +11,7 @@
 }
 .display_before_border {
 	
+	margin: 0px;
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
 	position: absolute;
@@ -38,6 +40,7 @@
 	transition: all 0.2s ease-out;
 }
 .display_after {
+	margin: 0px;
 	opacity: 0;
 	transition:inherit;
 }
@@ -45,11 +48,13 @@
 .pre_loaded_l.text_blink_cursor { opacity: 1; }
 
 .loaded_l.display_before {
+	margin: 0px;
 	opacity: 0;
 	display: none;
 }
 
 .loaded_l.display_after {
+	margin: 0px;
 	opacity: 1;
 }
 
