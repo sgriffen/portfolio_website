@@ -14,14 +14,12 @@ iframe, embed, object {
 #title h1 {
 	display: block;
 	margin: 3px;
-	
 	text-decoration: none;
 	transition: all 0.2s ease-out;
 }
 #title h2 {
 	display: inline-block;
 	margin: 3px;
-	
 	text-decoration: none;
 	transition: all 0.2s ease-out;
 }
@@ -30,129 +28,21 @@ a {
 	color: #009688;  /* Hyperlink default color is Teal */
 	transition: all 0.2s ease-out;
 }
-a:hover {
-	color: #4CAF50; /* Hyperlink hover color is Green */
-}
-
-.nav {
-	float: left;
-	
-	height: 100%;
-	width: 100%;
-	
-	transition: all 0.2s ease-out;
-}
-
-.nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	transition: all 0.2s ease-out;
-}
-.nav li {
-	display: block;
-	padding: 2% 2% 2% 2%;
-	
-	border-right: 12px solid #616161; /* Right border color is Dark-Gray */
-	text-decoration: none;
-	transition: all 0.2s ease-out;
-}
-.nav li:hover {
-	
-	border-right: 12px solid #009688; /* Right border color is Teal */
-	cursor: pointer;
-}
-.nav .nav-active {
-	border-right: 12px solid #87CEEB; /* Right border color is light-blue */
-}
-.nav-drop li {
-	padding: 2% 2% 2% 15%;
-}
-.nav .nav-drop-active {
-	border-right: 12px solid #87CEEB; /* Right border color is light-blue */
-	border-left: 6px solid #87CEEB; /* Left border color is light-blue */
-	opacity: 1;
-}
-
-.nav-slide li {
-	padding: 2% 2% 2% 15%;
-}
-.nav-slide li:hover {
-	border-left: 6px solid #009688; /* Right border color is Teal */
-	cursor: pointer;
-}
-.nav .nav-slide-active {
-	border-right: 12px solid #87CEEB; /* Right border color is light-blue */
-	border-left: 6px solid #87CEEB; /* Left border color is light-blue */
-	opacity: 1;
-}
-.slide-header {
-	padding: 2%;
-	
-	border-right: 12px solid #616161; /* Right border color is Dark-Gray */
-	
-	transition: all 0.2s ease-out;
-}
-.slide-header.slide_left {
-	text-align: center;
-	
-	padding-left: 7%;
-	padding-right: 7%;
-}
-.slide-header.slide_right {
-	padding-right: 25%;
-	padding-left: 6%;
-}
-.slide-header:hover {
-	border-right: 12px solid #009688; /* Right border color is Teal */
-	border-left: 6px solid #009688; /* Left border color is Teal */
-	cursor: pointer;
-}
-
-.arrow-right {
-	float: right;
-	transition: all 0.2s ease-out;
-}
-.arrow-left {
-	float: left;
-	transition: all 0.2s ease-out;
-}
-.arrow-left, .arrow-right {
-	opacity: 0;
-	
-	width: 0%;
-	height: 0%;
-}
-
-.slide-header:hover .arrow-left, .slide-header:hover .arrow-right {
-	opacity: 1;
-	cursor: pointer;
-}
-.slide-header:hover .arrow-left {
-	width: 25%;
-	height: 25%;
-}
-.slide-header:hover .arrow-right {
-	width: 5%;
-	height: 5%;
-}
+a:hover { color: #4CAF50; } /* Hyperlink hover color is Green */
 
 .footer {
 	clear: both;
 	display: block;
 	text-align: center;
 	width: 100%;
-	
 	background-color: #9E9E9E;
 }
-.footer .inline {
-	display: inline-block;
-}
+.footer .inline { display: inline-block; }
 .footer a {
 	display: inline-block;
 	text-align: center;
 	padding: 12px;
-	
+
 	color: #FFF;
 	transition: all 0.2s ease-out;
 }
@@ -160,6 +50,7 @@ a:hover {
 	background-color: #009688; /* Background color is Teal */
 	cursor: pointer;
 }
+a.mode { float: right; }
 
 /* Default column settings */
 [class*="col-"] {
@@ -172,7 +63,6 @@ a:hover {
 .content {
 	width: 100%;
 	height: 100%;
-	
 	padding: 15px;
 }
 .content iframe, .content object {
@@ -186,7 +76,6 @@ a:hover {
 	display: inline-block;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	
 	text-decoration: none;
 	border-bottom: 4px solid #4CAF50; /* Bottom border color is Green */
 	font-size: 18px;
@@ -199,7 +88,7 @@ a:hover {
 .section-breaker {
 	display: block;
 	border-bottom: 3px solid #616161; /* Bottom border color is Dark-Gray */
-	margin-top: 10px; 
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .subheader {
@@ -237,17 +126,13 @@ a:hover {
 	border: 2px solid #009688;
 	cursor: text;
 }
-.input:focus {
-	border: 2px solid #87CEEB;
-}
+.input:focus { border: 2px solid #87CEEB; }
 .input:focus + .input-label, .input:not(:placeholder-shown) + .input-label {
 	opacity: .5;
 	border-bottom: 2px solid #4CAF50;
 }
 
-.input::placeholder {
-	color: transparent;
-}
+.input::placeholder { color: transparent; }
 
 @media only screen and (max-width: 600px) {
 	.embed.pdf {
@@ -266,10 +151,8 @@ a:hover {
 		margin-bottom: 16px;
 		resize: vertical;
 		font-size: 16px;
-		
 		background-color: inherit;
 		color: inherit;
-		
 		transition: all 0.2s ease-out;
 	}
 	textarea {
@@ -278,7 +161,6 @@ a:hover {
 	}
 	.arrow-left, .arrow-right {
 		opacity: 1;
-		
 		width: 15%;
 		height: 15%;
 	}
@@ -300,10 +182,8 @@ a:hover {
 		margin-bottom: 16px;
 		resize: vertical;
 		font-size: 16px;
-		
 		background-color: inherit;
 		color: inherit;
-		
 		transition: all 0.2s ease-out;
 	}
 	textarea {
@@ -312,7 +192,6 @@ a:hover {
 	}
 	.arrow-left, .arrow-right {
 		opacity: 1;
-		
 		width: 15%;
 		height: 15%;
 	}
@@ -334,10 +213,8 @@ a:hover {
 		margin-bottom: 16px;
 		resize: vertical;
 		font-size: 16px;
-		
 		background-color: inherit;
 		color: inherit;
-		
 		transition: all 0.2s ease-out;
 	}
 	textarea {
@@ -346,7 +223,6 @@ a:hover {
 	}
 	.arrow-left, .arrow-right {
 		opacity: 0;
-		
 		width: 0%;
 		height: 0%;
 	}
@@ -368,10 +244,8 @@ a:hover {
 		margin-bottom: 16px;
 		resize: vertical;
 		font-size: 16px;
-		
 		background-color: inherit;
 		color: inherit;
-		
 		transition: all 0.2s ease-out;
 	}
 	textarea {
@@ -380,7 +254,6 @@ a:hover {
 	}
 	.arrow-left, .arrow-right {
 		opacity: 0;
-		
 		width: 0%;
 		height: 0%;
 	}
@@ -402,10 +275,8 @@ a:hover {
 		margin-bottom: 16px;
 		resize: vertical;
 		font-size: 16px;
-		
 		background-color: inherit;
 		color: inherit;
-		
 		transition: all 0.2s ease-out;
 	}
 	textarea {
@@ -414,7 +285,6 @@ a:hover {
 	}
 	.arrow-left, .arrow-right {
 		opacity: 0;
-		
 		width: 0%;
 		height: 0%;
 	}
@@ -436,10 +306,8 @@ a:hover {
 		margin-bottom: 16px;
 		resize: vertical;
 		font-size: 16px;
-		
 		background-color: inherit;
 		color: inherit;
-		
 		transition: all 0.2s ease-out;
 	}
 	textarea {
@@ -448,7 +316,6 @@ a:hover {
 	}
 	.arrow-left, .arrow-right {
 		opacity: 0;
-		
 		width: 0%;
 		height: 0%;
 	}

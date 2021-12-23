@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<div id="sub_1-7">
 		<div id="sub_1-7_header" class="section-header">
 			Senior Design - BeagleBoard IoT Gateway Extension
 		</div>
 		<br>
 		<p class="section-content">
-			This two semester-long project, proposed by <a id="tiWebsite_0" href="https://www.ti.com/" target="_blank" title="Texas Instruments Website">Texas Instruments</a> aims to extend the functionality of the <a id="beableboardWebsite_0" href="https://beagleboard.org/" target="_blank" title="BeagleBoard Website">BeagleBoard</a> IoT development platform
-				by adding the Zigbee wireless protocol and the abilty to parse an automotive CAN bus. This involves designing and manufacturing any new PCBs/custom hardware and developing the supporting firmware and software for the additional wireless protocol and any other services we want to add such as connecting to cloud services and existing home automation platforms.
+			This two semester-long project, proposed by <a id="tiWebsite_0" href="https://www.ti.com/" target="_blank" title="Texas Instruments Website">Texas Instruments</a> aimed to extend the functionality of the <a id="beableboardWebsite_0" href="https://beagleboard.org/" target="_blank" title="BeagleBoard Website">BeagleBoard</a> IoT development platform
+				by creating a "cape" that had Zigbee wireless functionality, giving the BeagleBoard the ability to be a Zigbee Coordinator or Router. This involved designing and manufacturing any new PCBs/custom hardware and developing the supporting firmware and software for the additional wireless protocol and any other services we want to add, such as connecting to cloud services and existing home automation platforms.
 			<br>
-			Mainly, I'll be working on the firmware for the Zigbee MCUs we plan on developing, adding on to the existing BeagleBone Green api, and any supporting software (web servers, mobile apps, databases) needed to complete this project.
+			Mainly, I worked on the firmware for the Zigbee MCUs we developed, the supporting firmware on the BeagleBone Green Gateway we were extending, and any extra software (web servers, mobile apps, databases) needed to complete and demo the project.
 			<br>
 			<br>
-			Skills in development:
+			At the end of the project, our development progress was made opensource on GitHub, in sprit of the open BeagleBoard platform, and our story was published on Hackster.io.
+			<br>
+			Also, a few of our team members (myself included) committed to further extending the capabilities of our platform as well as fixing bus found while finishing the project up.
+			<br>
+			<br>
+			What I learned:
 			<p>
 				<ul>
 					<li class="subheader">Development of a protocol api from scratch</li>
@@ -22,11 +27,23 @@
 				</ul>
 			</p>
 			<br>
-			At the end of the project, our development progress will be made opensource on GitHub, in sprit of the open BeagleBoard platform.
-			<!--
-			<a href="" target="_blank" title="">Source code</a>
-			<a href="" target="_blank" title="">Wiki</a>
-			-->
+			<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-7_pdf0'));" title="Display Senior Design Project Report">View Report</button>
+			<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-7_pdf1'));" title="Display Senior Design Project Poster">View Poster</button>
+			<br>
+			<div class="embed pdf" id="sub_1-7_pdf0" style="display:none">
+				<object data="/refs/pdf/sean_griffen-sddec21_07-final_report.pdf" type="application/pdf">
+					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen-sddec21_07-final_report.pdf"></iframe>
+				</object>
+			</div>
+			<div class="embed pdf" id="sub_1-7_pdf1" style="display:none">
+				<object data="/refs/pdf/sean_griffen-sddec21_07-poster.pdf" type="application/pdf">
+					<iframe src="/refs/pdf/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen-sddec21_07-poster.pdf"></iframe>
+				</object>
+			</div>
+			<br>
+			<a href="https://sddec21-07.sd.ece.iastate.edu/" target="_blank" title="Iowa State Senior Design Website">Website</a>
+			<a href="https://github.com/iowa-state-senior-design-dec-2021-proj7/BBGreenZigbeeCape" target="_blank" title="Senior Design Repository">Source code</a>
+			<a href="https://www.hackster.io/iowa-state-senior-design-dec-2021-proj7/beaglebone-green-wireless-zigbee-cape-c2da61" target="_blank" title="">Hackster.io Story</a>
 		</p>
 	</div>
 	<div id="sub_1-6">
@@ -56,7 +73,7 @@
 				</ul>
 			</p>
 			<br>
-			<a href="https://github.com/sgriffen/hack_squirrelhacksXI_HotCarAlly" target="_blank" title="Hot Car Ally repository">Source code</a>
+			<a href="https://github.com/sgriffen/hack_squirrelhacksXI_HotCarAlly" target="_blank" title="Hot Car Ally Repository">Source code</a>
 			<a href="https://devpost.com/software/hot-car-ally" target="_blank" title="Hot Car Ally DevPost">DevPost</a>
 		</p>
 		<span class="section-breaker"></span>
@@ -69,10 +86,10 @@
 		<p class="section-content">
 			For this half-semester project, after learning about UI frameworks, my team and I created a web-based game platform where users could connect to each other or an AI and play against one another in a game of tic tac toe, checkers, or chess.
 			<br>
-			I mainly focused on the Spring WebSocket components which were going to be the primary way the frontend JavaScript was going to communicate with the backend. 
+			I mainly focused on the Spring WebSocket components which were going to be the primary way the frontend JavaScript was going to communicate with the backend.
 			In doing this I created a way to generate unique user IDs when a new player comes to the website, a way to associate two players with a desired game, and a way to forward game moves to each player so they would know when the other player moved.
 			<br>
-			I also created the frontend HTML, CSS, and JavaScript for the game chess. For this, I utilized the API <a href="https://github.com/jhlywa/chess.js" target="_blank" title="chess.js repository">chess.js</a> for the chess game logic, 
+			I also created the frontend HTML, CSS, and JavaScript for the game chess. For this, I utilized the API <a href="https://github.com/jhlywa/chess.js" target="_blank" title="chess.js repository">chess.js</a> for the chess game logic,
 			and created my own methods for communicating that resulting move to the backend.
 			<br>
 			<br>
@@ -88,12 +105,12 @@
 			<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-5_pdf'));" title="Display SE 319 final release report">View Final Report</button>
 			<br>
 			<div class="embed pdf" id="sub_1-5_pdf" style="display:none">
-				<object data="/refs/pdf/sean_griffen_se319_final_release_report.pdf" type="application/pdf">
-					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_se319_final_release_report.pdf"></iframe>
+				<object data="/refs/pdf/sean_griffen-se319-final_release_report.pdf" type="application/pdf">
+					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen-se319-final_release_report.pdf"></iframe>
 				</object>
 			</div>
 			<br>
-			<a href="https://github.com/sgriffen/isu_se319_GameZone" target="_blank" title="Game Zone repository">Source code</a>
+			<a href="https://github.com/sgriffen/isu_se319_GameZone" target="_blank" title="Game Zone Repository">Source code</a>
 		</p>
 		<span class="section-breaker"></span>
 	</div>
@@ -103,7 +120,7 @@
 		</div>
 		<br>
 		<p class="section-content">
-			
+
 			<b>TODO</b>
 			<br>
 			<br>
@@ -114,7 +131,7 @@
 				</ul>
 			</p>
 			<br>
-			<a href="" target="_blank" title="MIPS Processor repository">Source code: <b>TODO</b></a>
+			<a href="" target="_blank" title="MIPS Processor Repository">Source code: <b>TODO</b></a>
 		</p>
 		<span class="section-breaker"></span>
 	</div>
@@ -124,12 +141,12 @@
 		</div>
 		<br>
 		<p class="section-content">
-			The final project for this class was to program a Roomba with a custom embedded chip to navigate an obstacle course by user input. 
+			The final project for this class was to program a Roomba with a custom embedded chip to navigate an obstacle course by user input.
 			My team and I had to figure out a way to get information from the ultrasonic and infrared, bump, and cliff sensors on the Roomba to display on a console on our control computer wirelessly, and display in a way that was easily digestible for us to determine our next move.
 			<br>
-			In order to display information we decided to, using PuTTY and circle equations, print a top-down view of what was in front of the Roomba. 
-			The Roomba would figure out where obstacles were and calculate their circumferemce. It would send back a 2D array to project on our console. 
-			Movement was handled by mapping DS4 controller inputs to keyboard presses and was sent to the robot through PuTTY to move forward 10cm, backward 10cm, or turn right or left 10 degrees. 
+			In order to display information we decided to, using PuTTY and circle equations, print a top-down view of what was in front of the Roomba.
+			The Roomba would figure out where obstacles were and calculate their circumferemce. It would send back a 2D array to project on our console.
+			Movement was handled by mapping DS4 controller inputs to keyboard presses and was sent to the robot through PuTTY to move forward 10cm, backward 10cm, or turn right or left 10 degrees.
 			After the goal of the obstacle course was found, we would then drive in it and play a victory song.
 			<br>
 			<br>
@@ -143,7 +160,7 @@
 				</ul>
 			</p>
 			<br>
-			<a href="https://github.com/sgriffen/isu_cpre288_finalProject" target="_blank" title="Roomba&#174; Rover repository">Source code</a>
+			<a href="https://github.com/sgriffen/isu_cpre288_finalProject" target="_blank" title="Roomba&#174; Rover Repository">Source code</a>
 		</p>
 		<span class="section-breaker"></span>
 	</div>
@@ -173,13 +190,13 @@
 			<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-2_pdf'));" title="Display ComS 309 project report">View Report</button>
 			<br>
 			<div class="embed pdf" id="sub_1-2_pdf" style="display:none">
-				<object data="/refs/pdf/sean_griffen_coms309_final_report.pdf" type="application/pdf">
-					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_coms309_final_report.pdf"></iframe>
+				<object data="/refs/pdf/sean_griffen-coms309-final_report.pdf" type="application/pdf">
+					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen-coms309-final_report.pdf"></iframe>
 				</object>
 			</div>
 			<br>
-			<a href="https://github.com/sgriffen/isu_coms309_007Knockout" target="_blank" title="007: Knockout repository">Source code</a>
-			<a href="https://documenter.getpostman.com/view/6678646/S1ETRwMK" target="_blank" title="007: Knockout Postman API documentation">Postman Documentation</a>
+			<a href="https://github.com/sgriffen/isu_coms309_007Knockout" target="_blank" title="007: Knockout Repository">Source code</a>
+			<a href="https://documenter.getpostman.com/view/6678646/S1ETRwMK" target="_blank" title="007: Knockout Postman API Documentation">Postman Documentation</a>
 		</p>
 		<span class="section-breaker"></span>
 	</div>
@@ -207,12 +224,12 @@
 			<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-1_pdf'));" title="Display CprE 281 final project report">View Report</button>
 			<br>
 			<div class="embed pdf" id="sub_1-1_pdf" style="display:none">
-				<object data="/refs/pdf/sean_griffen_cpre281_final_report.pdf" type="application/pdf">
-					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_cpre281_final_report.pdf"></iframe>
+				<object data="/refs/pdf/sean_griffen-cpre281-final_report.pdf" type="application/pdf">
+					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen-cpre281-final_report.pdf"></iframe>
 				</object>
 			</div>
 			<br>
-			<a href="https://github.com/sgriffen/isu_cpre281_finalProject" target="_blank" title="FPGA Traffic Light repository">Source code</a>
+			<a href="https://github.com/sgriffen/isu_cpre281_finalProject" target="_blank" title="FPGA Traffic Light Repository">Source code</a>
 		</p>
 		<span class="section-breaker"></span>
 	</div>
@@ -238,17 +255,17 @@
 			<button class="action" onclick="toggle_display_min(findChildById(this.parentNode, 'sub_1-0_pdf'));" title="Display CprE 186 project presentation">View Final Presentation</button>
 			<br>
 			<div class="embed pdf" id="sub_1-0_pdf" style="display:none">
-				<object data="/refs/pdf/sean_griffen_cpre186_final_presentation.pdf" type="application/pdf">
-					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen_cpre186_final_presentation.pdf"></iframe>
+				<object data="/refs/pdf/sean_griffen-cpre186-final_presentation.pdf" type="application/pdf">
+					<iframe src="/refs/js/pdf_js/web/viewer.html?file=/refs/pdf/sean_griffen-cpre186-final_presentation.pdf"></iframe>
 				</object>
 			</div>
 			<br>
-			<a href="https://github.com/sgriffen/isu_cpre186_DNDJava" target="_blank" title="DND Java repository">Source code</a>
+			<a href="https://github.com/sgriffen/isu_cpre186_DNDJava" target="_blank" title="DND Java Repository">Source code</a>
 		</p>
 		<span class="section-breaker"></span>
 	</div>
-	
+
 	<div class="spacer">
-		
+
 	</div>
 </html>

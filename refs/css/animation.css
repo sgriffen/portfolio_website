@@ -1,16 +1,13 @@
 @charset "ISO-8859-1";
 .display_before {
-	
 	margin: 0px;
 	position: fixed; /* Sit on top of the page content */
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
-	
 	border-radius: 50%;
 	transition: all 0.2s ease-out;
 }
 .display_before_border {
-	
 	margin: 0px;
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
@@ -24,19 +21,16 @@
 	float: left;
 	box-sizing: border-box;
 	display: flex;
-	
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	text-align: center;
-	
 	overflow: hidden;
 	white-space: nowrap;
 	margin: 0 auto;
 	opacity: 0;
 	letter-spacing: .15em;
-	
+	transform: translate(-50%, -50%);
 	transition: all 0.2s ease-out;
 }
 .display_after {
@@ -65,19 +59,19 @@
 		border-left: 12px solid #616161; /* Left border color is Dark-Gray */
 		border-right: 12px solid #4CAF50; /* Right border color is Green */
 	}
-	25% { 
+	25% {
 		border-top: 12px solid #616161; /* Top border color is Dark-Gray */
 		border-bottom: 12px solid #4CAF50; /* Bottom border color is Green */
 		border-left: 12px solid #87CEEB; /* Left border color is light-blue */
 		border-right: 12px solid #009688; /* Right border color is Teal */
 	}
-	50% { 
+	50% {
 		border-top: 12px solid #87CEEB; /* Top border color is light-blue */
 		border-bottom: 12px solid #009688; /* Bottom border color is Teal */
 		border-left: 12px solid #4CAF50; /* Left border color is Green */
 		border-right: 12px solid #616161; /* Right border color is Dark-Gray */
 	}
-	75% { 
+	75% {
 		border-top: 12px solid #4CAF50; /* Top border color is Green */
 		border-bottom: 12px solid #616161; /* Bottom border color is Dark-Gray */
 		border-left: 12px solid #009688; /* Left border color is Teal */

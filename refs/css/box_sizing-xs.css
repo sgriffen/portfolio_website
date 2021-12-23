@@ -1,29 +1,18 @@
-#title h1 {
-	font-size: 25px;
-}
-#title h2 {
-	font-size: 20px;
-}
+@charset "ISO-8859-1";
 
-.spacer {
-	height: 50px;
-}
+#title h1 { font-size: 25px; }
+#title h2 { font-size: 20px; }
+
+.spacer { height: 50px; }
 
 .nav {
 	padding-top: 20px; /* Place content 20px from the top */
-	
 	font-size: 18px;
 }
-.nav-drop {
-	font-size: 18px;
-}
-.nav-slide {
-	font-size: 16px;
-}
+.nav-drop { font-size: 18px; }
+.nav-slide { font-size: 16px; }
 
-.footer {
-	font-size: 12px;
-}
+.footer { font-size: 12px; }
 .footer a {
 	font-size: 16px;
 	width: 50px;

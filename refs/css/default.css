@@ -1,4 +1,5 @@
 @charset "ISO-8859-1";
+
 * {
 	margin: 0px;
 	box-sizing: border-box;
@@ -19,19 +20,9 @@ html {
 }
 body {
 	height: 100%;
-	
-	transition: all 0.2s ease-out;
-	
 	background-color: #3C3C3C;
-	color: #D3D3D3; /* Text color is Light Gray in dark mode */
-}
-
-.nav_pic {
-	
-	display: block;
-
-	max-width: 100%;
-	height: auto;
+	color: #D3D3D3; /* Text color is Light Gray in dark mode */\
+	transition: all 0.2s ease-out;
 }
 
 .linkedin {
@@ -47,12 +38,7 @@ body {
 	color: #FFF;
 }
 
-a.mode {
-	float: right;
-}
-
 .hidden {
-	
 	height: 0%;
 	width: 0%;
 	opacity: 0;
