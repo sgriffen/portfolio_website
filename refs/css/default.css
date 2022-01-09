@@ -3,6 +3,7 @@
 * {
 	margin: 0px;
 	box-sizing: border-box;
+	transition: all 0.2s ease-out;
 }
 
 /* Default row settings */
@@ -16,7 +17,6 @@
 /* Default page and font settings */
 html {
 	font-family: Arial, Helvetica, sans-serif;
-	transition: all 0.2s ease-out;
 }
 body {
 	height: 100%;

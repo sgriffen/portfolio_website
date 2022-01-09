@@ -15,7 +15,7 @@
 
 #container_title, #container_nav { overflow: hidden; }
 #container_content {
-	overflow-y: auto;
+	overflow-y: scroll;
 	height: 75vh;
 }
 #container_nav { max-width: 300px; }
@@ -24,6 +24,7 @@
 	float: left;
 	top: 0;
 }
+
 @media only screen and (max-height: 650px) {
 	#title h1 { font-size: 25px; }
 	#title h2 { font-size: 20px; }
