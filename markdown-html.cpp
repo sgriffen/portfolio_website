@@ -36,16 +36,14 @@ int main(int argc, char* argv[]) {
                 std::string line_html;
                 while (std::getline(file_md, line_md)) {
                     if (!line_md.empty()) {
-                        
+                        std::cout << line_md.compare("#") << std::endl;
                     }
                     filelines.push_back(line_md);
                     gLinecount_r++;
                 }
                 file_w(&file_html, std::string("</html>"));
+
                 std::cout << "Wrote \"" << gLinecount_w << "\" lines to \"" << filename_html << "\"." << std::endl;
-
-
-
                 file_html.close();
             }
             else { std::cout << "Could not open file \"" << filename_html << "\". " << std::endl; }
