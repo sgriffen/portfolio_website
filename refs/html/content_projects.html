@@ -12,7 +12,7 @@
 			Mainly, I worked on the firmware for the Zigbee MCUs we developed, the supporting firmware on the BeagleBone Green Gateway we were extending, and any extra software (web servers, mobile apps, databases) needed to complete and demo the project.
 			<br>
 			<br>
-			At the end of the project, our development progress was made opensource on GitHub, in sprit of the open BeagleBoard platform, and our story was published on Hackster.io.
+			At the end of the project, our development progress was made open-source on GitHub, in sprit of the open BeagleBoard platform, and our story was published on Hackster.io.
 			<br>
 			Also, a few of our team members (myself included) committed to further extending the capabilities of our platform as well as fixing bus found while finishing the project up.
 			<br>
@@ -55,10 +55,10 @@
 			My team and I made a system to alert parents if they left their child in a hot car.
 			<br>
 			Using an Arduino Uno, temperature, GPS, ultrasonic sensors, buttons, and radio transceivers, we were able to
-				 1) Tell if there was a child in a car seat,
-				 2) Know the temperature of the car,
-				 3) Get the location of the car seat,
-				 and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
+				1) Tell if there was a child in a car seat,
+				2) Know the temperature of the car,
+				3) Get the location of the car seat,
+				and 4) Communicate with an external "key fob" made of another Arduino Uno, buzzer, and radio transceiver.
 			Using all that, if the car seat and "key fob" lost communication with each other, the "key fob" would buzz if the last known location of the child was in the car seat,
 			and the car seat would send data (temperature, GPS location, and status of the child) over serial to a Raspberry Pi, which would then parse the data and send that to a web server to display that data on an app on the parent's phone.
 			The web server would also send text notifications to the parent that something was left in their car seat, with a time limit to get back before the car got too hot. If the parent's location was too far away for them to get back, the car seat (using its location data) would notify authorities to get the child out of the car.
@@ -98,7 +98,7 @@
 				<ul>
 					<li class="subheader">How Javascript and Spring handle WebSocket communication</li>
 					<li class="subheader">How to make interactive UI elements for a game in HTML, CSS, and JavaScript</li>
-					<li class="subheader">How to work remotly with a team online after working in-person, without the workflow being disrupted</li>
+					<li class="subheader">How to work remotely with a team online after working in-person, without the workflow being disrupted</li>
 				</ul>
 			</p>
 			<br>
@@ -145,7 +145,7 @@
 			My team and I had to figure out a way to get information from the ultrasonic and infrared, bump, and cliff sensors on the Roomba to display on a console on our control computer wirelessly, and display in a way that was easily digestible for us to determine our next move.
 			<br>
 			In order to display information we decided to, using PuTTY and circle equations, print a top-down view of what was in front of the Roomba.
-			The Roomba would figure out where obstacles were and calculate their circumferemce. It would send back a 2D array to project on our console.
+			The Roomba would figure out where obstacles were and calculate their circumference. It would send back a 2D array to project on our console.
 			Movement was handled by mapping DS4 controller inputs to keyboard presses and was sent to the robot through PuTTY to move forward 10cm, backward 10cm, or turn right or left 10 degrees.
 			After the goal of the obstacle course was found, we would then drive in it and play a victory song.
 			<br>
@@ -209,7 +209,7 @@
 			This goal of this final project was to create a traffic control system for a 4-way intersection using the FPGA we've been using in lab. This involved keeping track of the number of cars in each lane, counting up the cars in a user-chosen lane to the user-defined max capacity of that lane, and automatically removing cars from each lane until either the lane has reached zero cars, or the lane has decreased by 5 cars.
 			<br>
 			I decided to use 4 of the number displays in conjunction with a register file to keep track of the number of cars in each lane. Each lane also had its own counter that could count up to 15, or a user-defined maximum. To decrement the cars in a lane, I used the FPGA's internal clock and slowed it down using T flip-flops to about 1 clock cycle every 2 seconds.
-			Using a seperate counter for each lane, I was able to detect the number of clock cycles a lane was decrementing for, and based on that or the number of the cars in the lane, I switched to the next available lane that had cars in it to keep the intersection fair. This repeated until all the lanes were empty.
+			Using a separate counter for each lane, I was able to detect the number of clock cycles a lane was decrementing for, and based on that or the number of the cars in the lane, I switched to the next available lane that had cars in it to keep the intersection fair. This repeated until all the lanes were empty.
 			<br>
 			<br>
 			What I learned:
@@ -239,7 +239,7 @@
 		</div>
 		<br>
 		<p class="section-content">
-			My group and I made a map and character displayer for Dungeons ‘n Dragons.
+			My group and I made a map and character displayer for Dungeons 'n Dragons.
 			We accomplished this using JFrames and buffered images in Java and created a "fog of war" mechanic that, if turned on, covered the map and as the character model on the screen moved around, by clicking and holding the mouse, the map would uncover itself.
 			<br>
 			<br>
