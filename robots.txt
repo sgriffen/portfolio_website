@@ -1,4 +1,0 @@
-#Block crawlers from accessing pdf and img files
-User-agent: *
-Disallow: *.pdf
-Disallow: *.jpg
