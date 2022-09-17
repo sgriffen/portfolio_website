@@ -2,3 +2,6 @@
 	path = submodules/pdf.js
 	url = https://github.com/mozilla/pdf.js.git
 	branch = master
+[submodule "default/refs/pdf/pdf_js"]
+	path = default/refs/pdf/pdf_js
+	url = https://github.com/mozilla/pdf.js.git
