@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sean Griffen's Portfolio</title>
+
+		<meta charset="ISO-8859-1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="author" content="Sean Griffen" />
+		<meta name="description" content="A summary of professional work and achievements of Sean Michael Griffen for potential employer's reference" />
+
+		<link rel="icon" type="image/jpg" href="/refs/img/icon.jpg" size="32x32" />
+
+		<link rel="stylesheet" type="text/css" href="/refs/css/animation.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/default.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/content.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/content-nav.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_light.css">
+		<link rel="stylesheet" type="text/css" href="/refs/css/mode_dark.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="/refs/css/box_sizing-xs.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)" href="/refs/css/box_sizing-s.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="/refs/css/box_sizing-m.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 946px)" href="/refs/css/box_sizing-l.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1100px)" href="/refs/css/box_sizing-xl.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1500px)" href="/refs/css/box_sizing-xxl.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://use.fontawesome.com/4bc42436a1.js"></script>
+	</head>
+	<body id="body">
+
+		<input type="text"id="scroll_toChange" style="display:none" value="" disabled="true">
+		<input type="text"id="scroll_associated" style="display:none" value="" disabled="true">
+
+		<!-- PRE PAGE LOADED CONTENT -->
+		<div class="display_before">
+			<div class="display_before_border">
+				<p class="text_blink_cursor">
+					Loading Elements
+				</p>
+			</div>
+		</div>
+		<!-- POST PAGE LOADED CONTENT -->
+		<div class="display_after">
+			<!-- ROW HEADER -->
+			<div class="row" id="container_title">
+				<div id="title" class="col-12 col-xl-12 col-xxl-12"></div>
+			</div>
+			<!-- ROW MAIN CONTENT -->
+			<div class="row" id="container_main">
+				<!-- START NAVIGATION INTERFACE -->
+				<div id="container_nav" class="col-4 col-l-4 col-xl-4 col-xxl-2 sidebar"></div>
+
+				<!-- START WEBSITE CONTENT -->
+				<div id="container_content" class="col-8 col-l-8 col-xl-8 col-xxl-10">
+					<div class="content" id="sub_0"></div>
+					<div class="content" id="sub_1" style="display:none;"></div>
+					<div class="content" id="sub_2" style="display:none;"></div>
+					<div class="content" id="sub_3" style="display:none;"></div>
+				</div>
+			</div>
+			<!-- ROW FOOTER -->
+			<div class="row" id="row_footer">
+				<div class="col-12 col-xl-12 col-xxl-12 sidebar" id="container_footer"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/refs/js/general.js"></script>
+		<script type="text/javascript" src="/refs/js/content.js"></script>
+		<script type="text/javascript" src="/refs/js/message_send.js"></script>
+		<script type="text/javascript">
+			//Show loading animations
+			document.querySelector(".text_blink_cursor").classList.add("pre_loaded_l");
+
+			//Set color scheme
+			var sys_theme = window.matchMedia("(prefers-color-scheme: light)");
+			sys_theme.addListener(mode_default);
+			let mode_override = window.sessionStorage.getItem("com.seangriffen.resources-mode-override");
+			let curr_mode = window.sessionStorage.getItem("com.seangriffen.resources-mode");
+			if (mode_override != null && mode_override != "") { //if user is potentially overriding the color scheme
+
+				if (mode_override == "override-true") { //if user is definitely overriding the color scheme
+					if (curr_mode == null || curr_mode == "" || curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode", true)); }
+				} else {
+
+					if (sys_theme.matches && curr_mode == "mode-light") { mode_switch(document.getElementById("switch_mode")); } //if the system default mode is light and there is no manual override and the page currently isn't in light mode, switch to light mode
+					else { //else, set current mode to dark
+						window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
+						window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-true")
+					}
+				}
+			} else { //else
+
+				if (sys_theme.matches && curr_mode == "mode-dark") { mode_switch(document.getElementById("switch_mode")); } //if system default is dark mode and there is no override and the page currently isn't in dark mode, switch to dark mode
+				else { //else, set current mode to dark
+					window.sessionStorage.setItem("com.seangriffen.resources-mode", "mode-dark");
+					window.sessionStorage.setItem("com.seangriffen.resources-mode-override", "override-false")
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			$('#title').load("/refs/html/content_header.html");
+			$('#container_nav').load("/refs/html/interface_navbar.html");
+			$('#sub_0').load("/refs/html/content_about.html");
+			$('#sub_1').load("/refs/html/content_projects.html");
+			$('#sub_2').load("/refs/html/content_documents.html");
+			$('#sub_3').load("/refs/html/content_contact.html");
+			$('#container_footer').load("/refs/html/content_footer.html");
+		</script>
+	</body>
+</html>

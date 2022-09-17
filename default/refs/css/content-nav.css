@@ -1,0 +1,95 @@
+@charset "ISO-8859-1";
+
+.nav {
+	float: left;
+	height: 100%;
+	width: 100%;
+	transition: all 0.2s ease-out;
+}
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	transition: all 0.2s ease-out;
+}
+.nav li {
+	display: block;
+	padding: 2% 2% 2% 2%;
+	border-right: 12px solid #616161; /* Right border color is Dark-Gray */
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+}
+.nav li:hover {
+	border-right: 12px solid #009688; /* Right border color is Teal */
+	cursor: pointer;
+}
+.nav .nav-active { border-right: 12px solid #87CEEB; } /* Right border color is light-blue */
+.nav-drop li { padding: 2% 2% 2% 15%; }
+.nav .nav-drop-active {
+	border-right: 12px solid #87CEEB; /* Right border color is light-blue */
+	border-left: 6px solid #87CEEB; /* Left border color is light-blue */
+	opacity: 1;
+}
+.nav-slide li { padding: 2% 2% 2% 15%; }
+.nav-slide li:hover {
+	border-left: 6px solid #009688; /* Right border color is Teal */
+	cursor: pointer;
+}
+.nav .nav-slide-active {
+	border-right: 12px solid #87CEEB; /* Right border color is light-blue */
+	border-left: 6px solid #87CEEB; /* Left border color is light-blue */
+	opacity: 1;
+}
+.nav_pic {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.slide-header {
+	padding: 2%;
+	border-right: 12px solid #616161; /* Right border color is Dark-Gray */
+	transition: all 0.2s ease-out;
+}
+.slide-header.slide_left {
+	text-align: center;
+
+	padding-left: 7%;
+	padding-right: 7%;
+}
+.slide-header.slide_right {
+	padding-right: 25%;
+	padding-left: 6%;
+}
+.slide-header:hover {
+	border-right: 12px solid #009688; /* Right border color is Teal */
+	border-left: 6px solid #009688; /* Left border color is Teal */
+	cursor: pointer;
+}
+
+.arrow-right {
+	float: right;
+	transition: all 0.2s ease-out;
+}
+.arrow-left {
+	float: left;
+	transition: all 0.2s ease-out;
+}
+.arrow-left, .arrow-right {
+	opacity: 0;
+	width: 0%;
+	height: 0%;
+}
+
+.slide-header:hover .arrow-left, .slide-header:hover .arrow-right {
+	opacity: 1;
+	cursor: pointer;
+}
+.slide-header:hover .arrow-left {
+	width: 25%;
+	height: 25%;
+}
+.slide-header:hover .arrow-right {
+	width: 5%;
+	height: 5%;
+}

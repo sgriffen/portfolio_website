@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<img class="nav_pic" id="profile" src="/refs/img/sean_griffen.jpg" alt="Head shot of a handsome lad (if I do say so myself...)">
+	<div class="nav" id="nav">
+		<div id="nav_0" class="slide-header slide_right nav-active" onclick="update_slideBar(this.parentNode, this, true, 0); toggle_display(findChildById(document.getElementById('container_content'), 'sub_0'));">
+			<div style="display: inline-block">About</div>
+			<span class="arrow-right">&#8594;</span>
+		</div>
+		<div id="nav_1" class="slide-header slide_right" onclick="update_slideBar(this.parentNode, this, true, 1); toggle_display(findChildById(document.getElementById('container_content'), 'sub_1'));">
+			<div style="display: inline-block">Projects</div>
+			<span class="arrow-right">&#8594;</span>
+		</div>
+		<div id="nav_2" class="slide-header slide_right" onclick="update_slideBar(this.parentNode, this, true, 2); toggle_display(findChildById(document.getElementById('container_content'), 'sub_2'));">
+			<div style="display: inline-block">Documents</div>
+			<span class="arrow-right">&#8594;</span>
+		</div>
+		<a id="contactLink" class="slide-header slide_right" style="display: block" title="Email hire.seangriffen@gmail.com" href="mailto:hire.seangriffen@gmail.com">Contact</a>
+	</div>
+	<div class="nav hidden" id="nav-slide_0" style="display:none">
+		<div id="nav-slide_0-header" class="slide-header slide_left nav-active" onclick="update_slideBar(this.parentNode, this, false);">
+			<span class="arrow-left">&#8592;</span>
+			<div style="display: inline-block">About</div>
+		</div>
+		<ul>
+			<li>
+				<ul class="nav-slide" id="nav-slide_0-display">
+					<!-- Scroll to Career Goals -->
+					<li class="nav-slide-active" id="nav-slide_0-display_content_5" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-5');">
+						Professional Goals
+					</li>
+					<!-- Scroll to Job Experience -->
+					<li id="nav-slide_0-display_content_4" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-4');">
+						Job Experience
+					</li>
+					<!-- Scroll to Education -->
+					<li id="nav-slide_0-display_content_3" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-3');">
+						Education
+					</li>
+					<!-- Scroll to Awards -->
+					<li id="nav-slide_0-display_content_2" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-2');">
+						Awards
+					</li>
+					<!-- Scroll to Activities -->
+					<li id="nav-slide_0-display_content_1" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-1');">
+						Activities
+					</li>
+					<!-- Scroll to Activities -->
+					<li id="nav-slide_0-display_content_0" onclick="update_subBar(this.parentNode, this); scroll_to('sub_0-0');">
+						Website
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="nav hidden" id="nav-slide_1" style="display:none">
+		<div id="nav-slide_1-header" class="slide-header slide_left" onclick="update_slideBar(this.parentNode, this, 0);">
+			<span class="arrow-left">&#8592;</span>
+			<div style="display: inline-block">Projects</div>
+		</div>
+		<ul>
+			<li>
+				<ul class="nav-slide" id="nav-slide_1-display">
+					<!-- Scroll to Hot Car Ally -->
+					<li class="nav-slide-active" id="nav-slide_1-display_content_7" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-7');">
+						Senior Design
+					</li>
+					<!-- Scroll to Hot Car Ally -->
+					<li id="nav-slide_1-display_content_6" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-6');">
+						Hot Car Ally
+					</li>
+					<!-- Scroll to Game Zone -->
+					<li id="nav-slide_1-display_content_5" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-5');">
+						Game Zone
+					</li>
+					<!-- Scroll to MIPS Processor -->
+					<li id="nav-slide_1-display_content_4" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-4');">
+						MIPS Processor
+					</li>
+					<!-- Scroll to 007: Knockout -->
+					<li id="nav-slide_1-display_content_3" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-3');">
+						Roomba<span>&#174;</span> Rover
+					</li>
+					<!-- Scroll to Roomba<span>&#174;</span> Rover -->
+					<li id="nav-slide_1-display_content_2" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-2');">
+						007: Knockout
+					</li>
+					<!-- Scroll to FPGA Traffic Light -->
+					<li id="nav-slide_1-display_content_1" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-1');">
+						FPGA Traffic Light
+					</li>
+					<!-- Scroll to DND Java -->
+					<li id="nav-slide_1-display_content_0" onclick="update_subBar(this.parentNode, this); scroll_to('sub_1-0');">
+						DND Java
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="nav hidden" id="nav-slide_2" style="display:none">
+		<div id="nav-slide_2-header" class="slide-header slide_left" onclick="update_slideBar(this.parentNode, this, 0);">
+			<span class="arrow-left">&#8592;</span>
+			<div style="display: inline-block">Documents</div>
+		</div>
+		<ul>
+			<li>
+				<ul class="nav-slide" id="nav-slide_2-display">
+					<!-- Scroll to Resume -->
+					<li class="nav-slide-active" id="nav-slide_2-display_content_1" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-1');">
+						Resume
+					</li>
+					<!-- Scroll to Transcript -->
+					<li id="nav-slide_2-display_content_0" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-0');">
+						Cumulative Transcript
+					</li>
+					<!-- Scroll to Class Schedule -->
+					<!-- li id="nav-slide_2-display_content_3" onclick="update_subBar(this.parentNode, this); scroll_to('sub_2-3');">
+						Class Schedule
+					</li -->
+				</ul>
+			</li>
+		</ul>
+	</div>
+</html>

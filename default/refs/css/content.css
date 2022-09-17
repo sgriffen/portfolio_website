@@ -1,0 +1,322 @@
+@charset "ISO-8859-1";
+
+iframe, embed, object {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#title {
+	margin: 5px;
+	border-bottom: 12px solid #009688; /* Bottom border color is Teal */
+}
+
+#title h1 {
+	display: block;
+	margin: 3px;
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+}
+#title h2 {
+	display: inline-block;
+	margin: 3px;
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+}
+
+a {
+	color: #009688;  /* Hyperlink default color is Teal */
+	transition: all 0.2s ease-out;
+}
+a:hover { color: #4CAF50; } /* Hyperlink hover color is Green */
+
+.footer {
+	clear: both;
+	display: block;
+	text-align: center;
+	width: 100%;
+	background-color: #9E9E9E;
+}
+.footer .inline { display: inline-block; }
+.footer a {
+	display: inline-block;
+	text-align: center;
+	padding: 12px;
+
+	color: #FFF;
+	transition: all 0.2s ease-out;
+}
+.footer a:hover {
+	background-color: #009688; /* Background color is Teal */
+	cursor: pointer;
+}
+a.mode { float: right; }
+
+/* Default column settings */
+[class*="col-"] {
+	margin: 0px;
+	width: 100%;
+	float: left;
+	padding: 5px;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+}
+.content iframe, .content object {
+	display: block;
+	border: none;
+	width: inherit;
+	height: inherit;
+}
+
+.section-header {
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-decoration: none;
+	border-bottom: 4px solid #4CAF50; /* Bottom border color is Green */
+	font-size: 18px;
+	transition: all 0.2s ease-out;
+}
+.section-content {
+	padding: 0% 2% 0% 2%;
+	font-size: 16px;
+}
+.section-breaker {
+	display: block;
+	border-bottom: 3px solid #616161; /* Bottom border color is Dark-Gray */
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.subheader {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.action {
+	background-color: #616161; /* Button color is Dark-Gray */
+	border: none;
+	color: white;
+	padding: 12px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	transition: all 0.2s ease-out;
+}
+.action:hover {
+	background-color: #009688; /* Button color is Teal */
+	cursor: pointer;
+}
+
+.container-label {
+	position: relative;
+	font-size: 16px;
+}
+.input-label {
+	left: 0;
+	line-height: 1;
+	font-size: 16px;
+	display: block;
+	cursor: text;
+}
+.input:hover {
+	border: 2px solid #009688;
+	cursor: text;
+}
+.input:focus { border: 2px solid #87CEEB; }
+.input:focus + .input-label, .input:not(:placeholder-shown) + .input-label {
+	opacity: .5;
+	border-bottom: 2px solid #4CAF50;
+}
+
+.input::placeholder { color: transparent; }
+
+@media only screen and (max-width: 600px) {
+	.embed.pdf {
+		width: 100%;
+		height: 75vh;
+	}
+	.embed.img {
+		width: 100%;
+		height: auto;
+	}
+	.input {
+		width: 100%;
+		border: 2px solid #616161;
+		padding: 12px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		resize: vertical;
+		font-size: 16px;
+		background-color: inherit;
+		color: inherit;
+		transition: all 0.2s ease-out;
+	}
+	textarea {
+		width: 100%;
+		height: 20vh;
+	}
+	.arrow-left, .arrow-right {
+		opacity: 1;
+		width: 15%;
+		height: 15%;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.embed.pdf {
+		width: 600px;
+		height: 75vh;
+	}
+	.embed.img {
+		width: 600px;
+		height: auto;
+	}
+	.input {
+		width: 100%;
+		border: 2px solid #616161;
+		padding: 12px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		resize: vertical;
+		font-size: 16px;
+		background-color: inherit;
+		color: inherit;
+		transition: all 0.2s ease-out;
+	}
+	textarea {
+		width: 100%;
+		height: 20vh;
+	}
+	.arrow-left, .arrow-right {
+		opacity: 1;
+		width: 15%;
+		height: 15%;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.embed.pdf {
+		width: 576px;
+		height: 75vh;
+	}
+	.embed.img {
+		width: 576px;
+		height: auto;
+	}
+	.input {
+		width: 75%;
+		border: 2px solid #616161;
+		padding: 12px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		resize: vertical;
+		font-size: 16px;
+		background-color: inherit;
+		color: inherit;
+		transition: all 0.2s ease-out;
+	}
+	textarea {
+		width: 75%;
+		height: 20vh;
+	}
+	.arrow-left, .arrow-right {
+		opacity: 0;
+		width: 0%;
+		height: 0%;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.embed.pdf {
+		width: 744px;
+		height: 75vh;
+	}
+	.embed.img {
+		width: 744px;
+		height: auto;
+	}
+	.input {
+		width: 75%;
+		border: 2px solid #616161;
+		padding: 12px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		resize: vertical;
+		font-size: 16px;
+		background-color: inherit;
+		color: inherit;
+		transition: all 0.2s ease-out;
+	}
+	textarea {
+		width: 75%;
+		height: 20vh;
+	}
+	.arrow-left, .arrow-right {
+		opacity: 0;
+		width: 0%;
+		height: 0%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.embed.pdf {
+		width: 900px;
+		height: 75vh;
+	}
+	.embed.img {
+		width: 900px;
+		height: auto;
+	}
+	.input {
+		width: 75%;
+		border: 2px solid #616161;
+		padding: 12px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		resize: vertical;
+		font-size: 16px;
+		background-color: inherit;
+		color: inherit;
+		transition: all 0.2s ease-out;
+	}
+	textarea {
+		width: 75%;
+		height: 20vh;
+	}
+	.arrow-left, .arrow-right {
+		opacity: 0;
+		width: 0%;
+		height: 0%;
+	}
+}
+@media only screen and (min-width: 2500px) {
+	.embed.pdf {
+		width: 900px;
+		height: 75vh;
+	}
+	.embed.img {
+		width: 900px;
+		height: auto;
+	}
+	.input {
+		width: 75%;
+		border: 2px solid #616161;
+		padding: 12px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		resize: vertical;
+		font-size: 16px;
+		background-color: inherit;
+		color: inherit;
+		transition: all 0.2s ease-out;
+	}
+	textarea {
+		width: 75%;
+		height: 20vh;
+	}
+	.arrow-left, .arrow-right {
+		opacity: 0;
+		width: 0%;
+		height: 0%;
+	}
+}
